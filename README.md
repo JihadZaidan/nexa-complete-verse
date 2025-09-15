@@ -3,9 +3,6 @@
 Nexa adalah sebuah project berbasis **Next.js** yang dikembangkan sebagai website **Digital Agency** modern.  
 Tujuannya adalah membantu bisnis dan brand untuk membangun kehadiran digital yang kuat melalui layanan seperti **branding**, **strategi digital**, **desain UI/UX**, **pengembangan website**, serta **konten kreatif**.  
 
-Dengan desain yang clean, interaktif, dan responsif, Nexa memberikan pengalaman digital yang profesional serta berfokus pada performa dan optimisasi SEO.  
-Project ini dirancang agar mudah dikustomisasi dan dapat menjadi fondasi untuk berbagai kebutuhan agensi kreatif maupun perusahaan teknologi.  
-
 ---
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
