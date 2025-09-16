@@ -51,7 +51,7 @@ export default function Uppertise() {
                     <h3 ref={headRef} className="text-neutral-800 font-sans font-medium lg:text-5xl text-3xl text-left leading-[140%] pl-5">
                         Few of Our <br /> Specialites
                     </h3>
-                    <p ref={pagaRef} className="text-neutral-800 font-sans font-medium lg:text-3xl text-base leading-[140%] pl-5">
+                    <p ref={pagaRef} className="text-neutral-800 font-sans font-normal lg:text-3xl text-base leading-[140%] pl-5">
                         — From creative projects that push the <br /> boundaries of our
                         team&apos;s imagination. <br /> Build it into all of our works.
                     </p>
@@ -60,3 +60,4 @@ export default function Uppertise() {
         </div>
     );
 }
+
