@@ -31,7 +31,7 @@ export default function CenterWork() {
 
                     <div ref={fibeRef} className="justify-left items-left flex flex-col gap-6 bg-transparent">
                         <h5 className="text-2xl font-medium text-left text-white">/ CONTEXT AI</h5>
-                        <h4 className="lg:text-4xl text-xl font-medium text-left text-white">
+                        <h4 className="lg:text-4xl text-xl font-normal text-left text-white">
                             Empowers developers <br />
                             and companies to <br />
                             build outstanding <br />
@@ -77,3 +77,4 @@ export default function CenterWork() {
     )
 
 }
+
