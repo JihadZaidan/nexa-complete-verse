@@ -28,7 +28,7 @@ export default function UpperWorks() {
                     <div className="w-full flex lg:flex-row flex-col lg:pl-[304px] lg:gap-24 gap-10">
                         <div ref={describeRef} className="w-[55%] justify-left items-left flex flex-col gap-6 bg-transparent">
                             <h5 className="text-2xl font-medium text-left text-black">/ HOUSEL</h5>
-                            <h4 className="lg:text-3xl text-base font-medium text-left text-black">
+                            <h4 className="lg:text-3xl text-base font-normal text-left text-black">
                                 Help you to sell, buy, 
                                 mortgage, invest 
                                 property, and other 
@@ -55,4 +55,5 @@ export default function UpperWorks() {
             <div className="max-w-full relative bg-black bottom-0 h-20"></div>
         </section>
     )
+
 }
