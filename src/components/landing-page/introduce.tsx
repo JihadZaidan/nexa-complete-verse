@@ -40,7 +40,7 @@ export default function Introduce() {
                             alt="photos"
                             className="ml-0"
                         />
-                        <p className="lg:text-2xl text-base font-medium text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
+                        <p className="lg:text-2xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
                     </div>
 
                     <Image
@@ -52,4 +52,5 @@ export default function Introduce() {
             </div>
         </div>
     )
+
 }
