@@ -47,7 +47,7 @@ export default function Story() {
                                 All about the Business <br />
                                 Model Canvas
                             </h4>
-                            <p className="w-full text-lg font-medium text-black">
+                            <p className="w-full text-lg font-normal text-black">
                                 The Business Model Canvas was proposed by <br />
                                 Alexander Osterwalder based on his earlier book.
                             </p>
@@ -64,7 +64,7 @@ export default function Story() {
                                 UI + UX: Two Different but <br />
                                 Complimenting Practices
                             </h4>
-                            <p className="w-full text-lg font-medium text-black">
+                            <p className="w-full text-lg font-normal text-black">
                                 The Business Model Canvas was proposed by <br />
                                 Alexander Osterwalder based on his earlier book.
                             </p>
@@ -74,4 +74,5 @@ export default function Story() {
             </div>
         </div>
     )
+
 }
