@@ -26,7 +26,7 @@ export default function LowerSection() {
 
                 <div ref={describeRef} className="justify-left items-left flex flex-col gap-6 bg-transparent">
                     <h5 className="text-2xl font-medium text-left text-black">/ DOCKER</h5>
-                    <h4 className="lg:text-3xl text-2xl font-medium text-left text-black">
+                    <h4 className="lg:text-3xl text-2xl font-normal text-left text-black">
                         Enhanching digital <br />
                         marketing with <br />
                         innovative design <br />
@@ -42,4 +42,5 @@ export default function LowerSection() {
             </div>
         </div>
     )
+
 }
