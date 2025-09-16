@@ -17,7 +17,7 @@ export default function Insider() {
                     Strategies and Insights for Success
                 </h1>
 
-                <p ref={graphRef} className="lg:text-right text-black font-sans font-medium lg:text-3xl text-lg leading-[140%] lg:ml-50">
+                <p ref={graphRef} className="lg:text-right text-black font-sans font-normal lg:text-3xl text-lg leading-[140%] lg:ml-50">
                     — Unlocking Strategies, Trends, <br/>
                     and Insights to Propel Your Brand <br/>
                     Forward in the Dynamic World of <br/>
@@ -26,4 +26,5 @@ export default function Insider() {
             </div>
         </div>
     )
+
 }
