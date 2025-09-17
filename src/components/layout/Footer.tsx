@@ -147,7 +147,7 @@ export default function Footer() {
                         .filter(
                             (item) =>
                                 (item.hideInNavbar || item.published) &&
-                                ["Works 3", "Expertise 1", "Expertise 2", "About", "Insight"].includes(item.label)
+                                ["Awards", "Branding", "Careers", "Inquiries", "Contact Us"].includes(item.label)
                         )
                         .map((item, index) => (
                             <li
@@ -186,3 +186,4 @@ export default function Footer() {
         </footer>
     );
 }
+
