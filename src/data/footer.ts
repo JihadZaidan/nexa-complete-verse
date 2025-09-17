@@ -7,28 +7,28 @@ interface FooterProps {
 
 export const footer : FooterProps[] = [
     {
-        url: "/work-three",
-        label: "Works 3",
+        url: "/two-land",
+        label: "Awards",
         published: true
     },
     {
-        url: "/expertise",
-        label: "Expertise 1",
+        url: "/three-land",
+        label: "Branding",
+        published: true
+    },
+    {
+        url: "work-two",
+        label: "Careers",
+        published: true
+    },
+    {
+        url: "work-three",
+        label: "Inquiries",
         published: true
     },
     {
         url: "/secpertise",
-        label: "Expertise 2",
-        published: true
-    },
-    {
-        url: "/about",
-        label: "About",
-        published: true
-    },
-    {
-        url: "/insight",
-        label: "Insight",
+        label: "Contact Us",
         published: true
     }
 ] 
