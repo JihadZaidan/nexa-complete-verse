@@ -9,8 +9,8 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
 import { useRef } from "react"
 import { useSlideFromTop } from "@/library/animations/useSlideFromTop"
-import Image from "next/image"
-import Snack from "../../../public/second/landing-page/header/chipschapa.png"
+// import Image from "next/image"
+// import Snack from "../../../public/second/landing-page/header/chipschapa.png"
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +47,7 @@ export default function Navbar() {
 
                         {isMenuOpen && (
                             <nav
-                                className="absolute z-[9999] top-16 left-0 w-full flex flex-col gap-20 bg-black shadow-lg pt-10 pb-12 px-12"
+                                className="absolute z-[9999] top-16 left-0 w-full flex flex-col gap-20 bg-black shadow-lg pt-10 pb-12 lg:px-12 px-5"
                             >
                                 <div className="flex lg:flex-row flex-col lg:justify-between gap-8">
                                     <div></div>
@@ -58,18 +58,18 @@ export default function Navbar() {
                                                 <Link
                                                     key={item.url}
                                                     href={item.url}
-                                                    className="text-white hover:text-gray text-xl font-sans font-medium text-right w-full"
+                                                    className="text-white hover:text-gray lg:text-3xl text-2xl font-sans font-medium lg:text-right text-left w-full"
                                                 >
                                                     {item.label}
                                                 </Link>
                                             ))}
                                     </div>
                                 </div>
-                                <div className="flex lg:flex-row flex-col lg:justify-between gap-8">
-                                    <h4 className="font-sans font-medium text-8xl text-neutral-100">Nexa</h4>
+                                <div className="flex lg:flex-row flex-col gap-8 lg:justify-between">
+                                    <h4 className="font-sans font-medium text-8xl text-neutral-100 text-left">Nexa</h4>
                                     <div className="flex flex-col gap-5 pt-3">
-                                        <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base">123 Main Street, Anytown, USA 12345</p>
-                                        <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base">+1 141-756-9201 | contact@nexa.com</p>
+                                        <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base lg:text-right text-left">123 Main Street, Anytown, USA 12345</p>
+                                        <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base lg:text-right left">+1 141-756-9201 | contact@nexa.com</p>
                                     </div>
                                 </div>
                             </nav>
