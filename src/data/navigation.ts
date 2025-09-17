@@ -1,33 +1,35 @@
 interface NavigationProps {
     url: string;
     label: string;
+    hideInNavbar?: boolean;
     published?: boolean;
 }
 
 export const navigation: NavigationProps[] = [
     {
         url: "/",
-        label: "Landing Page 1",
-        published: true
-    },
-    {
-        url: "/two-land",
-        label: "Landing Page 2",
-        published: true
-    },
-    {
-        url: "/three-land",
-        label: "Landing Page 3",
-        published: true
+        label: "Home",
+        hideInNavbar: false,
+        published: true,
     },
     {
         url: "/works",
-        label: "Works 1",
+        label: "Works",
+        published: true
+    },
+    {
+        url: "/expertise",
+        label: "Expertise",
+        published: true
+    },
+    {
+        url: "/about",
+        label: "About",
         published: true
     }, 
     {
-        url: "/work-two",
-        label: "Works 2",
+        url: "/insight",
+        label: "Insight",
         published: true
     }
 ]
