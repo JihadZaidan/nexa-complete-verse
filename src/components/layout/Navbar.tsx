@@ -9,15 +9,20 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
 import { useRef } from "react"
 import { useSlideFromTop } from "@/library/animations/useSlideFromTop"
+import Image from "next/image"
+import Snack from "../../../public/second/landing-page/header/chipschapa.png"
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navRef = useRef<HTMLHeadElement>(null);
 
     useSlideFromTop(navRef, 0.35);
-    
+
     return (
-        <header ref={navRef} className="w-full max-w-full mt-8 mb-20 lg:px-20 px-8 justify-center items-center">
+        <header
+            ref={navRef}
+            className="relative z-50 w-full max-w-full mt-8 mb-20 lg:px-20 px-8 justify-center items-center"
+        >
             <nav className="w-full justify-between flex flex-row">
                 <div>
                     <h4 className="text-4xl font-medium font-sans text-black">Nexa</h4>
@@ -27,7 +32,7 @@ export default function Navbar() {
                         <p className="text-black text-lg font-medium lg:block hidden">Let&apos;s talk</p>
                         <ArrowRight height={18} width={18} className="mt-[5px] text-black lg:block hidden" />
                     </Button>
-                    <div className="border-1 border-black height-[3px] lg:block hidden"></div>
+
                     <div className="flex flex-row gap-5">
                         <button
                             className="text-black hover:text-black p-2 rounded-lg cursor-pointer"
@@ -42,24 +47,36 @@ export default function Navbar() {
 
                         {isMenuOpen && (
                             <nav
-                                className="absolute z-5 px-5 top-16 left-0 w-full bg-black shadow-lg flex flex-col items-center gap-8 py-8 px-8"
+                                className="absolute z-[9999] top-16 left-0 w-full flex flex-col gap-20 bg-black shadow-lg pt-10 pb-12 px-12"
                             >
-                                {navigation
-                                    .filter((item) => !item.published)
-                                    .map((item) => (
-                                        <Link
-                                            key={item.url}
-                                            href={item.url}
-                                            className="text-white hover:text-gray text-lg font-sans font-medium"
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    ))}
+                                <div className="flex lg:flex-row flex-col lg:justify-between gap-8">
+                                    <div></div>
+                                    <div className="flex flex-col items-right gap-8">
+                                        {navigation
+                                            .filter((item) => !item.hideInNavbar && item.published)
+                                            .map((item) => (
+                                                <Link
+                                                    key={item.url}
+                                                    href={item.url}
+                                                    className="text-white hover:text-gray text-xl font-sans font-medium text-right w-full"
+                                                >
+                                                    {item.label}
+                                                </Link>
+                                            ))}
+                                    </div>
+                                </div>
+                                <div className="flex lg:flex-row flex-col lg:justify-between gap-8">
+                                    <h4 className="font-sans font-medium text-8xl text-neutral-100">Nexa</h4>
+                                    <div className="flex flex-col gap-5 pt-3">
+                                        <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base">123 Main Street, Anytown, USA 12345</p>
+                                        <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base">+1 141-756-9201 | contact@nexa.com</p>
+                                    </div>
+                                </div>
                             </nav>
                         )}
                     </div>
                 </div>
             </nav>
-        </header >
+        </header>
     )
 }
