@@ -9,8 +9,8 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
 import { useRef } from "react"
 import { useSlideFromTop } from "@/library/animations/useSlideFromTop"
-// import Image from "next/image"
-// import Snack from "../../../public/second/landing-page/header/chipschapa.png"
+import Image from "next/image"
+import Snack from "../../../public/second/landing-page/header/chipschapa.png"
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +50,13 @@ export default function Navbar() {
                                 className="absolute z-[9999] top-16 left-0 w-full flex flex-col gap-20 bg-black shadow-lg pt-10 pb-12 lg:px-12 px-5"
                             >
                                 <div className="flex lg:flex-row flex-col lg:justify-between gap-8">
-                                    <div></div>
+                                    <div className="lg:w-1/2 flex justify-center lg:justify-start lg:ml-[-110px] lg:opacity-[100%] opacity-0">
+                                        <Image
+                                            src={Snack}
+                                            alt="Snack assets"
+                                            className="rounded-md object-contain max-h-[280px]"
+                                        />
+                                    </div>
                                     <div className="flex flex-col items-right gap-8">
                                         {navigation
                                             .filter((item) => !item.hideInNavbar && item.published)
@@ -80,3 +86,4 @@ export default function Navbar() {
         </header>
     )
 }
+
