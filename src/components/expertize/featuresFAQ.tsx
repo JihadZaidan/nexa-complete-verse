@@ -16,6 +16,9 @@ export default function ExpertiseFAQ() {
   const headeRef = useRef<HTMLHeadingElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
+  useSlideFromTop(headeRef, 0.3)
+  useFadeIn(contentRef, 0.3)
+
   return (
     <div className="w-full max-w-full px-4 lg:px-20 px-10 py-20 bg-gray-50">
       <div className="flex flex-col gap-12">
@@ -60,3 +63,4 @@ export default function ExpertiseFAQ() {
     </div>
   );
 }
+
