@@ -24,7 +24,7 @@ export default function VisionBrand() {
         <div className="max-w-full w-full lg:px-20 lg:py-20 px-8 py-8 bg-black">
             <div className="w-full flex flex-col lg:gap-20 gap-10">
                 <div className="w-full justify-left items-left">
-                    <h2 ref={headRef} className="lg:w-[40%] w-full text-left lg:text-5xl text-3xl font-medium font-sans text-white leading-[150%]">
+                    <h2 ref={headRef} className="lg:w-[40%] w-full text-left lg:text-5xl text-3xl font-normal font-sans text-white leading-[150%]">
                         Transforming Digital 
                         Innovations for Visionary Brands
                     </h2>
@@ -44,7 +44,7 @@ export default function VisionBrand() {
 
                         <div>
                             <Button className="justify-left gap-[9px] ml-[-10px] border-b-2 border-black">
-                                <p className="text-white text-lg font-medium">Explore All Expertise</p>
+                                <p className="text-white text-lg font-normal">Explore All Expertise</p>
                                 <ArrowRight height={22} width={22} className="mt-[2px] text-white" />
                             </Button>
                         </div>
