@@ -28,13 +28,13 @@ export default function Introduce() {
                     </h1>
                     <div ref={buttonRef} className="justify-left">
                         <Button className="justify-center gap-[9px] ml-[-10px] border-b-2 border-black">
-                            <p className="text-black text-xl lg:text-3xl font-medium">Let&apos;s talk</p>
+                            <p className="text-black text-xl lg:text-3xl font-normal">Let&apos;s talk</p>
                             <ArrowRight height={22} width={22} className="mt-[2px] text-black" />
                         </Button>
                     </div>
                 </div>
                 <div ref={bottomRef} className="w-full lg:flex lg:flex-row lg:justify-between lg:gap-4 flex flex-col justify between gap-10">
-                    <div className="lg:w-full w-[80%] flex lg:flex-row flex-col lg:gap-12 gap-8 lg:justify-left justify-center items-center">
+                    <div className="lg:w-full w-[80%] flex lg:flex-row flex-col lg:gap-12 gap-8 lg:justify-left justify-center items-center lg:pt-72">
                         <Image
                             src={team}
                             alt="photos"
@@ -52,5 +52,4 @@ export default function Introduce() {
             </div>
         </div>
     )
-
 }
