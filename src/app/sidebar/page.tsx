@@ -26,7 +26,7 @@ export default function SidebarPage() {
         <div className="fixed inset-0 z-[9999] w-[100vw] h-[100vh] bg-black flex flex-col lg:px-10 lg:pt-12 lg:pb-20 lg:gap-3 px-7 py-7">
 
             {/* Top-right Let's Talk + Close */}
-            <div className="flex lg:justify-end items-center lg:gap-6 lg:pr-10 justify-between">
+            <div ref={closeRef} className="flex lg:justify-end items-center lg:gap-6 lg:pr-10 justify-between">
                 <button className="flex items-center gap-2 text-lg font-sans hover:opacity-80 transition text-white">
                     Let&apos;s talk
                     <ArrowRight size={18} />
@@ -42,13 +42,14 @@ export default function SidebarPage() {
                 <div className="flex lg:flex-row flex-col lg:justify-between gap-8">
                     <div className="lg:w-1/2 flex justify-center lg:justify-start">
                         <Image
+                            ref={mageRef}
                             src={Snack}
                             alt="Snack assets"
                             className="rounded-md object-contain max-h-[280px] lg:mr-50 lg:mt-5"
                         />
                     </div>
 
-                    <div className="flex flex-col items-right lg:gap-8 gap-4">
+                    <div ref={listRef} className="flex flex-col items-right lg:gap-8 gap-4">
                         {navigation
                             .filter((item) => !item.hideInNavbar && item.published)
                             .map((item) => (
@@ -64,10 +65,10 @@ export default function SidebarPage() {
                 </div>
 
                 <div className="flex lg:flex-row flex-col gap-8 lg:justify-between">
-                    <h4 className="font-sans font-normal text-8xl text-neutral-100 text-left">
+                    <h4 ref={headeRef} className="font-sans font-normal text-8xl text-neutral-100 text-left">
                         Nexa
                     </h4>
-                    <div className="flex flex-col gap-5 pt-3">
+                    <div ref={addRef} className="flex flex-col gap-5 pt-3">
                         <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base lg:text-right text-left">
                             123 Main Street, Anytown, USA 12345
                         </p>
@@ -79,4 +80,5 @@ export default function SidebarPage() {
             </div>
         </div>
     )
+
 }
