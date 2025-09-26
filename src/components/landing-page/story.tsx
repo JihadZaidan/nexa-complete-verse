@@ -22,14 +22,14 @@ export default function Story() {
         <div className="max-w-full w-full bg-[#F2F2F2] lg:px-20 lg:py-30 px-8 py-8">
             <div className="w-full flex flex-col justify-left items-left lg:gap-30 gap-20">
                 <div className="w-full flex lg:flex-row flex-col lg:justify-between justify-left items-left gap-8">
-                    <h3 ref={headRef} className="lg:w-[45%] w-full text-left lg:text-5xl text-3xl font-medium font-sans text-black leading-[140%]">
+                    <h3 ref={headRef} className="lg:w-[45%] w-full text-left lg:text-5xl text-3xl font-normal font-sans text-black leading-[140%]">
                         Latest insights, stories,
                         and news from Nexa.
                     </h3>
 
                     <div ref={buttonRef} className="relative lg:mt-20">
                         <Button className="flex flex-row justify-center gap-3 ml-[-10px]">
-                            <p className="text-black text-lg font-medium">Explore the Insight</p>
+                            <p className="text-black text-xl font-normal">Explore the Insight</p>
                             <ArrowRight height={22} width={22} className="mt-[2px] text-black lg:h-[22px] lg:w-[22px] h-[25px] w-[25px]" />
                         </Button>
                     </div>
@@ -43,7 +43,7 @@ export default function Story() {
                             className="grayscale"
                         />
                         <div className="lg:w-[75%] w-full flex flex-col gap-6">
-                            <h4 className="w-full text-medium text-black lg:text-3xl text-2xl leading-[140%]">
+                            <h4 className="w-full text-normal text-black lg:text-4xl text-2xl leading-[140%]">
                                 All about the Business <br />
                                 Model Canvas
                             </h4>
@@ -60,7 +60,7 @@ export default function Story() {
                             alt="insight secondary"
                         />
                         <div className="lg:w-[75%] w-full flex flex-col gap-6">
-                            <h4 className="w-full text-medium text-black lg:text-3xl text-2xl leading-[140%]">
+                            <h4 className="w-full text-normal text-black lg:text-4xl text-2xl leading-[140%]">
                                 UI + UX: Two Different but <br />
                                 Complimenting Practices
                             </h4>
@@ -74,5 +74,4 @@ export default function Story() {
             </div>
         </div>
     )
-
 }
