@@ -56,7 +56,7 @@ export default function SidebarPage() {
                                 <Link
                                     key={item.url}
                                     href={item.url}
-                                    className="text-white hover:text-gray lg:text-3xl text-2xl font-sans font-normal lg:text-right text-left w-full"
+                                    className="text-white hover:text-gray lg:text-3xl text-2xl font-sans font-normal lg:text-right text-left w-full hover:border-b hover:border-additional-100 leading-[120%]"
                                 >
                                     {item.label}
                                 </Link>
@@ -82,3 +82,4 @@ export default function SidebarPage() {
     )
 
 }
+
