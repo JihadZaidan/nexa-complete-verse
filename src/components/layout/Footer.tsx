@@ -5,6 +5,7 @@ import { navigation } from "@/data/navigation";
 import { ArrowRight, ArrowUpIcon } from "lucide-react";
 import { footer } from "@/data/footer";
 import { useState, useRef } from "react";
+import { useSlideFromLeft, useFadeIn, useSlideFromRight } from "@/library/animations";
 import { z } from "zod";
 
 // validation news letter by zod 
@@ -21,6 +22,9 @@ export default function Footer() {
     const [error, setError] = useState<string | null>(null);
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
     const letterRef = useRef<HTMLInputElement | null>(null);
+    const upleftRef = useRef<HTMLDivElement>(null);
+    const uprightRef = useRef<HTMLDivElement>(null);
+    const lowerRef = useRef<HTMLDivElement>(null);
 
     const validate = (value: string) => {
         const result = emailSchema.safeParse(value);
@@ -55,11 +59,15 @@ export default function Footer() {
         if (email.length) validate(email);
     };
 
+    useSlideFromLeft(upleftRef, 0.4);
+    useSlideFromRight(uprightRef, 0.4);
+    useFadeIn(lowerRef , 0.4);
+
     return (
         <footer className="w-full bg-neutral-900 px-10 lg:px-20 py-20 flex flex-col gap-16">
             {/* Top Section */}
             <div className="flex flex-col lg:flex-row justify-between gap-10">
-                <div className="flex flex-col lg:gap-5 gap-3">
+                <div ref={upleftRef} className="flex flex-col lg:gap-5 gap-3">
                     <h4 className="font-sans font-medium text-8xl text-neutral-100">Nexa</h4>
                     <p className="leading-[140%] lg:text-3xl text-xl text-neutral-400 lg:text-left font-sans font-normal">
                         Let&apos;s Make Something Cool
@@ -67,7 +75,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bagian Newsletter */}
-                <div ref={letterRef} className="flex flex-col gap-4 justify-left items-left">
+                <div ref={uprightRef} className="flex flex-col gap-4 justify-left items-left">
                     <p className="text-neutral-400 font-sans font-medium text-xl">
                         Sign up for our newsletter
                     </p>
@@ -124,7 +132,7 @@ export default function Footer() {
             </div>
 
             {/* Middle Section */}
-            <div className="grid lg:grid-cols-3 gap-10">
+            <div ref={lowerRef} className="grid lg:grid-cols-3 gap-10">
                 {/* Navigation */}
                 <ul className="flex flex-col gap-5 justify-start items-start">
                     {navigation
@@ -186,4 +194,3 @@ export default function Footer() {
         </footer>
     );
 }
-
