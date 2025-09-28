@@ -24,7 +24,7 @@ export default function DescribeDetail() {
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-15 px-10 py-10">
             <div className="w-full gap-15 flex flex-col">
-                <p ref={textRef} className="lg:w-[75%] text-[#595E5E] lg:text-3xl leading-[150%] font-sans font-medium">
+                <p ref={textRef} className="lg:w-[75%] text-[#595E5E] lg:text-3xl leading-[150%] font-sans font-normal">
                     In todays rapidly evolving business landscape brands face
                     the constant challenge of staying relevant in the face of
                     changing market dynamics. Brand evolution the process of
@@ -52,8 +52,8 @@ export default function DescribeDetail() {
                 </div>
 
                 <div ref={typoRef} className="justify-right items-left flex flex-col lg:pl-120 gap-8">
-                    <h5 className="text-black lg:text-3xl text-xl font-sans font-medium text-left leading-[140%]">Empowering Businesses to Adapt and Thrive</h5>
-                    <p className="text-[#595E5E] lg:text-2xl leading-[150%] font-sans font-medium">
+                    <h5 className="text-black lg:text-3xl text-xl font-sans font-normal text-left leading-[140%]">Empowering Businesses to Adapt and Thrive</h5>
+                    <p className="text-[#595E5E] lg:text-2xl leading-[150%] font-sans font-normal">
                         This blog post explores the intricacies of brand evolution and its significance in
                         modern business strategy. From identifying emerging market trends to implementing
                         effective adaptation strategies businesses can navigate the complexities of brand
