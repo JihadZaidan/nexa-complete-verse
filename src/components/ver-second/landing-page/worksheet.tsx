@@ -2,17 +2,29 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Work from "../../../../public/second/landing-page/body/worker.png"
+import { useRef } from "react"
+import { useSlideFromLeft, useSlideFromRight } from "@/library/animations"
 
 export default function WorkerSheet() {
+    const headRef = useRef<HTMLHeadingElement>(null);
+    const btnRef = useRef<HTMLButtonElement>(null);
+    const listRef = useRef<HTMLDivElement>(null);
+    const imRef = useRef<HTMLImageElement>(null);
+
+    useSlideFromLeft(headRef, 0.3)
+    useSlideFromRight(btnRef, 0.3)
+    useSlideFromRight(listRef, 0.3)
+    useSlideFromLeft(imRef, 0.3)
+
     return (
         <div className="max-w-full w-full bg-neutral-100 lg:px-20 lg:pt-25 lg:pb-30 px-8 py-8">
             <div className="w-full flex flex-col lg:gap-20 gap-5">
                 <div className="w-full flex flex-col gap-5">
-                    <h2 className="font-sans font-normal lg:text-5xl text-2xl text-neutral-800 leading-[140%]">
+                    <h2 ref={headRef} className="font-sans font-normal lg:text-5xl text-2xl text-neutral-800 leading-[140%]">
                         The work we do, <br />
                         and the people we help
                     </h2>
-                    <Button className="lg:hidden justify-center gap-[9px] ml-[-170px] ">
+                    <Button ref={btnRef} className="lg:hidden justify-center gap-[9px] ml-[-170px] ">
                         <p className="text-neutral-800 text-base font-normal">All Case Study</p>
                         <ArrowRight height={20} width={20} className="mt-[3px] text-neutral-800" />
                     </Button>
@@ -20,7 +32,7 @@ export default function WorkerSheet() {
 
                 <div className="w-full justify-left flex lg:flex-row-reverse flex-col-reverse gap-15">
                     <div className="w-full justify-left lg:ml-[-250px] flex flex-col lg:justify-between gap-8">
-                        <div className="flex flex-col lg:gap-8 gap-4">
+                        <div ref={listRef} className="flex flex-col lg:gap-8 gap-4">
                             <div className="flex flex-col gap-6">
                                 <h4 className="text-neutral-800 lg:text-4xl text-xl font-sans font-normal text-left">/ HOUSEL</h4>
                                 <p className="text-neutral-600 lg:text-3xl text-lg font-sans font-normal leading-[150%]">
@@ -32,13 +44,14 @@ export default function WorkerSheet() {
                             <h4 className="text-neutral-500 lg:text-4xl font-sans font-normal text-left">/ CONTEXT AI</h4>
                             <h4 className="text-neutral-500 lg:text-4xl font-sans font-normal text-left">/ CLODY</h4>
                         </div>
-                        <Button className="justify-center gap-[9px] lg:ml-[-250px] ml-[-170px]">
+                        <Button ref={btnRef} className="justify-center gap-[9px] lg:ml-[-250px] ml-[-170px]">
                             <p className="text-neutral-800 lg:text-xl text-base font-normal">All Case Study</p>
                             <ArrowRight height={20} width={20} className="mt-[3px] text-neutral-800" />
                         </Button>
                     </div>
 
                     <Image
+                        ref={imRef}
                         src={Work}
                         alt="project"
                         className="lg:w-[55%] mr-[350px]"
@@ -47,5 +60,4 @@ export default function WorkerSheet() {
             </div>
         </div>
     )
-
 }
