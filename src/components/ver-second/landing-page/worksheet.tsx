@@ -45,7 +45,7 @@ export default function WorkerSheet() {
                             <h4 className="text-neutral-500 lg:text-4xl font-sans font-normal text-left">/ CONTEXT AI</h4>
                             <h4 className="text-neutral-500 lg:text-4xl font-sans font-normal text-left">/ CLODY</h4>
                         </div>
-                        <Button ref={btnRef} className="justify-center gap-[9px] lg:ml-[-250px] ml-[-170px]">
+                        <Button className="justify-center gap-[9px] lg:ml-[-250px] ml-[-170px]">
                             <p className="text-neutral-800 lg:text-xl text-base font-normal">All Case Study</p>
                             <ArrowRight height={20} width={20} className="mt-[3px] text-neutral-800" />
                         </Button>
@@ -62,4 +62,5 @@ export default function WorkerSheet() {
         </div>
     )
 }
+
 
