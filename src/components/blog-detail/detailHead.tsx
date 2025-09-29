@@ -17,7 +17,7 @@ export default function DetailUpper() {
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-30 px-8 py-5 flex flex-col lg:gap-20 gap-10">
             <div className="w-full flex flex-col gap-20">
-                <h1 ref={headRef} className="font-sans font-medium lg:text-5xl text-3xl text-black leading-[150%] lg:z-5">
+                <h1 ref={headRef} className="font-sans font-normal lg:text-5xl text-3xl text-black leading-[150%] lg:z-5">
                     Brand Evolution — <br />
                     Adapting to Changing Markets
                 </h1>
@@ -27,7 +27,7 @@ export default function DetailUpper() {
                         alt="founder"
                         className="w-[10%] h-[10%]"
                     />
-                    <p className="text-black text-2xl font-sans font-medium">Railey Braid</p>
+                    <p className="text-black text-2xl font-sans font-normal">Railey Braid</p>
                 </div>
             </div>
 
@@ -40,4 +40,5 @@ export default function DetailUpper() {
             </div>
         </div>
     )
+
 }
