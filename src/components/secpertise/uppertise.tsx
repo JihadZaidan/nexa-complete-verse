@@ -32,15 +32,15 @@ export default function Uppertise() {
 
                     <div className="flex items-center gap-6 lg:gap-10 px-5">
                         <div className="flex-none snap-start">
-                            <h3 className="text-neutral-800 lg:text-3xl text-lg font-medium font-sans">01/ DIGITAL STRATEGY</h3>
+                            <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">01/ DIGITAL STRATEGY</h3>
                             <Image src={Kopi} alt="coffeship" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
                         <div className="flex-none snap-start">
-                            <h3 className="text-neutral-800 lg:text-3xl text-lg font-medium font-sans">02/ BRANDING</h3>
+                            <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">02/ BRANDING</h3>
                             <Image src={Tamar} alt="conferention" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
                         <div className="flex-none snap-start">
-                            <h3 className="text-neutral-800 lg:text-3xl text-lg font-medium font-sans">03/ WEB DEVELOPMENT</h3>
+                            <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">03/ WEB DEVELOPMENT</h3>
                             <Image src={Cody} alt="coder" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
                     </div>
@@ -48,7 +48,7 @@ export default function Uppertise() {
 
                 {/* Text Section */}
                 <div className="w-full flex lg:flex-row flex-col lg:justify-between justify-left items-left gap-10">
-                    <h3 ref={headRef} className="text-neutral-800 font-sans font-medium lg:text-5xl text-3xl text-left leading-[140%] pl-5">
+                    <h3 ref={headRef} className="text-neutral-800 font-sans font-normal lg:text-5xl text-3xl text-left leading-[140%] pl-5">
                         Few of Our <br /> Specialites
                     </h3>
                     <p ref={pagaRef} className="text-neutral-800 font-sans font-normal lg:text-3xl text-base leading-[140%] pl-5">
@@ -60,4 +60,5 @@ export default function Uppertise() {
         </div>
     );
 }
+
 
