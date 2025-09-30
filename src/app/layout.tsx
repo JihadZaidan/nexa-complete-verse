@@ -1,9 +1,16 @@
 'use client'
+
 import "./globals.css";
+import { DM_Sans } from "next/font/google"
 import { usePathname } from "next/navigation";
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+
+const dmsans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400","500","600","700"],
+});
 
 export default function Layout({
   children,
@@ -14,7 +21,7 @@ export default function Layout({
   const isHomePage = pathname === "/";
   return (
     <html lang="en">
-      <body>
+      <body className={dmsans.className}>
         <main className="w-full min-h-screen">
           {isHomePage && (
             <div className="relative w-full h-full">
@@ -32,3 +39,4 @@ export default function Layout({
   )
 
 }
+
