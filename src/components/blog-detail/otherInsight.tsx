@@ -69,7 +69,7 @@ export default function OtherInsight() {
                         <div className="pt-4 hidden md:block">
                             <Button
                                 variant="outline"
-                                className="text-xl font-medium font-sans text-black px-25"
+                                className="text-xl font-normal font-sans text-black px-25"
                                 onClick={() => setShowAll(true)}
                             >
                                 See more →
@@ -95,7 +95,7 @@ export default function OtherInsight() {
                                     className="object-cover rounded-md aspect-[1/1]"
                                 />
                             </div>
-                            <h3 className="font-medium text-lg text-black">{item.title}</h3>
+                            <h3 className="font-normal text-lg text-black">{item.title}</h3>
                             <p className="text-sm text-gray-500">{item.date}</p>
                         </Link>
                     ))}
@@ -105,4 +105,5 @@ export default function OtherInsight() {
         </div>
     )
 }
+
 
