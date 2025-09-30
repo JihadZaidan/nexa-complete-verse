@@ -35,10 +35,10 @@ export default function ExpertiseFAQ() {
               <div key={item.id} className="border-gray border-b">
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full flex justify-between items-center py-6 text-left text-lg font-medium text-black hover:underline focus:outline-none"
+                  className="w-full flex justify-between items-center py-6 text-left text-lg font-normal text-black hover:underline focus:outline-none"
                 >
                   <div className="flex gap-2 items-center">
-                    <span className="text-black text-2xl font-sans font-medium">
+                    <span className="text-black text-2xl font-sans font-normal">
                       {String(index + 1).padStart(2, "0")}/
                     </span>
                     {item.question}
@@ -63,5 +63,6 @@ export default function ExpertiseFAQ() {
     </div>
   );
 }
+
 
 
