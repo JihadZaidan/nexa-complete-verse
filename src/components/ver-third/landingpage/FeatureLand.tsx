@@ -33,7 +33,7 @@ export default function Featurest() {
         <div className="max-w-full w-full bg-neutral-900 lg:px-20 lg:pt-20 lg:pb-40 px-8 py-14">
             <div className="w-full flex flex-col">
                 <div className="w-full flex flex-col gap-10">
-                    <h2 ref={headeRef} className="font-sans font-medium text-left lext-white lg:text-4xl text-3xl leading-[150%]">
+                    <h2 ref={headeRef} className="font-sans font-normal text-left lext-white lg:text-4xl text-3xl leading-[150%]">
                         Transforming Digital <br />
                         Innovations for Visionary Brands
                     </h2>
@@ -46,7 +46,7 @@ export default function Featurest() {
 
                         <div ref={buttonRef} className="lg:ml-140">
                             <Button className="justify-center gap-[9px] ml-[-10px] border-b-2 border-black">
-                                <p className="text-white text-lg font-medium">Explore All Experise</p>
+                                <p className="text-white text-lg font-normal">Explore All Experise</p>
                                 <ArrowRight height={22} width={22} className="mt-[2px] text-white" />
                             </Button>
                         </div>
@@ -76,12 +76,13 @@ export default function Featurest() {
                     </div>
 
                     <div className="w-full flex flex-col lg:gap-9 gap-10">
-                        <div className="lg:pl-230"><h3 ref={sedoRef} className="text-4xl text-neutral-100 font-medium font-sans">02/ BRANDING.</h3></div>
-                        <h3 ref={tredeRef} className="text-4xl text-neutral-100 font-medium font-sans">03/ WEB DEVELOPMENT.</h3>
-                        <div className="lg:pl-200"><h3 ref={fordoRef} className="text-4xl text-neutral-100 font-medium font-sans">04/ APP DEVELOPMENT.</h3></div>
+                        <div className="lg:pl-230"><h3 ref={sedoRef} className="text-4xl text-neutral-100 font-normal font-sans">02/ BRANDING.</h3></div>
+                        <h3 ref={tredeRef} className="text-4xl text-neutral-100 font-normal font-sans">03/ WEB DEVELOPMENT.</h3>
+                        <div className="lg:pl-200"><h3 ref={fordoRef} className="text-4xl text-neutral-100 font-normal font-sans">04/ APP DEVELOPMENT.</h3></div>
                     </div>
                 </div>
             </div>
         </div>
     )
+
 }
