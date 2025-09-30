@@ -34,8 +34,8 @@ export default function CenterWorks() {
                     </div>
 
                     <div className="w-full flex lg:flex-row flex-col lg:justify-between justify-left items-left gap-5">
-                        <h4 ref={prihadRef} className="text-neutral-100 text-xl font-size font-medium text-left">/ HOUSEL</h4>
-                        <p ref={prigarpRef} className="text-neutral-100 text-xl font-size font-medium text-left">
+                        <h4 ref={prihadRef} className="text-neutral-100 text-xl font-size font-normal text-left">/ HOUSEL</h4>
+                        <p ref={prigarpRef} className="text-neutral-100 text-xl font-size font-normal text-left">
                             Empowers developers and companies <br /> to build outstanding products.
                         </p>
                     </div>
@@ -48,8 +48,8 @@ export default function CenterWorks() {
                             className="w-full"
                         />
                         <div className="flex flex-row justify-between">
-                            <h4 className="text-neutral-100 text-xl font-size font-medium text-left">/ HOUSEL</h4>
-                            <ArrowRight className="text-white font-medium" />
+                            <h4 className="text-neutral-100 text-xl font-size font-normal text-left">/ HOUSEL</h4>
+                            <ArrowRight className="text-white font-normal" />
                         </div>
                     </div>
                     <div ref={loweregRef} className="flex flex-col gap-8">
@@ -59,12 +59,13 @@ export default function CenterWorks() {
                             className="w-full"
                         />
                         <div className="flex flex-row justify-between">
-                            <h4 className="text-neutral-100 text-xl font-size font-medium text-left">/ CONTEXT AI</h4>
-                            <ArrowRight className="text-white font-medium" />
+                            <h4 className="text-neutral-100 text-xl font-size font-normal text-left">/ CONTEXT AI</h4>
+                            <ArrowRight className="text-white font-normal" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     )
+
 }
