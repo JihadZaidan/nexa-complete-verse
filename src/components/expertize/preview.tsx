@@ -69,7 +69,7 @@ export default function ExpertiseCarousel() {
       >
         {works.map((work) => (
           <div key={work.id} className="min-w-[500px] flex-shrink-0">
-            <div className="mb-3 text-lg font-medium text-black">
+            <div className="mb-3 text-xl font-normal text-black">
               {work.title}
             </div>
             <div className="lg:aspect-[4/5] aspect-[3/2] w-full relative overflow-hidden rounded-lg shadow-lg">
@@ -86,3 +86,4 @@ export default function ExpertiseCarousel() {
     </div>
   );
 }
+
