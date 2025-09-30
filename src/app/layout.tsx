@@ -1,17 +1,22 @@
 'use client'
-
+import localfont from "next/font/local"
 import "./globals.css";
-import { DM_Sans } from "next/font/google"
 import { usePathname } from "next/navigation";
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const dmsans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400","500","600","700"],
-});
-
+const openSauce = localfont({
+  src: [
+    {
+      path: "/OpenSauceSans/OpenSauceSans-Regular.ttf",
+      weight: "400",
+      style: "normal"
+    },
+  ],
+  variable: "--font-open-sauce",
+  display: "swap"
+})
 export default function Layout({
   children,
 }: Readonly<{
@@ -21,7 +26,7 @@ export default function Layout({
   const isHomePage = pathname === "/";
   return (
     <html lang="en">
-      <body className={dmsans.className}>
+      <body className={openSauce.className}>
         <main className="w-full min-h-screen">
           {isHomePage && (
             <div className="relative w-full h-full">
@@ -37,6 +42,4 @@ export default function Layout({
       </body>
     </html>
   )
-
 }
-
