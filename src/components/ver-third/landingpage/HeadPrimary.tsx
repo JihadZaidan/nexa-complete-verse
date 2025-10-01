@@ -22,13 +22,13 @@ export default function Resprime() {
             <div className="w-full flex flex-col justify-between lg:gap-30 gap-8">
                 <div className="w-full flex flex-col justify-right lg:gap-15 gap-8">
                     <h1 ref={headRef} className="w-full text-neutral-800 font-sans font-normal lg:text-8xl text-5xl lg:text-center text-left leading-[130%]">NEXA DIGITAL AGENCY</h1>
-                    <div ref={timsRef} className="lg:ml-130 lg:w-[50%] flex lg:flex-row flex-col lg:gap-5 gap-3 justify-left items-left">
+                    <div ref={timsRef} className="lg:ml-150 lg:w-[50%] flex lg:flex-row flex-col lg:gap-5 gap-3 justify-left items-left">
                         <Image
                             src={team}
                             alt="photos"
                             className="ml-[-45px] lg:scale-[75%] scale-[75%] lg:ml-0"
                         />
-                        <p className="lg:text-2xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
+                        <p className="lg:mt-4 lg:text-2xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
                     </div>
                 </div>
 
@@ -54,11 +54,10 @@ export default function Resprime() {
                 <Image
                     src={cheepa}
                     alt="upper section"
-                    className="lg:w-[35%] lg:absolute lg:opacity-[100%] opacity-0 lg:top-[570px] lg:left-[900px]"
+                    className="lg:w-[33%] lg:absolute lg:opacity-[100%] opacity-0 lg:top-[570px] lg:left-[950px]"
                 />
 
             </div>
         </div>
     )
-
 }
