@@ -68,7 +68,7 @@ export default function Footer() {
             {/* Top Section */}
             <div className="flex flex-col lg:flex-row justify-between gap-10">
                 <div ref={upleftRef} className="flex flex-col lg:gap-5 gap-3">
-                    <h4 className="font-sans font-medium text-8xl text-neutral-100">Nexa</h4>
+                    <h4 className="font-sans font-normal text-8xl text-neutral-100">Nexa</h4>
                     <p className="leading-[140%] lg:text-3xl text-xl text-neutral-400 lg:text-left font-sans font-normal">
                         Let&apos;s Make Something Cool
                     </p>
@@ -76,7 +76,7 @@ export default function Footer() {
 
                 {/* Bagian Newsletter */}
                 <div ref={uprightRef} className="flex flex-col gap-4 justify-left items-left">
-                    <p className="text-neutral-400 font-sans font-medium text-xl">
+                    <p className="text-neutral-400 font-sans font-normal text-xl">
                         Sign up for our newsletter
                     </p>
 
@@ -119,11 +119,11 @@ export default function Footer() {
                         </p>
                     ) : status === "success" ? (
                         <p className="text-emerald-400 text-sm mt-1">
-                            Terima kasih! Email kamu sudah terdaftar.
+                            Thank You , Your email has been verified.
                         </p>
                     ) : null}
 
-                    <p className="text-neutral-600 font-sans font-medium text-lg">
+                    <p className="text-neutral-600 font-sans font-normal text-lg">
                         By signing up to receive emails from Motto, you agree to our <br />
                         Privacy Policy. We treat your info responsibly. <br />
                         Unsubscribe anytime.
@@ -140,7 +140,7 @@ export default function Footer() {
                         .map((item, index) => (
                             <li
                                 key={`${item.url}-${index}`}
-                                className="font-medium text-neutral-400 text-xl"
+                                className="font-normal text-neutral-400 text-xl"
                             >
                                 <Link href={item.url} className="hover:text-neutral-100">
                                     {item.label}
@@ -160,7 +160,7 @@ export default function Footer() {
                         .map((item, index) => (
                             <li
                                 key={`${item.url}-${index}`}
-                                className="font-medium text-neutral-400 text-xl"
+                                className="font-normal text-neutral-400 text-xl"
                             >
                                 <Link href={item.url} className="hover:text-neutral-100">
                                     {item.label}
@@ -173,21 +173,21 @@ export default function Footer() {
                 <div className="flex flex-col gap-4">
                     <ul className="flex flex-row gap-3">
                         {["Fb", "Ig", "Tw", "In", "Be"].map((item, index) => (
-                            <li key={index} className="text-neutral-400 font-medium text-xl">
+                            <li key={index} className="text-neutral-400 font-normal text-xl">
                                 {item}
                             </li>
                         ))}
                     </ul>
-                    <p className="text-neutral-400 font-medium text-xl">© 2024 Nexa.</p>
-                    <p className="text-neutral-400 font-medium text-xl">NYC | UK | Dallas</p>
+                    <p className="text-neutral-400 font-normal text-xl">© 2024 Nexa.</p>
+                    <p className="text-neutral-400 font-normal text-xl">NYC | UK | Dallas</p>
                 </div>
             </div>
 
             {/* Bottom Section */}
             <div className="border-t border-neutral-800 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4">
-                <p className="text-neutral-400 text-lg">Copyright © 2024 Nexa</p>
+                <p className="text-neutral-400 text-lg font-normal">Copyright © 2024 Nexa</p>
                 <div className="flex items-center cursor-pointer gap-2 text-neutral-400 hover:text-white">
-                    <Link href="#">Back to top</Link>
+                    <Link href="#" className="text-neutral-400 text-lg font-normal">Back to top</Link>
                     <ArrowUpIcon size={18} />
                 </div>
             </div>
