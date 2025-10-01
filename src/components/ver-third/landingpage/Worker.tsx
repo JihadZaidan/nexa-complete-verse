@@ -45,7 +45,7 @@ export default function WorkerFiles() {
     return (
         <div className="max-w-full w-full bg-neutral-100 lg:px-20 lg:pt-27 lg:pb-30 px-8 pt-10 pb-14">
             <div className="w-full flex flex-col lg:gap-[-150px] gap-8">
-                <h2 ref={headerRef} className="text-right text-neutral-800 lg:text-7xl text-3xl leading-[140%]">The work we do, <br /> and the people we help</h2>
+                <h2 ref={headerRef} className="text-right text-neutral-800 lg:text-7xl text-3xl leading-[140%]">The work we do, <br /> and the people <br /> we help</h2>
                 <div className="w-full flex lg:flex-row flex-col lg:gap-25">
                     <div className="w-full flex flex-col lg:gap-20 gap-10">
                         <div className="w-full flex flex-col gap-8">
@@ -88,4 +88,5 @@ export default function WorkerFiles() {
     )
 
 }
+
 
