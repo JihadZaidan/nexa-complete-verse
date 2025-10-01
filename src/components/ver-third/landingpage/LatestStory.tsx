@@ -26,7 +26,7 @@ export default function Story() {
             <div className="w-full flex flex-col justify-left items-left lg:gap-30 gap-20">
                 <div className="w-full flex lg:flex-row flex-col lg:justify-between justify-left items-left gap-8 lg:px-20 lg:pt-20 px-10 pt-10">
                     <h3 ref={headRef} className="lg:w-[45%] w-full text-left lg:text-5xl text-3xl font-normal font-sans text-black leading-[140%]">
-                        Latest insights, stories, </br>
+                        Latest insights, stories, <br />
                         and news from Nexa.
                     </h3>
 
@@ -53,4 +53,5 @@ export default function Story() {
     )
 
 }
+
 
