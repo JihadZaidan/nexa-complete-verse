@@ -44,7 +44,7 @@ export default function Featurest() {
                             thinking brands looking to push boundaries and drive significant impact.
                         </p>
 
-                        <div ref={buttonRef} className="lg:ml-140">
+                        <div ref={buttonRef} className="lg:ml-180">
                             <Button className="justify-center gap-[9px] ml-[-10px] border-b-2 border-black">
                                 <p className="text-white text-lg font-normal">Explore All Experise</p>
                                 <ArrowRight height={22} width={22} className="mt-[2px] text-white" />
@@ -86,3 +86,4 @@ export default function Featurest() {
     )
 
 }
+
