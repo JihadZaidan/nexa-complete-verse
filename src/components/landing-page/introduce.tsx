@@ -1,4 +1,5 @@
 "use client"
+
 import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
 import Image from "next/image"
@@ -38,7 +39,7 @@ export default function Introduce() {
                         <Image
                             src={team}
                             alt="photos"
-                            className="ml-0"
+                            className="ml-0 lg:w-[50%]"
                         />
                         <p className="lg:text-2xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
                     </div>
