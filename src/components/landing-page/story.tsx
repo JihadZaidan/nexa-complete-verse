@@ -61,7 +61,7 @@ export default function Story() {
                         />
                         <div className="lg:w-[75%] w-full flex flex-col gap-6">
                             <h4 className="w-full text-normal text-black lg:text-4xl text-2xl leading-[140%]">
-                                UI + UX: Two Different but <br />
+                                UI + UX: Two Different but 
                                 Complimenting Practices
                             </h4>
                             <p className="w-full text-lg font-normal text-black">
@@ -75,3 +75,4 @@ export default function Story() {
         </div>
     )
 }
+
