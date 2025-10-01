@@ -50,16 +50,16 @@ export default function Jobdesk() {
                         <div className="w-full flex flex-col gap-8">
                             <div ref={housemageRef}><Image src={house} alt="cloudess-image-upper" /></div>
                             <div className="flex flex-row justify-between">
-                                <h4 ref={housetitleRef} className="text-neutral-800 lg:text-2xl text-xl font-size font-medium text-left">/ HOUSEL</h4>
-                                <div ref={houserrow}><ArrowRight className="text-neutral-700 font-medium" /></div>
+                                <h4 ref={housetitleRef} className="text-neutral-800 lg:text-2xl text-xl font-size font-normal text-left">/ HOUSEL</h4>
+                                <div ref={houserrow}><ArrowRight className="text-neutral-700 font-normal" /></div>
                             </div>
                         </div>
 
                         <div className="w-full flex flex-col gap-8">
                             <div ref={intelekRef}><Image src={ai} alt="cloudess-image-upper" /></div>
                             <div className="flex flex-row justify-between">
-                                <h4 ref={intitleRef} className="text-neutral-800 lg:text-2xl text-xl font-size font-medium text-left">/ CONTEXT AI</h4>
-                                <div ref={interrow}><ArrowRight className="text-neutral-700 font-medium" /></div>
+                                <h4 ref={intitleRef} className="text-neutral-800 lg:text-2xl text-xl font-size font-normal text-left">/ CONTEXT AI</h4>
+                                <div ref={interrow}><ArrowRight className="text-neutral-700 font-normal" /></div>
                             </div>
                         </div>
                     </div>
@@ -68,16 +68,16 @@ export default function Jobdesk() {
                         <div className="w-full flex flex-col gap-8">
                             <div ref={cloodyRef}><Image src={cloody} alt="cloudess-image-upper" /></div>
                             <div className="flex flex-row justify-between">
-                                <h4 ref={cloodeRef} className="text-neutral-800 lg:text-2xl text-xl font-size font-medium text-left">/ CLOODY</h4>
-                                <div ref={clorophile}><ArrowRight className="text-neutral-700 font-medium" /></div>
+                                <h4 ref={cloodeRef} className="text-neutral-800 lg:text-2xl text-xl font-size font-normal text-left">/ CLOODY</h4>
+                                <div ref={clorophile}><ArrowRight className="text-neutral-700 font-normal" /></div>
                             </div>
                         </div>
 
                         <div className="w-full flex flex-col gap-8">
                             <div ref={dockeRef}><Image src={dockey} alt="cloudess-image-upper" /></div>
                             <div className="flex flex-row justify-between">
-                                <h4 ref={dotRef} className="text-neutral-800 lg:text-2xl text-xl font-size font-medium text-left">/ DOCKER</h4>
-                                <div ref={dorrow}><ArrowRight className="text-neutral-700 font-medium" /></div>
+                                <h4 ref={dotRef} className="text-neutral-800 lg:text-2xl text-xl font-size font-normal text-left">/ DOCKER</h4>
+                                <div ref={dorrow}><ArrowRight className="text-neutral-700 font-normal" /></div>
                             </div>
                         </div>
                     </div>
@@ -85,4 +85,5 @@ export default function Jobdesk() {
             </div>
         </div>
     )
+
 }

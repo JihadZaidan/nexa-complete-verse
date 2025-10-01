@@ -20,18 +20,19 @@ export default function Lork() {
                 <div ref={lemakeRef} className="flex flex-col justify-left items-left gap-8">
                     <Image src={Short} alt="image lower person" />
                     <div className="flex flex-row justify-between">
-                        <h4 className="text-neutral-800 text-xl font-size font-medium text-left">/ CLOODY</h4>
-                        <ArrowRight className="text-neutral-700 font-medium" />
+                        <h4 className="text-neutral-800 text-xl font-size font-normal text-left">/ CLOODY</h4>
+                        <ArrowRight className="text-neutral-700 font-normal" />
                     </div>
                 </div>
                 <div ref={remakeRef} className="flex flex-col justify-left items-left gap-8">
                     <Image src={Full} alt="image lower person" />
                     <div className="flex flex-row justify-between">
-                        <h4 className="text-neutral-800 text-xl font-size font-medium text-left">/ DOCKER</h4>
-                        <ArrowRight className="text-neutral-700 font-medium" />
+                        <h4 className="text-neutral-800 text-xl font-size font-normal text-left">/ DOCKER</h4>
+                        <ArrowRight className="text-neutral-700 font-normal" />
                     </div>
                 </div>
             </div>
         </div>
     )
+
 }

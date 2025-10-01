@@ -38,7 +38,7 @@ export default function Featurest() {
                         Innovations for Visionary Brands
                     </h2>
 
-                    <div className="w-full flex flex-col lg:pl-130 lg:gap-10 gap-5">
+                    <div className="w-full flex flex-col lg:pl-120 lg:gap-10 gap-5">
                         <p ref={graphRef} className="text-white font-normal font-sans lg:text-xl text-base leading-[170%]">
                             We are passionate about uncovering the best digital innovations for forward —
                             thinking brands looking to push boundaries and drive significant impact.
@@ -76,9 +76,9 @@ export default function Featurest() {
                     </div>
 
                     <div className="w-full flex flex-col lg:gap-9 gap-10">
-                        <div className="lg:pl-230"><h3 ref={sedoRef} className="text-4xl text-neutral-100 font-medium font-sans">02/ BRANDING.</h3></div>
-                        <h3 ref={tredeRef} className="text-4xl text-neutral-100 font-medium font-sans">03/ WEB DEVELOPMENT.</h3>
-                        <div className="lg:pl-200"><h3 ref={fordoRef} className="text-4xl text-neutral-100 font-medium font-sans">04/ APP DEVELOPMENT.</h3></div>
+                        <div className="lg:pl-240"><h3 ref={sedoRef} className="text-4xl text-neutral-100 font-normal font-sans">02/ BRANDING.</h3></div>
+                        <h3 ref={tredeRef} className="text-4xl text-neutral-100 font-normal font-sans">03/ WEB DEVELOPMENT.</h3>
+                        <div className="lg:pl-200"><h3 ref={fordoRef} className="text-4xl text-neutral-100 font-normal font-sans">04/ APP DEVELOPMENT.</h3></div>
                     </div>
                 </div>
             </div>

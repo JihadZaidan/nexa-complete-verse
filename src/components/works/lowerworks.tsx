@@ -25,7 +25,7 @@ export default function LowerSection() {
                 </div>
 
                 <div ref={describeRef} className="justify-left items-left flex flex-col gap-6 bg-transparent">
-                    <h5 className="text-2xl font-medium text-left text-black">/ DOCKER</h5>
+                    <h5 className="text-2xl font-normal text-left text-black">/ DOCKER</h5>
                     <h4 className="lg:text-3xl text-2xl font-normal text-left text-black">
                         Enhanching digital <br />
                         marketing with <br />
@@ -34,7 +34,7 @@ export default function LowerSection() {
                     </h4>
                     <div>
                         <Button className="justify-left gap-[9px] ml-[-10px]">
-                            <p className="text-black lg:text-xl text-base font-medium text-left">View case study</p>
+                            <p className="text-black lg:text-xl text-base font-normal text-left">View case study</p>
                             <ArrowRight height={23} width={23} className="mt-[2px] text-black" />
                         </Button>
                     </div>
@@ -42,5 +42,4 @@ export default function LowerSection() {
             </div>
         </div>
     )
-
 }

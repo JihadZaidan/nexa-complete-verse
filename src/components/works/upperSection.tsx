@@ -27,7 +27,7 @@ export default function UpperWorks() {
 
                     <div className="w-full flex lg:flex-row flex-col lg:pl-[304px] lg:gap-24 gap-10">
                         <div ref={describeRef} className="w-[55%] justify-left items-left flex flex-col gap-6 bg-transparent">
-                            <h5 className="text-2xl font-medium text-left text-black">/ HOUSEL</h5>
+                            <h5 className="text-2xl font-normal text-left text-black">/ HOUSEL</h5>
                             <h4 className="lg:text-3xl text-base font-normal text-left text-black">
                                 Help you to sell, buy, 
                                 mortgage, invest 
@@ -36,7 +36,7 @@ export default function UpperWorks() {
                             </h4>
                             <div>
                                 <Button className="justify-left gap-[9px] ml-[-10px]">
-                                    <p className="text-black lg:text-xl text-base font-medium text-left">View case study</p>
+                                    <p className="text-black lg:text-xl text-base font-normal text-left">View case study</p>
                                     <ArrowRight height={23} width={23} className="mt-[2px] text-black" />
                                 </Button>
                             </div>
@@ -55,5 +55,4 @@ export default function UpperWorks() {
             <div className="max-w-full relative bg-black bottom-0 h-20"></div>
         </section>
     )
-
 }

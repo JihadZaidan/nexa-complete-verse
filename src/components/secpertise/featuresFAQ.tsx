@@ -2,7 +2,8 @@
 
 import { itemsFAQ } from "@/data/faq";
 import { ArrowRight, ArrowDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useSlideFromLeft, useSlideFromRight, useStaggerChildren } from "@/library/animations";
 
 export default function ExpertiseFAQ() {
   const [openItem, setOpenItem] = useState<string | null>(itemsFAQ[0]?.id);
@@ -11,15 +12,21 @@ export default function ExpertiseFAQ() {
     setOpenItem((prev) => (prev === id ? null : id));
   };
 
+  const headerRef = useRef<HTMLHeadingElement>(null);
+  const listRef = useRef<HTMLDivElement>(null)
+
+  useSlideFromLeft(headerRef, 0.3)
+  useSlideFromRight(listRef, 0.3)
+
   return (
     <div className="w-full max-w-full px-4 lg:px-20 px-10 py-20 bg-gray-50">
       <div className="flex lg:flex-row lg:justify-between flex-col gap-12">
-        <h2 className="text-black font-medium lg:text-5xl text-3xl font-sans font-normal leading-snug">
+        <h2 ref={headerRef} className="text-black font-normal lg:text-5xl text-3xl font-sans leading-snug">
           Frequently Asked <br />
           Questions
         </h2>
 
-        <div className="flex flex-col border-t divide-y">
+        <div ref={listRef} className="flex flex-col border-t divide-y">
           {itemsFAQ.map((item, index) => {
             const isOpen = openItem === item.id;
 
@@ -27,10 +34,10 @@ export default function ExpertiseFAQ() {
               <div key={item.id} className="w-full border-gray border-b">
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full flex justify-between items-center py-6 text-left text-lg font-medium text-black hover:underline focus:outline-none"
+                  className="w-full flex justify-between items-center py-6 text-left text-lg font-normal text-black hover:underline focus:outline-none"
                 >
                   <div className="flex gap-3 items-center flex-1">
-                    <span className="text-black text-2xl font-sans font-medium">
+                    <span className="text-black text-2xl font-sans font-normal">
                       {String(index + 1).padStart(2, "0")}/
                     </span>
                     <span className="w-full">{item.question}</span>
