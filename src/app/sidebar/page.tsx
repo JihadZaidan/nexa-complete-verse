@@ -11,7 +11,7 @@ import { useRef } from "react"
 
 export default function SidebarPage() {
     const closeRef = useRef<HTMLDivElement>(null);
-    const mageRef = useRef<HTMLImageElement>(null);
+    const mageRef = useRef<HTMLDivElement>(null);
     const listRef = useRef<HTMLDivElement>(null);
     const headeRef = useRef<HTMLHeadingElement>(null);
     const addRef = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ export default function SidebarPage() {
     useSlideFromRight(addRef, 0.3)
     
     return (
-        <div className="fixed inset-0 z-[9999] w-[100vw] h-[100vh] bg-black flex flex-col lg:px-10 lg:pt-12 lg:pb-20 lg:gap-3 px-7 py-7">
+        <div className="fixed inset-0 z-[9999] w-[100vw] h-[100vh] bg-black flex flex-col lg:px-10 lg:pt-10 lg:pb-20 lg:gap-2 px-7 py-7">
 
             {/* Top-right Let's Talk + Close */}
             <div ref={closeRef} className="flex lg:justify-end items-center lg:gap-6 lg:pr-10 justify-between">
@@ -38,11 +38,10 @@ export default function SidebarPage() {
             </div>
 
             {/* Main Content */}
-            <div className="flex-grow flex flex-col gap-20 px-5 lg:px-12 pt-10 pb-12">
+            <div className="flex-grow flex flex-col lg:gap-15 gap-20 px-5 lg:px-12 pt-10 pb-12">
                 <div className="flex lg:flex-row flex-col lg:justify-between gap-8">
-                    <div className="lg:w-1/2 flex justify-center lg:justify-start">
+                    <div ref={mageRef} className="lg:w-1/2 flex justify-center lg:justify-start">
                         <Image
-                            ref={mageRef}
                             src={Snack}
                             alt="Snack assets"
                             className="rounded-md object-contain max-h-[280px] lg:mr-50 lg:mt-5"
@@ -80,6 +79,4 @@ export default function SidebarPage() {
             </div>
         </div>
     )
-
 }
-
