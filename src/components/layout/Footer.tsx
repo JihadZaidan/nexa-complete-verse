@@ -29,7 +29,7 @@ export default function Footer() {
     const validate = (value: string) => {
         const result = emailSchema.safeParse(value);
         if (!result.success) {
-            setError(result.error.issues[0]?.message ?? "Email tidak valid.");
+            setError(result.error.issues[0]?.message ?? "Your Email don't valid, please repeat sign in.");
             return false;
         }
         setError(null);
@@ -194,3 +194,4 @@ export default function Footer() {
         </footer>
     );
 }
+
