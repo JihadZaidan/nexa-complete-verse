@@ -22,13 +22,13 @@ export default function Resprime() {
             <div className="w-full flex flex-col justify-between lg:gap-30 gap-8">
                 <div className="w-full flex flex-col justify-right lg:gap-15 gap-8">
                     <h1 ref={headRef} className="w-full text-neutral-800 font-sans font-normal lg:text-8xl text-5xl lg:text-center text-left leading-[130%]">NEXA DIGITAL AGENCY</h1>
-                    <div ref={timsRef} className="lg:ml-150 lg:w-[50%] flex lg:flex-row flex-col lg:gap-5 gap-3 justify-left items-left">
+                    <div ref={timsRef} className="lg:w-full w-[80%] flex lg:flex-row flex-col lg:gap-12 gap-8 lg:justify-left justify-center items-center lg:pt-72">
                         <Image
                             src={team}
                             alt="photos"
-                            className="ml-[-45px] lg:scale-[75%] scale-[75%] lg:ml-0"
+                            className="ml-0 lg:w-[50%]"
                         />
-                        <p className="lg:mt-4 lg:text-2xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
+                        <p className="lg:text-2xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
                     </div>
                 </div>
 
@@ -61,3 +61,4 @@ export default function Resprime() {
         </div>
     )
 }
+
