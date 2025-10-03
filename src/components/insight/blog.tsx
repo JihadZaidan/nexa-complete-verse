@@ -25,7 +25,7 @@ export default function InsightSection() {
         {blogsToShow.map((item, index) => (
           <Link
             key={index}
-            href={`/blog-detail`}
+            href={item.url}
             className="flex flex-col gap-3"
           >
             <div className="relative w-full h-[200px]">
@@ -61,7 +61,7 @@ export default function InsightSection() {
         {insightBlog.map((item, index) => (
           <Link
             key={index}
-            href={`/blog-detail`}
+            href={item.url}
             className="flex flex-col gap-3"
           >
             <div className="relative w-full lg:h-[300px]">
@@ -80,4 +80,5 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
