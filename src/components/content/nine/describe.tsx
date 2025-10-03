@@ -52,7 +52,7 @@ export default function Ninescription() {
                     <p className="text-[#595E5E] lg:text-2xl leading-[150%] font-sans font-normal">
                         Brand insights are the heartbeat of successful brands. The more you know about
                         your brand in the eyes of customers, the more you can tailor your brand strategy 
-                        to align with what they're looking for. These brand insights can ultimately 
+                        to align with what they&apos;re looking for. These brand insights can ultimately 
                         elevate your brand to new heights.
                     </p>
                 </div>
@@ -66,4 +66,5 @@ export default function Ninescription() {
             </div>
         </div>
     )
+
 }
