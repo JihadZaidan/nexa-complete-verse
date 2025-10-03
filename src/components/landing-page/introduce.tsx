@@ -1,5 +1,4 @@
 "use client"
-
 import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
 import Image from "next/image"
@@ -34,12 +33,12 @@ export default function Introduce() {
                         </Button>
                     </div>
                 </div>
-                <div ref={bottomRef} className="w-full lg:flex lg:flex-row lg:justify-between lg:gap-4 flex flex-col justify between gap-10">
-                    <div className="lg:w-full w-[80%] flex lg:flex-row flex-col lg:gap-12 gap-8 lg:justify-left justify-center items-center lg:pt-72">
+                <div ref={bottomRef} className="w-full lg:flex lg:flex-row lg:justify-between lg:gap-4 flex flex-col justify-between gap-10">
+                    <div className="lg:w-full w-[80%] flex lg:flex-row flex-col lg:gap-12 gap-8 lg:justify-left justify-center items-center lg:pt-[240px]">
                         <Image
                             src={team}
                             alt="photos"
-                            className="ml-0 lg:w-[50%]"
+                            className="w-[50%]"
                         />
                         <p className="lg:text-2xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
                     </div>
@@ -47,7 +46,7 @@ export default function Introduce() {
                     <Image
                         src={contribute}
                         alt="contributors clients"
-                        className="relative lg:w-[50%] w-full lg:left-20 lg:block hidden"
+                        className="relative lg:w-[50%] w-full lg:left-20 hidden lg:block "
                     />
                 </div>
             </div>
