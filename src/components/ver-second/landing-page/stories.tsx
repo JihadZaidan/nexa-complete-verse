@@ -32,7 +32,7 @@ export default function StoryWork() {
                     </h3>
 
                     <Button ref={btnRef} className="justify-center gap-[9px] lg:mt-22 mt-10 lg:ml-0 ml-[-150px]">
-                        <p className="text-neutral-800 text-base font-normal">Explore the Insight</p>
+                        <p className="text-neutral-800 lg:text-xl text-base font-normal">Explore the Insight</p>
                         <ArrowRight height={25} width={25} className="mt-[3px] text-neutral-800" />
                     </Button>
                 </div>
@@ -66,4 +66,5 @@ export default function StoryWork() {
         </div>
     )
 }
+
 

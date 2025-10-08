@@ -51,13 +51,16 @@ export default function Resprime() {
                 </div>
 
 
-                <Image
+               <Image
                     src={cheepa}
                     alt="upper section"
-                    className="lg:w-[33%] lg:absolute lg:opacity-[100%] opacity-0 lg:top-[570px] lg:left-[950px]"
+                    className="lg:w-[33%] lg:absolute lg:opacity-[100%] opacity-0 lg:top-[587.75px] lg:left-[930px]"
                 />
 
             </div>
         </div>
     )
 }
+
+
+

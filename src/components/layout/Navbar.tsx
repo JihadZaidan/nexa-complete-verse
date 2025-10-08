@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className="relative z-50 w-full max-w-full mt-8 mb-20 lg:px-20 px-8"
+      className="relative z-50 w-full max-w-full mt-8 mb-20 lg:px-20 md:px-14 px-8"
     >
       <nav className="w-full flex justify-between items-center">
         <h4 className="text-4xl font-normal font-sans text-black">Nexa</h4>

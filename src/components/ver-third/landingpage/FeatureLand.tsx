@@ -55,7 +55,7 @@ export default function Featurest() {
 
                 <div className="w-full flex flex-col lg:gap-30 gap-15">
                     <div className="w-full flex flex-col gap-14">
-                        <h3 ref={fredoRef} className="lg:w-[32%] lg:pb-2 pb-4 text-4xl text-neutral-100 font-medium font-sans border-b-2 border-neutral-500">01/ DIGITAL STRATEGY.</h3>
+                        <h3 ref={fredoRef} className="lg:w-[35%] lg:pb-2 pb-4 text-4xl text-neutral-100 font-medium font-sans border-b-2 border-neutral-500">01/ DIGITAL STRATEGY.</h3>
                         <div ref={mageRef} className="flex lg:flex-row lg:justify-between flex-col justify-left gap-4">
                             <Image
                                 src={Chitato}
@@ -85,3 +85,4 @@ export default function Featurest() {
         </div>
     )
 }
+

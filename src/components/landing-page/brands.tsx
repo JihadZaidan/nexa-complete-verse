@@ -21,18 +21,18 @@ export default function VisionBrand() {
     useZoom(lowerRef, 0.3);
     
     return (
-        <div className="max-w-full w-full lg:px-20 lg:py-20 px-8 py-8 bg-black">
+        <div className="max-w-full w-full lg:px-20 lg:py-20 md:px-14 md:py-14 px-8 py-8 bg-black">
             <div className="w-full flex flex-col lg:gap-20 gap-10">
                 <div className="w-full justify-left items-left">
-                    <h2 ref={headRef} className="lg:w-[40%] w-full text-left lg:text-5xl text-3xl font-normal font-sans text-white leading-[150%]">
+                    <h2 ref={headRef} className="lg:w-[40%] md:w-[75%] w-full text-left lg:text-5xl md:text-4xl text-3xl font-normal font-sans text-white leading-[150%]">
                         Transforming Digital 
                         Innovations for Visionary Brands
                     </h2>
                 </div>
 
-                <div className="w-full flex flex-col gap-18 justify-left items-left">
-                    <div ref={graphRef} className="w-full flex lg:flex-row flex-col justify-between items-left pr-10 pb-10 gap-8 border-b-[0.25px] border-gray">
-                        <div className="w-full flex lg:flex-row flex-col justify-left lg:gap-20 gap-10 items-left">
+                <div className="w-full flex flex-col gap-18 justify-start items-start">
+                    <div ref={graphRef} className="w-full flex lg:flex-row flex-col justify-between items-start pr-10 pb-10 gap-8 border-b-[0.25px] border-gray">
+                        <div className="w-full flex lg:flex-row flex-col justify-start lg:gap-20 gap-10 items-start">
                             <p className="lg:text-base text-xl font-normal text-white leading-[180%] text-left">
                                 Elevating Brands with <br />
                                 Digital Transformation Innovation
@@ -51,13 +51,13 @@ export default function VisionBrand() {
                     </div>
 
                     <div className="w-full flex flex-col justify-left items-left gap-18">
-                        <div ref={upperRef} className="w-full flex lg:flex-row flex-col gap-7">
+                        <div ref={upperRef} className="w-full flex lg:flex-row md:flex-row flex-col gap-7">
                             <div className="w-full flex flex-col justify-left items-left gap-5">
                                 <h4 className="font-normal text-2xl text-white">01/ DIGITAL STRATEGY</h4>
                                 <Image
                                     src={DigitalStrategy}
                                     alt="digital strategy"
-                                    className="h-[500px] w-full"
+                                    className="lg:h-[480px] md:h-[240px] w-full"
                                 />
                             </div>
                             <div className="w-full flex flex-col justify-left items-left gap-5">
@@ -65,18 +65,18 @@ export default function VisionBrand() {
                                 <Image
                                     src={Branding}
                                     alt="Branding"
-                                    className="h-[500px] w-full"
+                                    className="lg:h-[480px] md:h-[240px] w-full"
                                 />
                             </div>
                         </div>
 
-                        <div ref={lowerRef} className="w-full flex lg:flex-row flex-col gap-7">
+                        <div ref={lowerRef} className="w-full flex lg:flex-row md:flex-row flex-col gap-7">
                             <div className="w-full flex flex-col justify-left items-left gap-5">
                                 <h4 className="font-normal text-2xl text-white">03/ WEB DEVELOPMENT</h4>
                                 <Image
                                     src={Webdev}
                                     alt="WebDev"
-                                    className="h-[500px] w-full"
+                                    className="lg:h-[480px] md:h-[240px] w-full"
                                 />
                             </div>
                             <div className="w-full flex flex-col justify-left items-left gap-5">
@@ -84,7 +84,7 @@ export default function VisionBrand() {
                                 <Image
                                     src={Appdev}
                                     alt="MobileDev"
-                                    className="h-[500px] w-full"
+                                    className="lg:h-[480px] md:h-[240px] w-full"
                                 />
                             </div>
                         </div>

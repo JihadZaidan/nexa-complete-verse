@@ -17,7 +17,7 @@ export default function Introduce() {
     useFadeIn(bottomRef, 0.3);
 
     return (
-        <div className="max-w-full w-full gap-16 lg:px-20 lg:pt-24 px-8 lg:pb-0 pb-10 bg-white">
+        <div className="max-w-full w-full gap-16 lg:px-20 lg:pt-24 md:px-14 px-8 lg:pb-0 pb-10 bg-white">
             <div className="w-full flex flex-col justify-between items-left gap-20">
                 <div className="w-full flex flex-col justify-left items-left lg:gap-16 gap-8">
                     <h1 ref={headRef} className="lg:text-5xl text-3xl leading-[130%] lg:w-[70%] w-full font-normal font-sans text-black">
@@ -33,20 +33,20 @@ export default function Introduce() {
                         </Button>
                     </div>
                 </div>
-                <div ref={bottomRef} className="w-full lg:flex lg:flex-row lg:justify-between lg:gap-4 flex flex-col justify between gap-10">
-                    <div className="lg:w-full w-[80%] flex lg:flex-row flex-col lg:gap-12 gap-8 lg:justify-left justify-center items-center lg:pt-72">
+                <div ref={bottomRef} className="w-full lg:flex lg:flex-row lg:justify-between lg:gap-4 flex flex-col justify-between gap-10">
+                    <div className="lg:w-full md:w-[45%] w-[90%] flex lg:flex-row flex-col lg:gap-12 gap-8 lg:justify-left justify-center items-center lg:pt-[240px]">
                         <Image
                             src={team}
                             alt="photos"
-                            className="ml-0"
+                            className="lg:w-[50%]"
                         />
-                        <p className="lg:text-2xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
+                        <p className="lg:text-2xl md:text-xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
                     </div>
 
                     <Image
                         src={contribute}
                         alt="contributors clients"
-                        className="relative lg:w-[50%] w-full lg:left-20 lg:block hidden"
+                        className="relative lg:w-[50%] w-full lg:left-20 hidden lg:block "
                     />
                 </div>
             </div>
