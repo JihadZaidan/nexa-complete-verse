@@ -132,7 +132,7 @@ export default function Footer() {
             </div>
 
             {/* Middle Section */}
-            <div ref={lowerRef} className="grid lg:grid-cols-3 gap-10">
+            <div ref={lowerRef} className="grid lg:grid-cols-3 md:grid-cols-3 gap-10">
                 {/* Navigation */}
                 <ul className="flex flex-col gap-5 justify-start items-start">
                     {navigation
@@ -194,4 +194,5 @@ export default function Footer() {
         </footer>
     );
 }
+
 
