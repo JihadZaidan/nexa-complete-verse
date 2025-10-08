@@ -23,7 +23,7 @@ export default function SidebarPage() {
     useSlideFromRight(addRef, 0.3)
     
     return (
-        <div className="fixed inset-0 z-[9999] w-[100vw] h-[100vh] bg-black flex flex-col lg:px-10 lg:pt-10 lg:pb-20 lg:gap-2 px-7 py-7">
+        <div className="fixed inset-0 z-[9999] w-[100vw] h-[100vh] bg-black flex flex-col lg:px-10 lg:pt-10 md:px-10 md:py-7 lg:gap-2 px-7 py-7">
 
             {/* Top-right Let's Talk + Close */}
             <div ref={closeRef} className="flex lg:justify-end items-center lg:gap-6 lg:pr-10 justify-between">
@@ -38,7 +38,7 @@ export default function SidebarPage() {
             </div>
 
             {/* Main Content */}
-            <div className="flex-grow flex flex-col lg:gap-15 gap-20 px-5 lg:px-12 pt-10 pb-12">
+            <div className="flex-grow flex flex-col lg:gap-15 gap-20 px-5 md:px-8 lg:px-12 md:py-8 pt-10 pb-12">
                 <div className="flex lg:flex-row flex-col lg:justify-between gap-8">
                     <div ref={mageRef} className="lg:w-1/2 flex justify-center lg:justify-start">
                         <Image
@@ -48,14 +48,14 @@ export default function SidebarPage() {
                         />
                     </div>
 
-                    <div ref={listRef} className="flex flex-col items-right lg:gap-8 gap-4">
+                    <div ref={listRef} className="flex flex-col lg:items-end lg:gap-8 gap-4">
                         {navigation
                             .filter((item) => !item.hideInNavbar && item.published)
                             .map((item) => (
                                 <Link
                                     key={item.url}
                                     href={item.url}
-                                    className="text-white hover:text-gray lg:text-3xl text-2xl font-sans font-normal lg:text-right text-left w-full hover:border-b hover:border-additional-100 leading-[120%]"
+                                    className="text-white hover:text-gray lg:text-3xl text-2xl font-sans font-normal lg:text-right md:text-center text-left w-full hover:border-b hover:border-additional-100 leading-[120%]"
                                 >
                                     {item.label}
                                 </Link>
@@ -63,15 +63,15 @@ export default function SidebarPage() {
                     </div>
                 </div>
 
-                <div className="flex lg:flex-row flex-col gap-8 lg:justify-between">
+                <div className="flex lg:flex-row md:flex-col flex-col gap-8 lg:justify-between md:justify-center">
                     <h4 ref={headeRef} className="font-sans font-normal text-8xl text-neutral-100 text-left">
                         Nexa
                     </h4>
                     <div ref={addRef} className="flex flex-col gap-5 pt-3">
-                        <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base lg:text-right text-left">
+                        <p className="text-neutral-100 font-sans font-normal lg:text-xl md:text-lg text-base lg:text-end md:text-center text-start">
                             123 Main Street, Anytown, USA 12345
                         </p>
-                        <p className="text-neutral-100 font-sans font-normal lg:text-xl text-base lg:text-right text-left">
+                        <p className="text-neutral-100 font-sans font-normal lg:text-xl md:text-lg text-base lg:text-end md:text-center text-start">
                             +1 141-756-9201 | contact@nexa.com
                         </p>
                     </div>
