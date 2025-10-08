@@ -19,19 +19,20 @@ export default function CenterWork() {
     useSlideFromRight(seimageRef, 0.3);
 
     return (
-        <div className="max-w-full w-full lg:px-20 lg:py-20 px-8 py-8 bg-black">
+        <div className="max-w-full w-full lg:px-20 lg:py-20 md:px-14 md:py-8 px-8 py-8 bg-black">
             <div className="w-full flex flex-col lg:gap-[-64px] gap-16">
-                <div className="w-full justify-left items-left flex lg:flex-row flex-col-reverse gap-12">
+                <div className="w-full justify-left items-left flex lg:flex-row md:flex-row flex-col-reverse gap-12">
                     <div ref={fimageRef} className="lg:w-[40%] w-full">
                         <Image
                             src={work2}
                             alt="second-work-features"
+                            className="lg:w-[75%] lg:w-[85%]"
                         />
                     </div>
 
-                    <div ref={fibeRef} className="justify-left items-left flex flex-col gap-6 bg-transparent">
+                    <div ref={fibeRef} className="justify-start items-start flex flex-col gap-6 bg-transparent">
                         <h5 className="text-2xl font-normal text-left text-white">/ CONTEXT AI</h5>
-                        <h4 className="lg:text-4xl text-xl font-normal text-left text-white">
+                        <h4 className="lg:text-3xl text-xl font-normal text-left text-white">
                             Empowers developers <br />
                             and companies to <br />
                             build outstanding <br />
@@ -46,10 +47,10 @@ export default function CenterWork() {
                     </div>
                 </div>
 
-                <div className="w-full justify-right items-right flex lg:flex-row flex-col gap-12 lg:pl-90">
-                    <div ref={secobeRef} className="justify-left items-left flex flex-col gap-6 bg-transparent relative lg:top-25">
+                <div className="w-full justify-end items-end flex lg:flex-row md:flex-row flex-col gap-12 lg:pl-90">
+                    <div ref={secobeRef} className="justify-left items-left flex flex-col gap-6 bg-transparent lg:pb-20">
                         <h5 className="text-2xl font-normal text-left text-white">/ CLOODY</h5>
-                        <h4 className="lg:text-4xl text-xl font-normal text-left text-white">
+                        <h4 className="lg:text-3xl text-xl font-normal text-left text-white">
                             Allowing users to <br />
                             upload and sync files <br />
                             to cloud storage and <br />
@@ -65,7 +66,7 @@ export default function CenterWork() {
                         </div>
                     </div>
 
-                    <div ref={seimageRef} className="lg:w-[44%] w-full">
+                    <div ref={seimageRef} className="lg:w-[44%] md:w-[44%] w-full">
                         <Image
                             src={crop}
                             alt="worker first photos"
