@@ -16,16 +16,16 @@ export default function UpperWorks() {
     useSlideFromRight(imageRef, 0.3);
     return (
         <section>
-            <div className="max-w-full w-full lg:px-20 lg:py-16 px-8 py-8 bg-white">
+            <div className="max-w-full w-full lg:px-20 lg:py-16 md:px-14 md:py-12 px-8 py-8 bg-white">
                 <div className="w-full flex flex-col lg:gap-30 gap-18 relative lg:top-10">
-                    <h1 ref={headerRef} className="lg:text-5xl text-2xl leading-[130%] lg:w-[60%] font-normal font-sans text-black">
+                    <h1 ref={headerRef} className="lg:text-5xl md:text-3xl text-2xl leading-[130%] lg:w-[60%] md:w-[90%] font-normal font-sans text-black">
                         From creative projects that push 
                         the boundaries of our team&apos;s 
                         imagination. Build in into all of 
                         our works.
                     </h1>
 
-                    <div className="w-full flex lg:flex-row flex-col lg:pl-[304px] lg:gap-24 gap-10">
+                    <div className="w-full flex lg:flex-row md:flex-row flex-col lg:pl-[304px] lg:gap-24 gap-10">
                         <div ref={describeRef} className="w-[55%] justify-left items-left flex flex-col gap-6 bg-transparent">
                             <h5 className="text-2xl font-normal text-left text-black">/ HOUSEL</h5>
                             <h4 className="lg:text-3xl text-base font-normal text-left text-black">
