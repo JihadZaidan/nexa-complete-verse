@@ -22,7 +22,7 @@ export default function Uppertise() {
     useSlideFromRight(pagaRef, 0.3);
     useSlideFromTop(slideRef, 0.3);
     return (
-        <div className="max-w-full w-full lg:px-20 lg:pt-12 lg:pb-18 px-5 pt-6 pb-14">
+        <div className="max-w-full w-full lg:px-20 lg:pt-12 lg:pb-18 md:px-12 md:py-8 px-5 pt-6 pb-14">
             <div className="w-full flex flex-col justify-left gap-20">
                 {/* Manual horizontal overflow (no auto) */}
                 <div ref={slideRef} className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none]"
@@ -60,5 +60,6 @@ export default function Uppertise() {
         </div>
     );
 }
+
 
 
