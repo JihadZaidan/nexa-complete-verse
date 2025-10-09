@@ -47,11 +47,11 @@ export default function Uppertise() {
                 </div>
 
                 {/* Text Section */}
-                <div className="w-full flex lg:flex-row flex-col lg:justify-between justify-left items-left gap-10">
-                    <h3 ref={headRef} className="text-neutral-800 font-sans font-normal lg:text-5xl text-3xl text-left leading-[140%] pl-5">
+                <div className="w-full flex lg:flex-row md:flex-row flex-col lg:justify-between md:justify-between justify-left items-left gap-10">
+                    <h3 ref={headRef} className="text-neutral-800 font-sans font-medium lg:text-5xl md:text-4xl text-3xl text-left leading-[140%] lg:pl-0 md:pl-0 md:pb-2 pl-5">
                         Few of Our <br /> Specialites
                     </h3>
-                    <p ref={pagaRef} className="text-neutral-800 font-sans font-normal lg:text-3xl text-base leading-[140%] pl-5">
+                    <p ref={pagaRef} className="text-neutral-800 font-sans font-medium lg:text-3xl text-base leading-[140%] md:pt-4 pl-5">
                         — From creative projects that push the <br /> boundaries of our
                         team&apos;s imagination. <br /> Build it into all of our works.
                     </p>
@@ -60,6 +60,7 @@ export default function Uppertise() {
         </div>
     );
 }
+
 
 
 
