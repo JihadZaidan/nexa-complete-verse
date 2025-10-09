@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import Canva from "../../../../public/second/landing-page/story/uiux.png"
+import Canva from "../../../../public/second/landing-page/story/storycanvas.png"
 import UIUX from "../../../../public/second/landing-page/story/uiux.png"
 import Brand from "../../../../public/second/landing-page/story/improve.png"
 import { useZoom, useSlideFromLeft, useSlideFromRight } from "@/library/animations"
@@ -66,5 +66,6 @@ export default function StoryWork() {
         </div>
     )
 }
+
 
 
