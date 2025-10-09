@@ -13,7 +13,7 @@ export default function ExpertWorks() {
     return (
         <div className="max-w-full w-full bg-white lg:px-20 lg:py-16 md:px-14 md:py-10 px-8 py-8">
             <div className="w-full flex flex-col lg:gap-30 gap-20">
-                <h1 ref={headerRef} className="text-black font-sans font-normal lg:text-4xl text-2xl leading-[150%]">
+                <h1 ref={headerRef} className="text-black font-sans font-normal lg:text-4xl md:text-3xl text-2xl leading-[150%]">
                     — Discover Our Expertise: <br/>
                     Crafting Digital Strategy, <br/>
                     Elevating Brands, Web <br/>
@@ -28,4 +28,5 @@ export default function ExpertWorks() {
     )
 
 }
+
 
