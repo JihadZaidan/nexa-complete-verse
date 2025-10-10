@@ -45,14 +45,15 @@ export default function Featurise() {
                 </div>
 
                 <div className="w-full flex flex-col lg:gap-9 gap-10">
-                    <div className="lg:pl-230 md:pl-90"><h3 ref={sedoRef} className="text-4xl text-neutral-100 font-normal font-sans">02/ BRANDING.</h3></div>
-                    <h3 ref={tredeRef} className="text-4xl text-neutral-100 font-normal font-sans">03/ WEB DEVELOPMENT.</h3>
-                    <div className="lg:pl-200 md:pl-50"><h3 ref={fordoRef} className="text-4xl text-neutral-100 font-normal font-sans">04/ APP DEVELOPMENT.</h3></div>
+                    <h3 ref={sedoRef} className="text-4xl lg:text-end md:text-end text-neutral-100 font-medium font-sans">02/ BRANDING.</h3>
+                    <h3 ref={tredeRef} className="text-4xl text-neutral-100 font-medium font-sans">03/ WEB DEVELOPMENT.</h3>
+                    <h3 ref={fordoRef} className="text-4xl lg:text-end md:text-end text-neutral-100 font-medium font-sans">04/ APP DEVELOPMENT.</h3>
                 </div>
             </div>
         </div>
     )
 
 }
+
 
 
