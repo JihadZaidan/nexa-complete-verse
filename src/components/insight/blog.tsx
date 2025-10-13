@@ -10,7 +10,7 @@ import { useZoom } from "@/library/animations";
 export default function InsightSection() {
   const [showAll, setShowAll] = useState(false);
   const blogsToShow = showAll ? insightBlog : insightBlog.slice(0, 3);
-  
+
   // gsap implement components
   const blogRef = useRef<HTMLDivElement>(null);
 
@@ -18,7 +18,7 @@ export default function InsightSection() {
   useZoom(blogRef, 0.3);
 
   return (
-    <section className="py-12 px-4 md:px-12 lg:px-20">
+    <section className="py-12 px-4 md:px-14 lg:px-20">
 
       {/* Mobile View */}
       <div ref={blogRef} className="block md:hidden space-y-8">
@@ -56,6 +56,31 @@ export default function InsightSection() {
         )}
       </div>
 
+      {/* Tablet View */}
+      <div
+        ref={blogRef}
+        className="hidden md:grid lg:hidden grid-cols-2 gap-6"
+      >
+        {insightBlog.map((item, index) => (
+          <Link
+            key={index}
+            href={item.url}
+            className="flex flex-col gap-3"
+          >
+            <div className="relative w-full h-[240px]">  {/* This line is crucial */}
+              <Image
+                src={item.image.replace("public/", "/")}
+                alt={item.title}
+                fill
+                className="object-cover rounded-md aspect-[1/1]"
+              />
+            </div>
+            <h3 className="font-medium text-lg text-black">{item.title}</h3>
+            <p className="text-sm text-gray-500">{item.date}</p>
+          </Link>
+        ))}
+      </div>
+
       {/* Desktop Grid */}
       <div ref={blogRef} className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
         {insightBlog.map((item, index) => (
@@ -80,5 +105,4 @@ export default function InsightSection() {
     </section>
   );
 }
-
 
