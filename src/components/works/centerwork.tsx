@@ -19,7 +19,7 @@ export default function CenterWork() {
     useSlideFromRight(seimageRef, 0.3);
 
     return (
-        <div className="max-w-full w-full lg:px-20 lg:py-20 md:px-14 md:py-8 px-8 py-8 bg-black">
+        <div className="max-w-full w-full lg:px-20 lg:py-20 md:px-14 md:py-8 px-10 py-8 bg-black">
             <div className="w-full flex flex-col lg:gap-[-64px] gap-16">
                 <div className="w-full justify-left items-left flex lg:flex-row md:flex-row flex-col-reverse gap-12">
                     <div ref={fimageRef} className="lg:w-[40%] w-full">
@@ -77,3 +77,4 @@ export default function CenterWork() {
         </div>
     )
 }
+
