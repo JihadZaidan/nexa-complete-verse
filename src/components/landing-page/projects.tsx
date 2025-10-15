@@ -28,7 +28,7 @@ export default function Worksheet() {
   useSlideFromRight(tangoRef, 0.3);
 
   return (
-    <div className="max-w-full w-full lg:px-20 lg:py-36 md:px-14 md:py-20 py-14 px-5 gap-28 bg-white">
+    <div className="max-w-full w-full lg:px-20 lg:py-36 md:px-14 md:py-20 py-14 px-10 gap-28 bg-white">
       <div className="w-full flex flex-col gap-28">
         <div className="w-full flex lg:flex-row md:flex-col flex-col justify-between gap-10">
           <h2
@@ -117,3 +117,4 @@ export default function Worksheet() {
     </div>
   )
 }
+
