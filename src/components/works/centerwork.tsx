@@ -47,7 +47,7 @@ export default function CenterWork() {
                     </div>
                 </div>
 
-                <div className="w-full justify-end items-end flex lg:flex-row md:flex-row flex-col gap-12 lg:pl-90">
+                <div className="w-full lg:justify-end lg:items-end flex lg:flex-row md:flex-row flex-col gap-12 lg:pl-90">
                     <div ref={secobeRef} className="justify-left items-left flex flex-col gap-6 bg-transparent lg:pb-20">
                         <h5 className="text-2xl font-normal text-left text-white">/ CLOODY</h5>
                         <h4 className="lg:text-3xl text-xl font-normal text-left text-white">
@@ -77,4 +77,5 @@ export default function CenterWork() {
         </div>
     )
 }
+
 
