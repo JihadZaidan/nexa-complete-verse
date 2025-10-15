@@ -21,7 +21,7 @@ export default function VisionBrand() {
     useZoom(lowerRef, 0.3);
     
     return (
-        <div className="max-w-full w-full lg:px-20 lg:py-20 md:px-14 md:py-14 px-8 py-8 bg-black">
+        <div className="max-w-full w-full lg:px-20 lg:py-20 md:px-14 md:py-14 px-10 py-8 bg-black">
             <div className="w-full flex flex-col lg:gap-20 gap-10">
                 <div className="w-full justify-left items-left">
                     <h2 ref={headRef} className="lg:w-[40%] md:w-[75%] w-full text-left lg:text-5xl md:text-4xl text-3xl font-normal font-sans text-white leading-[150%]">
@@ -94,3 +94,4 @@ export default function VisionBrand() {
         </div>
     )
 } 
+
