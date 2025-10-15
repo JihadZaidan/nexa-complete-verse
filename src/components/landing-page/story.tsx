@@ -19,7 +19,7 @@ export default function Story() {
   useZoom(twoRef, 0.3);
 
   return (
-    <div className="max-w-full w-full bg-[#F2F2F2] lg:px-20 lg:py-30 md:px-14 md:py-15 px-8 py-8">
+    <div className="max-w-full w-full bg-[#F2F2F2] lg:px-20 lg:py-30 md:px-14 md:py-15 px-10 py-8">
       <div className="w-full flex flex-col lg:gap-30 gap-20">
         <div className="w-full flex lg:flex-row md:flex-row flex-col lg:justify-between gap-8">
           <h3
@@ -68,3 +68,4 @@ export default function Story() {
     </div>
   )
 }
+
