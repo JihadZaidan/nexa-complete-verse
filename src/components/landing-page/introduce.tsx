@@ -17,7 +17,7 @@ export default function Introduce() {
     useFadeIn(bottomRef, 0.3);
 
     return (
-        <div className="max-w-full w-full gap-16 lg:px-20 lg:pt-24 md:px-14 px-8 lg:pb-0 pb-10 bg-white">
+        <div className="max-w-full w-full gap-16 lg:px-20 lg:pt-24 md:px-14 px-10 lg:pb-0 pb-10 bg-white">
             <div className="w-full flex flex-col justify-between items-left gap-20">
                 <div className="w-full flex flex-col justify-left items-left lg:gap-16 gap-8">
                     <h1 ref={headRef} className="lg:text-5xl text-3xl leading-[130%] lg:w-[70%] w-full font-normal font-sans text-black">
@@ -53,3 +53,4 @@ export default function Introduce() {
         </div>
     )
 }
+
