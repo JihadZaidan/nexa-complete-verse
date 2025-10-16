@@ -47,7 +47,7 @@ export default function UpperWorks() {
             {/* Right image */}
             <div
               ref={imageRef}
-              className="lg:w-[55%] w-full rounded-2xl overflow-hidden"
+              className="lg:w-[55%] w-full overflow-hidden"
             >
               <Image
                 src={work1}
@@ -62,3 +62,4 @@ export default function UpperWorks() {
     </section>
   )
 }
+
