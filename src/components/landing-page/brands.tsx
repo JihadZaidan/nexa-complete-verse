@@ -1,73 +1,123 @@
 "use client"
-import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
-import team from "../../../public/one/landing-photos/teams.png"
-import contribute from "../../../public/one/landing-photos/contributors.png"
+import DigitalStrategy from "../../../public/one/landing-photos/digital-strategy.png"
+import Branding from "../../../public/one/landing-photos/branding.png"
+import Webdev from "../../../public/one/landing-photos/webdevelopers.png"
+import Appdev from "../../../public/one/landing-photos/appdeveloper.png"
 import { useRef } from "react"
-import { useSlideFromLeft, useFadeIn } from "@/library/animations"
+import { useSlideFromTop, useFadeIn, useZoom } from "@/library/animations"
 
-export default function Introduce() {
+export default function VisionBrand() {
   const headRef = useRef<HTMLHeadingElement>(null)
-  const buttonRef = useRef<HTMLDivElement>(null)
-  const bottomRef = useRef<HTMLDivElement>(null)
+  const graphRef = useRef<HTMLDivElement>(null)
+  const upperRef = useRef<HTMLDivElement>(null)
+  const lowerRef = useRef<HTMLDivElement>(null)
 
-  useSlideFromLeft(headRef, 0.3)
-  useSlideFromLeft(buttonRef, 0.3)
-  useFadeIn(bottomRef, 0.3)
+  useSlideFromTop(headRef, 0.3)
+  useFadeIn(graphRef, 0.3)
+  useZoom(upperRef, 0.3)
+  useZoom(lowerRef, 0.3)
 
   return (
-    <section className="w-full max-w-full bg-white lg:px-20 md:px-14 px-8 lg:pt-24 pt-14 lg:pb-0 pb-10 overflow-x-hidden">
-      <div className="flex flex-col justify-between gap-16">
-        {/* Heading + Button */}
-        <div className="flex flex-col gap-8 lg:gap-16">
-          <h1
+    <section className="w-full max-w-full bg-black overflow-x-hidden lg:px-20 md:px-14 px-8 lg:py-20 md:py-14 py-12">
+      <div className="flex flex-col gap-12 lg:gap-20">
+        {/* Heading */}
+        <div className="w-full">
+          <h2
             ref={headRef}
-            className="font-sans text-black font-normal leading-[130%] w-full lg:w-[70%] text-xl md:text-3xl lg:text-5xl"
+            className="font-sans text-white font-normal leading-[150%] w-full md:w-[75%] lg:w-[40%] text-3xl md:text-4xl lg:text-5xl"
           >
-            A digital agency focused on digital experiences. With every single
-            one of our clients, we bring forth a deep passion for creative
-            problem solving.
-          </h1>
-
-          <div ref={buttonRef}>
-            <Button className="flex items-center gap-2 border-b-2 border-black px-0">
-              <p className="text-black text-lg md:text-xl lg:text-3xl font-normal">
-                Let&apos;s talk
-              </p>
-              <ArrowRight
-                height={22}
-                width={22}
-                className="mt-[2px] text-black"
-              />
-            </Button>
-          </div>
+            Transforming Digital Innovations for Visionary Brands
+          </h2>
         </div>
 
-        {/* Images Section */}
-        <div
-          ref={bottomRef}
-          className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-4"
-        >
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 lg:pt-[200px] w-full lg:w-[55%]">
-            <Image
-              src={team}
-              alt="team members"
-              className="w-full sm:w-[80%] lg:w-[50%] h-auto object-contain"
-              priority
-            />
-            <p className="text-black font-normal leading-[140%] text-base md:text-xl lg:text-2xl text-center lg:text-left">
-              You&apos;ll collaborate with our experts.
-            </p>
+        {/* Intro text + button */}
+        <div className="flex flex-col gap-10">
+          <div
+            ref={graphRef}
+            className="flex flex-col lg:flex-row justify-between items-start gap-8 border-b border-white/20 pb-10"
+          >
+            <div className="flex flex-col lg:flex-row justify-start items-start gap-8 lg:gap-20 w-full">
+              <p className="text-white text-lg lg:text-base leading-[180%]">
+                Elevating Brands with <br /> Digital Transformation Innovation
+              </p>
+              <p className="text-white text-base lg:w-[65%] w-full leading-[180%]">
+                We are passionate about uncovering the best digital innovations
+                for forward-thinking brands looking to push boundaries and drive
+                significant impact.
+              </p>
+            </div>
+
+            <div>
+              <Button className="flex items-center gap-[9px] px-0">
+                <p className="text-white text-lg font-normal">
+                  Explore All Expertise
+                </p>
+                <ArrowRight
+                  height={22}
+                  width={22}
+                  className="mt-[2px] text-white"
+                />
+              </Button>
+            </div>
           </div>
 
-          {/* Hide this image completely in mobile (not invisible, to avoid white space) */}
-          <div className="hidden lg:block lg:w-[45%] relative lg:left-20">
-            <Image
-              src={contribute}
-              alt="contributors clients"
-              className="w-full h-auto object-contain"
-            />
+          {/* Image Grid */}
+          <div className="flex flex-col gap-14">
+            <div
+              ref={upperRef}
+              className="flex flex-col md:flex-row gap-7 w-full"
+            >
+              <div className="flex flex-col gap-5 w-full">
+                <h4 className="text-white text-2xl font-normal">
+                  01/ DIGITAL STRATEGY
+                </h4>
+                <Image
+                  src={DigitalStrategy}
+                  alt="Digital Strategy"
+                  className="w-full h-auto lg:h-[480px] md:h-[320px] object-cover"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col gap-5 w-full">
+                <h4 className="text-white text-2xl font-normal">
+                  02/ BRANDING
+                </h4>
+                <Image
+                  src={Branding}
+                  alt="Branding"
+                  className="w-full h-auto lg:h-[480px] md:h-[320px] object-cover"
+                />
+              </div>
+            </div>
+
+            <div
+              ref={lowerRef}
+              className="flex flex-col md:flex-row gap-7 w-full"
+            >
+              <div className="flex flex-col gap-5 w-full">
+                <h4 className="text-white text-2xl font-normal">
+                  03/ WEB DEVELOPMENT
+                </h4>
+                <Image
+                  src={Webdev}
+                  alt="Web Development"
+                  className="w-full h-auto lg:h-[480px] md:h-[320px] object-cover"
+                />
+              </div>
+              <div className="flex flex-col gap-5 w-full">
+                <h4 className="text-white text-2xl font-normal">
+                  04/ APP DEVELOPMENT
+                </h4>
+                <Image
+                  src={Appdev}
+                  alt="App Development"
+                  className="w-full h-auto lg:h-[480px] md:h-[320px] object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
