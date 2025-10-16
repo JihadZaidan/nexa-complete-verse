@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { FiMenu } from "react-icons/fi"
-import { ArrowRight, DivideIcon } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "../ui/button"
 import { useRef } from "react"
 import { useSlideFromTop } from "@/library/animations/useSlideFromTop"
@@ -14,24 +14,35 @@ export default function Navbar() {
   return (
     <header
       ref={navRef}
-      className="relative z-50 w-full max-w-full mt-8 mb-20 lg:px-20 md:px-14 px-8"
+      className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200"
     >
-      <nav className="w-full flex justify-between items-center">
-        <h4 className="text-4xl font-normal font-sans text-black">Nexa</h4>
+      <nav className="flex justify-between items-center lg:px-20 md:px-14 px-6 py-5">
+        {/* Logo */}
+        <Link href="/" className="text-3xl font-sans font-medium text-black">
+          Nexa
+        </Link>
 
-        <div className="flex items-center gap-5">
-          <Button className="flex items-center gap-2">
-            <p className="text-black text-lg font-medium lg:block hidden">
+        {/* Right Side */}
+        <div className="flex items-center lg:gap-8">
+          <Button className="hidden lg:visible lg:flex items-center gap-2 bg-transparent hover:bg-black hover:text-white transition-all duration-300">
+            <p className="text-black text-base font-medium">
               Let&apos;s talk
             </p>
-            <ArrowRight height={18} width={18} className="mt-[5px] text-black lg:block hidden" />
+            <ArrowRight
+              height={18}
+              width={18}
+              className="mt-[2px] text-black group-hover:text-white transition"
+            />
           </Button>
 
-          <DivideIcon className="text-neutral-900 lg:opacity-100 opacity-0 rotate-90" />
+          <div className="w-[2px] h-[20px] bg-neutral-900" />
 
-          {/* Tombol ke halaman sidebar */}
-          <Link href="../sidebar" className="p-2">
-            <FiMenu className="w-8 h-8 text-black" />
+          {/* Sidebar / Menu Button */}
+          <Link
+            href="../sidebar"
+            className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
+          >
+            <FiMenu className="w-7 h-7 text-black" />
           </Link>
         </div>
       </nav>
