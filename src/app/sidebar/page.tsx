@@ -26,12 +26,12 @@ export default function SidebarPage() {
         <div className="fixed inset-0 z-[9999] w-[100vw] h-[100vh] bg-black flex flex-col lg:px-10 lg:pt-10 md:px-10 md:py-7 lg:gap-2 px-7 py-7">
 
             {/* Top-right Let's Talk + Close */}
-            <div ref={closeRef} className="flex lg:justify-end items-center lg:gap-6 lg:pr-10 justify-between">
+            <div ref={closeRef} className="flex lg:justify-end items-center lg:gap-8 lg:pr-10 justify-between">
                 <button className="flex items-center gap-2 text-lg font-sans hover:opacity-80 transition text-white">
                     Let&apos;s talk
                     <ArrowRight size={18} />
                 </button>
-                <DivideIcon className="text-neutral-100 rotate-90 lg:opacity-100 opacity-0" />
+                <div className="w-[2px] h-[20px] bg-neutral-100" />
                 <Link href="/" className="p-2">
                     <HiX className="w-8 h-8 text-white hover:opacity-80 transition" />
                 </Link>
@@ -80,3 +80,4 @@ export default function SidebarPage() {
         </div>
     )
 }
+
