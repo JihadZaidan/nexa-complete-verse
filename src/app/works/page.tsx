@@ -4,10 +4,11 @@ import CenterWorks from "@/components/works/centerwork";
 
 export default function WorksLand() {
     return (
-        <div className="w-full">
+        <div className="w-full mt-32">
             <HeaderWork/>
             <CenterWorks/>
             <Lork/>
         </div>
     )
+
 }
