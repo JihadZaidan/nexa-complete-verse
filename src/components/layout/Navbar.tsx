@@ -39,7 +39,7 @@ export default function Navbar() {
 
           {/* Sidebar / Menu Button */}
           <Link
-            href="../sidebar"
+            href="/sidebar"
             className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
           >
             <FiMenu className="w-7 h-7 text-black" />
@@ -49,4 +49,5 @@ export default function Navbar() {
     </header>
   )
 }
+
 
