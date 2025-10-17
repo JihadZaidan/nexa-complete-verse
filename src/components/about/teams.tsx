@@ -22,24 +22,24 @@ export default function Teams() {
     useZoom(themeRef, 0.3);
 
     return (
-        <section className="relative lg:px-30 lg:py-30">
+        <section className="relative lg:px-30 lg:py-30 md:px-22 md:py-22">
             <Image
                 ref={fouRef}
                 src={Antony}
                 alt="team-antony"
-                className="absolute grayscale scale-30 lg:scale-25 lg:right-[-200px] lg:bottom-[-350px] right-[120px] bottom-[-140px]"
+                className="absolute grayscale scale-30 md:scale-25 lg:scale-25 lg:right-[-200px] lg:bottom-[-350px] md:bottom-[-310px] md:right-[-270px] right-[120px] bottom-[-140px]"
             />
 
             <Image
                 ref={oneRef}
                 src={Luna}
                 alt="team-luna"
-                className="absolute grayscale scale-35 lg:scale-40 lg:right-[-150px] lg:bottom-[230px] right-[100px] bottom-[180px]"
+                className="absolute grayscale scale-35 md:scale-35 lg:scale-40 lg:right-[-150px] lg:bottom-[230px] md:right-[-220px] right-[100px] bottom-[180px]"
             />
 
             <div className="z-5 w-full px-25 pt-30 pb-40 relative justify-center items-center">
                 <div className="justify-center items-center">
-                    <h2 ref={themeRef} className="w-full text-black text-center text-xl lg:text-5xl font-sans font-medium leading-[130%]">
+                    <h2 ref={themeRef} className="w-full text-black text-center text-xl lg:text-5xl md:text-3xl font-sans font-medium leading-[130%]">
                         Meet Our Troops of Creative
                     </h2>
                 </div>
@@ -49,14 +49,14 @@ export default function Teams() {
                 ref={thRef}
                 src={Sakhir}
                 alt="team-sakhir"
-                className="absolute grayscale scale-30 lg:scale-35 lg:left-[-150px] lg:bottom-[-150px] left-[123px] bottom-[-80px]"
+                className="absolute grayscale scale-30 md:scale-25 lg:scale-35 lg:left-[-150px] lg:bottom-[-150px] md:left-[-250px] md:bottom-[-150px] left-[123px] bottom-[-80px]"
             />
 
             <Image
                 ref={twoRef}
                 src={Wayne}
                 alt="team-wayne"
-                className="absolute grayscale scale-30 lg:scale-32 lg:left-[-250px] lg:bottom-[170px] left-[120px] bottom-[150px]"
+                className="absolute grayscale scale-30 lg:scale-32 lg:left-[-250px] lg:bottom-[170px] md:left-[-250px] md:bottom-[120px] left-[120px] bottom-[150px]"
             />
         </section>
 

@@ -19,16 +19,16 @@ export default function AboutExplor() {
     useFadeIn(imageRef, 0.3);
 
     return (
-        <div className="max-w-full w-full bg-black lg:px-20 lg:py-20 px-8 py-8">
+        <div className="max-w-full w-full bg-black lg:px-20 lg:py-20 md:px-14 md:py-14 px-8 py-8">
             <div className="w-full flex flex-col gap-14">
                 <div className="w-full flex flex-col gap-10">
-                    <h2 ref={headeRef} className="font-sans font-medium text-left lext-white lg:text-4xl text-xl leading-[150%]">
+                    <h2 ref={headeRef} className="font-sans font-medium text-start text-neutral-100 lg:text-4xl md:text-3xl text-xl leading-[150%]">
                         Shaping Tomorrow&apos;s Digital Realms. <br />
                         One Pixel at a Time
                     </h2>
 
                     <div className="w-full flex flex-col lg:pl-130 lg:gap-10 gap-5">
-                        <p ref={describeRef} className="text-white font-normal font-sans lg:text-2xl text-base leading-[170%]">
+                        <p ref={describeRef} className="text-white font-normal font-sans lg:text-2xl md:text-lg text-base leading-[170%]">
                             Here, we transform your digital dreams into reality <br />
                             — pushing boundaries and setting new standards in the digital landscape.
                         </p>

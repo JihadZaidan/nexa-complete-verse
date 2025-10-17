@@ -184,7 +184,7 @@ export default function Footer() {
             </div>
 
             {/* Bottom Section */}
-            <div className="border-t border-neutral-800 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4">
+            <div className="border-t border-neutral-800 pt-8 flex flex-col lg:flex-row md:flex-row justify-between items-center gap-4">
                 <p className="text-neutral-400 text-lg font-normal">Copyright © 2024 Nexa</p>
                 <div className="flex items-center cursor-pointer gap-2 text-neutral-400 hover:text-white">
                     <Link href="#" className="text-neutral-400 text-lg font-normal">Back to top</Link>
@@ -194,5 +194,6 @@ export default function Footer() {
         </footer>
     );
 }
+
 
 

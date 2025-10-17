@@ -15,9 +15,9 @@ export default function LowerSection() {
     useSlideFromLeft(imageRef, 0.3);
 
     return (
-        <div className="max-w-full w-full lg:px-18 lg:pt-12 lg:pb-25 px-5 py-8 bg-white">
-            <div className="w-full flex lg:flex-row flex-col-reverse lg:gap-20 gap-12">
-                <div ref={imageRef} className="lg:w-[70%] w-full">
+        <div className="max-w-full w-full lg:px-18 lg:pt-12 md:px-10 md:pt-14 md:pb-18 lg:pb-25 px-10 py-8 bg-white">
+            <div className="w-full flex lg:flex-row md:flex-row flex-col-reverse lg:gap-20 gap-12">
+                <div ref={imageRef} className="lg:w-[70%] md:w-[50%] w-full">
                     <Image
                         src={ProDocker}
                         alt="Docker Project"
@@ -43,3 +43,4 @@ export default function LowerSection() {
         </div>
     )
 }
+

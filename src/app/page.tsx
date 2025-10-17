@@ -5,7 +5,7 @@ import Story from "@/components/landing-page/story";
 
 export default function RootPage() {
   return (
-    <div className="max-w-full mt-10">
+    <div className="max-w-full">
       <Introduce/>
       <VisionBrand/>
       <Worksheet/>
@@ -13,4 +13,6 @@ export default function RootPage() {
     </div>
   );
 }
+
+
 
