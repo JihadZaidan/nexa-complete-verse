@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { FiMenu } from "react-icons/fi"
 import { ArrowRight } from "lucide-react"
-import { Button } from "../ui/button"
+import { Button } from "@/components/ui/button"
 import { useRef } from "react"
 import { useSlideFromTop } from "@/library/animations/useSlideFromTop"
 
@@ -51,3 +51,4 @@ export default function Navbar() {
     </header>
   )
 }
+
