@@ -3,10 +3,11 @@ import ExpertiseFAQ from "@/components/expertize/featuresFAQ";
 
 export default function Expertise() {
     return (
-        <div className="max-w-full mt-32">
+        <div className="max-w-full">
             <ExpertWorks/>
             <ExpertiseFAQ/>
         </div>
     )
 
 }
+
