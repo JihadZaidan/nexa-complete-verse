@@ -1,49 +1,53 @@
-'use client'
-import localfont from "next/font/local"
-import "./globals.css";
-import { usePathname } from "next/navigation";
-import React from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+"use client"
 
-const openSauce = localfont({
-  src: [
-    {
-      path: "/OpenSauceSans/OpenSauceSans-Regular.ttf",
-      weight: "400",
-      style: "normal"
-    },
-  ],
-  variable: "--font-open-sauce",
-  display: "swap"
-})
+import Link from "next/link"
+import { FiMenu } from "react-icons/fi"
+import { ArrowRight } from "lucide-react"
+import { Button } from "../ui/button"
+import { useRef } from "react"
+import { useSlideFromTop } from "@/library/animations/useSlideFromTop"
 
-export default function Layout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
+export default function Navbar() {
+  const navRef = useRef<HTMLHeadElement>(null)
+  useSlideFromTop(navRef, 0.35)
 
   return (
-    <html lang="en">
-      <body className={`${openSauce.className} bg-white`}>
-        <main className="w-full min-h-screen pt-32">
-          {/* Gradient overlay hanya untuk homepage */}
-          {isHomePage && (
-            <div className="relative w-full h-full">
-              <div className="absolute bg-gradient-custom inset-0 backdrop-blur-md h-[70vh] z-[-10]">
-                <div className="absolute w-full h-full shadow-blur z-[-5]" />
-              </div>
-            </div>
-          )}
+    <header
+      ref={navRef}
+      className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200"
+    >
+      <nav className="flex justify-between items-center lg:px-20 md:px-14 px-6 py-5">
+        {/* Logo */}
+        <Link href="/" className="text-3xl font-sans font-medium text-black">
+          Nexa
+        </Link>
 
-          <Navbar />
-          <div className="w-full overflow-hidden">
-            {children}
-          </div>
-          <Footer />
-        </main>
-      </body>
-    </html>
+        {/* Right Side */}
+        <div className="flex items-center lg:gap-8">
+          {/* Button hanya muncul di desktop */}
+          <Button className="hidden lg:flex items-center gap-2 bg-transparent hover:bg-black hover:text-white transition-all duration-300 lg:visible md:invisible invisible">
+            <p className="text-black text-base font-medium">
+              Let&apos;s talk
+            </p>
+            <ArrowRight
+              height={18}
+              width={18}
+              className="mt-[2px] text-black group-hover:text-white transition"
+            />
+          </Button>
+
+          {/* Garis pemisah hanya tampil di desktop */}
+          <div className="hidden lg:block w-[2px] h-[20px] bg-neutral-900" />
+
+          {/* Sidebar / Menu Button */}
+          <Link
+            href="../sidebar"
+            className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
+          >
+            <FiMenu className="w-7 h-7 text-black" />
+          </Link>
+        </div>
+      </nav>
+    </header>
   )
 }
