@@ -24,7 +24,8 @@ export default function Navbar() {
 
         {/* Right Side */}
         <div className="flex items-center lg:gap-8">
-          <Button className="hidden lg:visible lg:flex items-center gap-2 bg-transparent hover:bg-black hover:text-white transition-all duration-300">
+          {/* Button hanya muncul di desktop */}
+          <Button className="hidden lg:flex items-center gap-2 bg-transparent hover:bg-black hover:text-white transition-all duration-300 lg:visible md:invisible invisible">
             <p className="text-black text-base font-medium">
               Let&apos;s talk
             </p>
@@ -35,7 +36,8 @@ export default function Navbar() {
             />
           </Button>
 
-          <div className="w-[2px] h-[20px] bg-neutral-900" />
+          {/* Garis pemisah hanya tampil di desktop */}
+          <div className="hidden lg:block w-[2px] h-[20px] bg-neutral-900" />
 
           {/* Sidebar / Menu Button */}
           <Link
@@ -49,6 +51,3 @@ export default function Navbar() {
     </header>
   )
 }
-
-
-
