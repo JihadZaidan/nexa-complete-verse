@@ -1,3 +1,5 @@
+"use client"
+
 import { usePathname } from "next/navigation"
 
 export default function GradientOverlay() {
@@ -10,3 +12,4 @@ export default function GradientOverlay() {
     </div>
   );
 }
+
