@@ -64,7 +64,7 @@ export default function SidebarPage() {
                 </div>
 
                 <div className="flex lg:flex-row md:flex-col flex-col lg:gap-8 md:gap-8 gap-4 lg:justify-between md:justify-center lg:mt-0 md:mt-0 mt-[-80px]">
-                    <h4 ref={headeRef} className="font-sans font-normal lg:text-8xl md:text-5xl lg:visible md:visible invisible text-neutral-100 text-left">
+                    <h4 ref={headeRef} className="font-sans font-normal lg:text-8xl md:text-5xl lg:visible md:visible invisible text-neutral-100 lg:text-start md:text-center">
                         Nexa
                     </h4>
                     <div ref={addRef} className="flex flex-col gap-5 pt-3">
@@ -80,3 +80,4 @@ export default function SidebarPage() {
         </div>
     )
 }
+
