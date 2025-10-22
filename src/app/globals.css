@@ -1,4 +1,45 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ======================== */
+/* 1. VIEWPORT HEIGHT FIX (Solition Mobile ui white gap) */
+/* ======================== */
+
+/* added custom class for dynamic viewport height */
+/* this class to repaired min-h-screen in <main> element */
+.min-h-div {
+  /* Implement unit Dynamic Viewport Height (dvh) for mobile ui true solution */
+  /* to acuraccy height */
+  min-height: 100dvh;
+
+  /* Fallback for old browser because dont supported dvh */
+  min-height: 100vh;
+}
+
+/* ==================================== */
+/* 2. ROOT & BODY STYLING (HATI-HATI DENGAN MARGIN/PADDING) */
+/* ==================================== */
+
+/* Pastikan tidak ada margin/padding yang tidak diinginkan di root */
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Pastikan elemen root Next.js mengisi penuh layar */
+/* Anda bisa menggunakan kelas Tailwind min-h-screen pada body di layout.tsx */
+/* Tetapi menambahkan ini sebagai safety net yang baik */
+#__next {
+  width: 100%;
+  /* Gunakan min-height: 100% jika seluruh layout Anda sudah di-wrap dengan min-h-dvh */
+  min-height: 100%;
+}
+
+/* ==================================== */
+/* 3. ORIGINAL STYLES & FONTS */
+/* ==================================== */
 
 :root {
   --background: #ffffff;
@@ -42,6 +83,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Open Sauce Sans', sans-serif;
+  font-family: 'Open Sauce Sans' sans-serif;
 }
-
