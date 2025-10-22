@@ -22,7 +22,7 @@ export default function CenterWorks() {
     useSlideFromRight(prigarpRef, 0.3);
 
     return (
-        <div className="max-w-full w-full bg-neutral-900 lg:px-20 lg:pt-20 lg:pb-16 md:px-14 md:pt-15 md:pb-18 px-5 py-14">
+        <div className="max-w-full w-full bg-neutral-900 lg:px-20 lg:pt-20 lg:pb-16 md:px-14 md:pt-15 md:pb-18 px-8 py-14">
             <div className="w-full flex flex-col lg:gap-18 gap-12">
                 <div className="w-full flex flex-col lg:gap-14 gap-6">
                     <div ref={uppermageRef}>
@@ -68,3 +68,4 @@ export default function CenterWorks() {
         </div>
     )
 }
+
