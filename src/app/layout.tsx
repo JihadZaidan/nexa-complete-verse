@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <body className={`${openSauce.className} bg-white`}>
         <Navbar />
 
-        <main className="w-full min-h-dvh overflow-hidden pt-32">
+        <main className="w-full min-h-screen overflow-hidden pt-32">
           <GradientOverlay />
           {children}
         </main>
@@ -29,4 +29,5 @@ export default function Layout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
 
