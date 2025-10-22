@@ -15,7 +15,7 @@ export default function Lork() {
     useSlideFromRight(remakeRef, 0.3);
 
     return (
-        <div className="max-w-full w-full lg:px-20 lg:pt-10 md:px-14 md:py-18 pb-30 px-5 pt-12 bg-neutral-100">
+        <div className="max-w-full w-full lg:px-20 lg:pt-10 md:px-14 md:py-18 pb-30 px-8 pt-12 bg-neutral-100">
             <div className="w-full flex lg:flex-row md:flex-row flex-col lg:gap-14 gap-12">
                 <div ref={lemakeRef} className="flex flex-col justify-left items-left gap-8">
                     <Image src={Short} alt="image lower person" />
@@ -35,3 +35,4 @@ export default function Lork() {
         </div>
     )
 }
+
