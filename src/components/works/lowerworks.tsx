@@ -4,15 +4,15 @@ import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 import ProDocker from "../../../public/one/works/docker-pro.png"
 import { useRef } from "react";
-import { useSlideFromLeft, useSlideFromRight, useZoom } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 
 
 export default function LowerSection() {
     const describeRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromRight(describeRef, 0.3);
-    useSlideFromLeft(imageRef, 0.3);
+    useSlideFromTop(describeRef, 0.3);
+    useSlideFromTop(imageRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-18 lg:pt-12 md:px-10 md:pt-14 md:pb-18 lg:pb-25 px-10 py-8 bg-white">
@@ -43,4 +43,5 @@ export default function LowerSection() {
         </div>
     )
 }
+
 
