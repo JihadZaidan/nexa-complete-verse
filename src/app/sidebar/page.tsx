@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 import { navigation } from "@/data/navigation"
 import Image from "next/image"
 import Snack from "../../../public/second/landing-page/header/chipschapa.png"
-import { useSlideFromRight, useSlideFromLeft, useSlideFromTop } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 import { useRef } from "react"
 
 export default function SidebarPage() {
@@ -17,10 +17,10 @@ export default function SidebarPage() {
     const addRef = useRef<HTMLDivElement>(null);
 
     useSlideFromTop(closeRef, 0.3)
-    useSlideFromLeft(mageRef, 0.3)
-    useSlideFromRight(listRef, 0.3)
-    useSlideFromLeft(headeRef, 0.3)
-    useSlideFromRight(addRef, 0.3)
+    useSlideFromTop(mageRef, 0.3)
+    useSlideFromTop(listRef, 0.3)
+    useSlideFromTop(headeRef, 0.3)
+    useSlideFromTop(addRef, 0.3)
     
     return (
         <div className="fixed inset-0 z-[9999] w-[100vw] h-[100vh] bg-black flex flex-col lg:px-10 lg:pt-10 md:px-10 md:py-7 lg:gap-2 px-7 py-7">
@@ -80,4 +80,5 @@ export default function SidebarPage() {
         </div>
     )
 }
+
 
