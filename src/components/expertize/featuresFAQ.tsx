@@ -3,7 +3,7 @@
 import { itemsFAQ } from "@/data/faq";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { useState,useRef } from "react";
-import { useSlideFromTop, useFadeIn } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 
 
 export default function ExpertiseFAQ() {
@@ -17,7 +17,7 @@ export default function ExpertiseFAQ() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useSlideFromTop(headeRef, 0.3)
-  useFadeIn(contentRef, 0.3)
+  useSlideFromTop(contentRef, 0.3)
 
   return (
     <div className="w-full max-w-full px-4 lg:px-20 px-10 py-20 bg-gray-50">
@@ -63,6 +63,7 @@ export default function ExpertiseFAQ() {
     </div>
   );
 }
+
 
 
 
