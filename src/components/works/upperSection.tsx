@@ -4,16 +4,16 @@ import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import work1 from "../../../public/one/landing-photos/worker/firsly-work.png"
 import { useRef } from "react"
-import { useSlideFromLeft, useSlideFromRight } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 
 export default function UpperWorks() {
   const headerRef = useRef<HTMLHeadingElement>(null)
   const describeRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
 
-  useSlideFromLeft(headerRef, 0.3)
-  useSlideFromLeft(describeRef, 0.3)
-  useSlideFromRight(imageRef, 0.3)
+  useSlideFromTop(headerRef, 0.3)
+  useSlideFromTop(describeRef, 0.3)
+  useSlideFromTop(imageRef, 0.3)
 
   return (
     <section className="w-full bg-white overflow-hidden">
@@ -62,4 +62,5 @@ export default function UpperWorks() {
     </section>
   )
 }
+
 
