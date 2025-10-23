@@ -25,7 +25,7 @@ export default function Footer() {
     const upleftRef = useRef<HTMLDivElement>(null);
     const uprightRef = useRef<HTMLDivElement>(null);
     const lowerRef = useRef<HTMLDivElement>(null);
-    const copyRef = useref<HTMLDivElement>(null);
+    const copyRef = useRef<HTMLDivElement>(null);
 
     const validate = (value: string) => {
         const result = emailSchema.safeParse(value);
@@ -196,6 +196,7 @@ export default function Footer() {
         </footer>
     );
 }
+
 
 
 
