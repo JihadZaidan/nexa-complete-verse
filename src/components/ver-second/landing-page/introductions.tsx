@@ -8,13 +8,11 @@ import Bottle from "../../../../public/second/landing-page/header/presure.png"
 import { useRef } from "react"
 import { useSlideFromTop } from "@/library/animations"
 
-const headeRef = useRef<HTMLHeadingElement>(null);
-const graphRef = useRef<HTMLDivElement>(null);
-
-useSlideFromTop(headeRef, 0.3);
-useSlideFromTop(graphRef, 0.3);
-
 export default function IntroCover() {
+    const headeRef = useRef<HTMLHeadingElement>(null);
+    const graphRef = useRef<HTMLDivElement>(null);
+    useSlideFromTop(headeRef, 0.3);
+    useSlideFromTop(graphRef, 0.3);
     return (
         <div className="bg-neutral-100 max-w-full w-full lg:px-20 lg:py-15 md:px-14 md:py-8 px-8 pt-8 pb-20">
             <div className="lg:justify-between justify-left items-left flex flex-col gap-2">
@@ -64,5 +62,6 @@ export default function IntroCover() {
         </div>
     )
 }
+
 
 
