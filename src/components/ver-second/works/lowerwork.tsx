@@ -4,7 +4,7 @@ import Image from "next/image"
 import Full from "../../../../public/second/works/lower/full.png"
 import Short from "../../../../public/second/works/lower/short.png"
 import { ArrowRight } from "lucide-react"
-import { useSlideFromLTop } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 import { useRef } from "react"
 
 export default function Lork() {
@@ -35,5 +35,6 @@ export default function Lork() {
         </div>
     )
 }
+
 
 
