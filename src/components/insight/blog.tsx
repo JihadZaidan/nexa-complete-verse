@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { useState, useRef } from "react";
 import Link from "next/link";
-import { useZoom } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 
 export default function InsightSection() {
   const [showAll, setShowAll] = useState(false);
@@ -15,7 +15,7 @@ export default function InsightSection() {
   const blogRef = useRef<HTMLDivElement>(null);
 
   // run animate
-  useZoom(blogRef, 0.3);
+  useSlideFromTop(blogRef, 0.3);
 
   return (
     <section className="py-12 px-4 md:px-14 lg:px-20">
@@ -105,4 +105,5 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
