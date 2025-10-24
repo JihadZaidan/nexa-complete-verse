@@ -10,17 +10,17 @@ import { useSlideFromTop } from "@/library/animations"
 import { useRef } from "react"
 
 export default function StoryWork() {
-    const headRef  = useRef<HTMLHeadingElement>(null)
-    const btnRef   = useRef<HTMLButtonElement>(null)
-    const imcaRef  = useRef<HTMLDivElement>(null)
-    const imdegRef = useRef<HTMLDivElement>(null)
-    const imbRef   = useRef<HTMLDivElement>(null)
+    const headRef  = useRef<HTMLHeadingElement>(null);
+    const btnRef   = useRef<HTMLButtonElement>(null);
+    const imcaRef  = useRef<HTMLDivElement>(null);
+    const imdegRef = useRef<HTMLDivElement>(null);
+    const imbRef   = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(headRef, 0.3)
-    useSlideFromTop(btnRef, 0.3)
-    useSlideFromTop(imcaRef, 0.3)
-    useSlideFromTop(imdegRef, 0.3)
-    useSlideFromTop(imbRef, 0.3)
+    useSlideFromTop(headRef, 0.3);
+    useSlideFromTop(btnRef, 0.3);
+    useSlideFromTop(imcaRef, 0.3);
+    useSlideFromTop(imdegRef, 0.3);
+    useSlideFromTop(imbRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:pt-20 lg:pb-5 md:px-14 md:py-18 px-5 py-14 bg-neutral-200">
@@ -66,4 +66,5 @@ export default function StoryWork() {
         </div>
     )
 }
+
 
