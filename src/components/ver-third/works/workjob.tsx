@@ -17,6 +17,7 @@ export default function Jobdesk() {
     const housemageRef  = useRef<HTMLDivElement>(null);
     const housetitleRef = useRef<HTMLHeadingElement>(null);
     const houserrow = useRef<HTMLDivElement>(null);
+    
     useZoom(housemageRef, 0.3);
     useSlideFromTop(housetitleRef, 0.3);
     useSlideFromTop(houserrow, 0.3);
@@ -24,6 +25,7 @@ export default function Jobdesk() {
     const cloodyRef  = useRef<HTMLDivElement>(null);
     const cloodeRef = useRef<HTMLHeadingElement>(null);
     const clorophile = useRef<HTMLDivElement>(null);
+    
     useZoom(cloodyRef, 0.3);
     useSlideFromTop(cloodeRef, 0.3);
     useSlideFromTop(clorophile, 0.3);
@@ -31,6 +33,7 @@ export default function Jobdesk() {
     const intelekRef  = useRef<HTMLDivElement>(null);
     const intitleRef = useRef<HTMLHeadingElement>(null);
     const interrow = useRef<HTMLDivElement>(null);
+    
     useZoom(intelekRef, 0.3);
     useSlideFromTop(intitleRef, 0.3);
     useSlideFromTop(interrow, 0.3);
@@ -38,6 +41,7 @@ export default function Jobdesk() {
     const dockeRef  = useRef<HTMLDivElement>(null);
     const dotRef = useRef<HTMLHeadingElement>(null);
     const dorrow = useRef<HTMLDivElement>(null);
+    
     useZoom(dockeRef, 0.3);
     useSlideFromTop(dotRef, 0.3);
     useSlideFromTop(dorrow, 0.3);
@@ -87,4 +91,5 @@ export default function Jobdesk() {
     )
 
 }
+
 
