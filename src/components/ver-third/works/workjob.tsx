@@ -6,41 +6,41 @@ import cloody from "../../../../public/three/landingpage/worker/cloody.png"
 import dockey from "../../../../public/three/landingpage/worker/docker.png"
 import house from "../../../../public/three/landingpage/worker/housel.png"
 import ai from "../../../../public/three/landingpage/worker/contai.png"
-import { useZoom, useSlideFromLeft, useSlideFromRight } from "@/library/animations";
+import { useZoom, useSlideFromTop } from "@/library/animations";
 import { useRef } from "react";
 
 export default function Jobdesk() {
 
     const headerRef = useRef<HTMLHeadingElement>(null);
-    useSlideFromRight(headerRef, 0.3);
+    useSlideFromTop(headerRef, 0.3);
 
     const housemageRef  = useRef<HTMLDivElement>(null);
     const housetitleRef = useRef<HTMLHeadingElement>(null);
     const houserrow = useRef<HTMLDivElement>(null);
     useZoom(housemageRef, 0.3);
-    useSlideFromRight(housetitleRef, 0.3);
-    useSlideFromLeft(houserrow, 0.3);
+    useSlideFromTop(housetitleRef, 0.3);
+    useSlideFromTop(houserrow, 0.3);
 
     const cloodyRef  = useRef<HTMLDivElement>(null);
     const cloodeRef = useRef<HTMLHeadingElement>(null);
     const clorophile = useRef<HTMLDivElement>(null);
     useZoom(cloodyRef, 0.3);
-    useSlideFromRight(cloodeRef, 0.3);
-    useSlideFromLeft(clorophile, 0.3);
+    useSlideFromTop(cloodeRef, 0.3);
+    useSlideFromTop(clorophile, 0.3);
 
     const intelekRef  = useRef<HTMLDivElement>(null);
     const intitleRef = useRef<HTMLHeadingElement>(null);
     const interrow = useRef<HTMLDivElement>(null);
     useZoom(intelekRef, 0.3);
-    useSlideFromRight(intitleRef, 0.3);
-    useSlideFromLeft(interrow, 0.3);
+    useSlideFromTop(intitleRef, 0.3);
+    useSlideFromTop(interrow, 0.3);
 
     const dockeRef  = useRef<HTMLDivElement>(null);
     const dotRef = useRef<HTMLHeadingElement>(null);
     const dorrow = useRef<HTMLDivElement>(null);
     useZoom(dockeRef, 0.3);
-    useSlideFromRight(dotRef, 0.3);
-    useSlideFromLeft(dorrow, 0.3);
+    useSlideFromTop(dotRef, 0.3);
+    useSlideFromTop(dorrow, 0.3);
 
     return (
         <div className="max-w-full w-full bg-neutral-100 lg:px-20 lg:pt-27 lg:pb-30 px-8 pt-10 pb-14">
@@ -87,3 +87,4 @@ export default function Jobdesk() {
     )
 
 }
+
