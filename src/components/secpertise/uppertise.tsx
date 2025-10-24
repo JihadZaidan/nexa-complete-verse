@@ -25,15 +25,15 @@ export default function Uppertise() {
                     <style jsx>{`div::-webkit-scrollbar { display: none; }`}</style>
 
                     <div className="flex items-center gap-6 lg:gap-10 px-5">
-                        <div className="flex flex-col snap-start lg:gap-3 ">
+                        <div className="flex flex-col snap-start lg:gap-1 ">
                             <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">01/ DIGITAL STRATEGY</h3>
                             <Image src={Kopi} alt="coffeship" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
-                        <div className="flex flex-col snap-start lg:gap-3">
+                        <div className="flex flex-col snap-start lg:gap-1">
                             <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">02/ BRANDING</h3>
                             <Image src={Tamar} alt="conferention" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
-                        <div className="flex flex-col snap-start lg:gap-3">
+                        <div className="flex flex-col snap-start lg:gap-1">
                             <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">03/ WEB DEVELOPMENT</h3>
                             <Image src={Cody} alt="coder" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
@@ -54,6 +54,7 @@ export default function Uppertise() {
         </div>
     );
 }
+
 
 
 
