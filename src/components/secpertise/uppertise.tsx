@@ -4,7 +4,7 @@ import Image from "next/image";
 import Kopi from "../../../public/expertise/01-digital.png";
 import Tamar from "../../../public/expertise/02-branding.png";
 import Cody from "../../../public/expertise/03-website.png";
-import { useSlideFromTop, useSlideFromLeft, useSlideFromRight } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 import { useRef } from "react";
 
 export default function Uppertise() {
@@ -12,8 +12,8 @@ export default function Uppertise() {
     const headRef = useRef<HTMLHeadingElement>(null);
     const pagaRef = useRef<HTMLParagraphElement>(null);
 
-    useSlideFromLeft(headRef, 0.3);
-    useSlideFromRight(pagaRef, 0.3);
+    useSlideFromTop(headRef, 0.3);
+    useSlideFromTop(pagaRef, 0.3);
     useSlideFromTop(slideRef, 0.3);
     return (
         <div className="max-w-full w-full lg:px-20 lg:pt-12 lg:pb-18 md:px-12 md:py-8 px-5 pt-6 pb-14">
@@ -54,6 +54,7 @@ export default function Uppertise() {
         </div>
     );
 }
+
 
 
 
