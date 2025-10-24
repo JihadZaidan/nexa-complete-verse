@@ -7,12 +7,6 @@ import Cody from "../../../public/expertise/03-website.png";
 import { useSlideFromTop, useSlideFromLeft, useSlideFromRight } from "@/library/animations";
 import { useRef } from "react";
 
-const images = [
-    { src: Kopi, alt: "coffeship", scale: "scale-[50%]" },
-    { src: Tamar, alt: "conferention", scale: "scale-[70%]" },
-    { src: Cody, alt: "coder", scale: "scale-[50%]" },
-];
-
 export default function Uppertise() {
     const slideRef = useRef<HTMLDivElement>(null);
     const headRef = useRef<HTMLHeadingElement>(null);
@@ -60,6 +54,7 @@ export default function Uppertise() {
         </div>
     );
 }
+
 
 
 
