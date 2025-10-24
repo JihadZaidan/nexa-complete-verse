@@ -6,7 +6,7 @@ import work1 from "../../../public/one/landing-photos/worker/firsly-work.png"
 import work2 from "../../../public/one/landing-photos/worker/secondary-work.png"
 import work3 from "../../../public/one/landing-photos/worker/threel-work.png"
 import { useRef } from "react"
-import { useSlideFromLeft, useSlideFromRight } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 
 export default function Worksheet() {
   const headRef = useRef<HTMLHeadingElement>(null)
@@ -18,14 +18,14 @@ export default function Worksheet() {
   const thirdRef = useRef<HTMLDivElement>(null)
   const tangoRef = useRef<HTMLDivElement>(null)
 
-  useSlideFromLeft(headRef, 0.3)
-  useSlideFromRight(buttonRef, 0.3)
-  useSlideFromLeft(firstRef, 0.3)
-  useSlideFromRight(figeRef, 0.3)
-  useSlideFromLeft(secondRef, 0.3)
-  useSlideFromRight(sagaRef, 0.3)
-  useSlideFromLeft(thirdRef, 0.3)
-  useSlideFromRight(tangoRef, 0.3)
+  useSlideFromTop(headRef, 0.3)
+  useSlideFromTop(buttonRef, 0.3)
+  useSlideFromTop(firstRef, 0.3)
+  useSlideFromTop(figeRef, 0.3)
+  useSlideFromTop(secondRef, 0.3)
+  useSlideFromTop(sagaRef, 0.3)
+  useSlideFromTop(thirdRef, 0.3)
+  useSlideFromTop(tangoRef, 0.3)
 
   return (
     <section className="relative max-w-full w-full bg-white overflow-hidden lg:px-20 lg:py-36 md:px-14 md:py-24 px-8 py-16 mb-0">
@@ -129,3 +129,4 @@ export default function Worksheet() {
     </section>
   )
 }
+

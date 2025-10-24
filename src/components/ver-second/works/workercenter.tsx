@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Converter from "../../../../public/second/works/center/upper.png"
 import Lofi from "../../../../public/second/works/center/left.png"
 import Rigel from "../../../../public/second/works/center/right.png"
-import { useZoom, useSlideFromLeft, useSlideFromRight } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 import { useRef } from "react";
 
 export default function CenterWorks() {
@@ -15,14 +15,14 @@ export default function CenterWorks() {
     const prihadRef = useRef<HTMLHeadingElement>(null);
     const prigarpRef = useRef<HTMLParagraphElement>(null);
 
-    useZoom(uppermageRef, 0.3);
-    useSlideFromLeft(lowerlevronRef, 0.3);
-    useSlideFromRight(loweregRef, 0.3);
-    useSlideFromLeft(prihadRef, 0.3);
-    useSlideFromRight(prigarpRef, 0.3);
+    useSlideFromTop(uppermageRef, 0.3);
+    useSlideFromTop(lowerlevronRef, 0.3);
+    useSlideFromTop(loweregRef, 0.3);
+    useSlideFromTop(prihadRef, 0.3);
+    useSlideFromTop(prigarpRef, 0.3);
 
     return (
-        <div className="max-w-full w-full bg-neutral-900 lg:px-20 lg:pt-20 lg:pb-16 md:px-14 md:pt-15 md:pb-18 px-5 py-14">
+        <div className="max-w-full w-full bg-neutral-900 lg:px-20 lg:pt-20 lg:pb-16 md:px-14 md:pt-15 md:pb-18 px-8 py-14">
             <div className="w-full flex flex-col lg:gap-18 gap-12">
                 <div className="w-full flex flex-col lg:gap-14 gap-6">
                     <div ref={uppermageRef}>
@@ -68,3 +68,5 @@ export default function CenterWorks() {
         </div>
     )
 }
+
+

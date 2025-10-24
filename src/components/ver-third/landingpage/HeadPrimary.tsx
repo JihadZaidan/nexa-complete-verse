@@ -5,7 +5,7 @@ import team from "../../../../public/three/landingpage/teams.png"
 import cheepa from "../../../../public/three/landingpage/body/chipschapa.png"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { useSlideFromTop, useSlideFromLeft, useSlideFromRight } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 import { useRef } from "react"
 
 export default function Resprime() {
@@ -15,9 +15,9 @@ export default function Resprime() {
     const chiRef = useRef<HTMLImageElement>(null);
 
     useSlideFromTop(headRef, 0.3);
-    useSlideFromRight(timsRef, 0.3);
-    useSlideFromLeft(paraRef, 0.3);
-    useSlideFromRight(chiRef, 0.3);
+    useSlideFromTop(timsRef, 0.3);
+    useSlideFromTop(paraRef, 0.3);
+    useSlideFromTop(chiRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-16 md:px-14 md:py-10 px-5 pt-7 pb-14 bg-neutral-100">
@@ -64,3 +64,4 @@ export default function Resprime() {
         </div>
     )
 }
+

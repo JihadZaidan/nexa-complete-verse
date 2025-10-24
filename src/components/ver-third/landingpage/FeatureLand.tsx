@@ -6,7 +6,7 @@ import Studio from "../../../../public/three/landingpage/body/shooting.png"
 import Bin from "../../../../public/three/landingpage/body/binary.png"
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useSlideFromLeft, useSlideFromRight, useFadeIn } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 import { useRef } from "react";
 
 export default function Featurest() {
@@ -20,14 +20,14 @@ export default function Featurest() {
     const graphRef = useRef<HTMLParagraphElement>(null);
     const buttonRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromLeft(fredoRef, 0.3);
-    useSlideFromRight(sedoRef, 0.3);
-    useSlideFromLeft(tredeRef, 0.3);
-    useSlideFromRight(fordoRef, 0.3);
-    useFadeIn(mageRef, 0.3);
-    useSlideFromLeft(headeRef, 0.3);
-    useSlideFromRight(graphRef, 0.3);
-    useSlideFromRight(buttonRef, 0.3);
+    useSlideFromTop(fredoRef, 0.3);
+    useSlideFromTop(sedoRef, 0.3);
+    useSlideFromTop(tredeRef, 0.3);
+    useSlideFromTop(fordoRef, 0.3);
+    useSlideFromTop(mageRef, 0.3);
+    useSlideFromTop(headeRef, 0.3);
+    useSlideFromTop(graphRef, 0.3);
+    useSlideFromTop(buttonRef, 0.3);
 
     return (
         <div className="max-w-full w-full bg-neutral-900 lg:px-20 lg:pt-20 lg:pb-40 md:px-14 md:pt-10 md:pt-20 px-8 py-14">
@@ -85,3 +85,4 @@ export default function Featurest() {
         </div>
     )
 }
+

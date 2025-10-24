@@ -4,22 +4,16 @@ import Image from "next/image";
 import Kopi from "../../../public/expertise/01-digital.png";
 import Tamar from "../../../public/expertise/02-branding.png";
 import Cody from "../../../public/expertise/03-website.png";
-import { useSlideFromTop, useSlideFromLeft, useSlideFromRight } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 import { useRef } from "react";
-
-const images = [
-    { src: Kopi, alt: "coffeship", scale: "scale-[50%]" },
-    { src: Tamar, alt: "conferention", scale: "scale-[70%]" },
-    { src: Cody, alt: "coder", scale: "scale-[50%]" },
-];
 
 export default function Uppertise() {
     const slideRef = useRef<HTMLDivElement>(null);
     const headRef = useRef<HTMLHeadingElement>(null);
     const pagaRef = useRef<HTMLParagraphElement>(null);
 
-    useSlideFromLeft(headRef, 0.3);
-    useSlideFromRight(pagaRef, 0.3);
+    useSlideFromTop(headRef, 0.3);
+    useSlideFromTop(pagaRef, 0.3);
     useSlideFromTop(slideRef, 0.3);
     return (
         <div className="max-w-full w-full lg:px-20 lg:pt-12 lg:pb-18 md:px-12 md:py-8 px-5 pt-6 pb-14">
@@ -31,15 +25,15 @@ export default function Uppertise() {
                     <style jsx>{`div::-webkit-scrollbar { display: none; }`}</style>
 
                     <div className="flex items-center gap-6 lg:gap-10 px-5">
-                        <div className="flex-none snap-start">
+                        <div className="flex flex-col snap-start lg:gap-1 ">
                             <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">01/ DIGITAL STRATEGY</h3>
                             <Image src={Kopi} alt="coffeship" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
-                        <div className="flex-none snap-start">
+                        <div className="flex flex-col snap-start lg:gap-1">
                             <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">02/ BRANDING</h3>
                             <Image src={Tamar} alt="conferention" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
-                        <div className="flex-none snap-start">
+                        <div className="flex flex-col snap-start lg:gap-1">
                             <h3 className="text-neutral-800 lg:text-3xl text-lg font-normal font-sans">03/ WEB DEVELOPMENT</h3>
                             <Image src={Cody} alt="coder" className="h-[370px] lg:h-[700px] w-auto object-contain" />
                         </div>
@@ -60,6 +54,11 @@ export default function Uppertise() {
         </div>
     );
 }
+
+
+
+
+
 
 
 

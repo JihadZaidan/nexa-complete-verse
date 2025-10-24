@@ -5,7 +5,7 @@ import { navigation } from "@/data/navigation";
 import { ArrowRight, ArrowUpIcon } from "lucide-react";
 import { footer } from "@/data/footer";
 import { useState, useRef } from "react";
-import { useSlideFromLeft, useFadeIn, useSlideFromRight } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 import { z } from "zod";
 
 // validation news letter by zod 
@@ -25,6 +25,7 @@ export default function Footer() {
     const upleftRef = useRef<HTMLDivElement>(null);
     const uprightRef = useRef<HTMLDivElement>(null);
     const lowerRef = useRef<HTMLDivElement>(null);
+    const copyRef = useRef<HTMLDivElement>(null);
 
     const validate = (value: string) => {
         const result = emailSchema.safeParse(value);
@@ -59,9 +60,10 @@ export default function Footer() {
         if (email.length) validate(email);
     };
 
-    useSlideFromLeft(upleftRef, 0.4);
-    useSlideFromRight(uprightRef, 0.4);
-    useFadeIn(lowerRef , 0.4);
+    useSlideFromTop(upleftRef, 0.4);
+    useSlideFromTop(uprightRef, 0.4);
+    useSlideFromTop(lowerRef , 0.4);
+    useSlideFromTop(copyRef, 0.4);
 
     return (
         <footer className="w-full bg-neutral-900 px-10 lg:px-20 py-20 flex flex-col gap-16">
@@ -184,7 +186,7 @@ export default function Footer() {
             </div>
 
             {/* Bottom Section */}
-            <div className="border-t border-neutral-800 pt-8 flex flex-col lg:flex-row md:flex-row justify-between items-center gap-4">
+            <div ref={copyRef} className="border-t border-neutral-800 pt-8 flex flex-col lg:flex-row md:flex-row justify-between items-center gap-4">
                 <p className="text-neutral-400 text-lg font-normal">Copyright © 2024 Nexa</p>
                 <div className="flex items-center cursor-pointer gap-2 text-neutral-400 hover:text-white">
                     <Link href="#" className="text-neutral-400 text-lg font-normal">Back to top</Link>
@@ -194,6 +196,8 @@ export default function Footer() {
         </footer>
     );
 }
+
+
 
 
 

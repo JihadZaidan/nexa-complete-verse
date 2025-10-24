@@ -42,6 +42,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Open Sauce Sans', sans-serif;
+  font-family: 'Open Sauce Sans' sans-serif;
 }
-

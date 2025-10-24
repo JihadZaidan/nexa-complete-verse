@@ -7,7 +7,7 @@ import Chitato from "../../../../public/second/landing-page/header/chipschapa.pn
 import Studio from "../../../../public/second/landing-page/header/shooting.png"
 import Bin from "../../../../public/second/landing-page/body/binary.png"
 import { useRef } from "react"
-import { useSlideFromLeft, useSlideFromRight, useFadeIn } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 
 export default function Marketing() {
 
@@ -23,17 +23,17 @@ export default function Marketing() {
     const parRef = useRef<HTMLParagraphElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromLeft(onetownRef, 0.3);
-    useSlideFromLeft(twonRef, 0.3);
-    useSlideFromLeft(tresuRef, 0.3);
-    useSlideFromLeft(fourteRef, 0.3);
-    useSlideFromRight(firstoRef, 0.3);
-    useSlideFromRight(dousRef, 0.3);
-    useSlideFromRight(tresseruRef, 0.3);
-    useSlideFromRight(fourtRef, 0.3);
-    useSlideFromLeft(headerRef, 0.3);
-    useSlideFromRight(parRef, 0.3);
-    useFadeIn(imageRef, 0.3);
+    useSlideFromTop(onetownRef, 0.3);
+    useSlideFromTop(twonRef, 0.3);
+    useSlideFromTop(tresuRef, 0.3);
+    useSlideFromTop(fourteRef, 0.3);
+    useSlideFromTop(firstoRef, 0.3);
+    useSlideFromTop(dousRef, 0.3);
+    useSlideFromTop(tresseruRef, 0.3);
+    useSlideFromTop(fourtRef, 0.3);
+    useSlideFromTop(headerRef, 0.3);
+    useSlideFromTop(parRef, 0.3);
+    useSlideFromTop(imageRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:pt-24 lg:pb-28 md:px-14 md:py-18 px-10 py-14 bg-neutral-900">
@@ -133,3 +133,4 @@ export default function Marketing() {
         </div>
     )
 }
+

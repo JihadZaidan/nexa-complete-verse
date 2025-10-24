@@ -1,16 +1,23 @@
+"use client"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Chitato from "../../../../public/second/landing-page/header/chipschapa.png"
 import Studio from "../../../../public/second/landing-page/header/shooting.png"
 import Bottle from "../../../../public/second/landing-page/header/presure.png"
+import { useRef } from "react"
+import { useSlideFromTop } from "@/library/animations"
 
 export default function IntroCover() {
+    const headeRef = useRef<HTMLHeadingElement>(null);
+    const graphRef = useRef<HTMLDivElement>(null);
+    useSlideFromTop(headeRef, 0.3);
+    useSlideFromTop(graphRef, 0.3);
     return (
         <div className="bg-neutral-100 max-w-full w-full lg:px-20 lg:py-15 md:px-14 md:py-8 px-8 pt-8 pb-20">
             <div className="lg:justify-between justify-left items-left flex flex-col gap-2">
                 <div className="block">
-                    <h1 className="font-sans font-medium text-left text-7xl text-neutral-800 leading-[130%]">
+                    <h1 ref={headeRef} className="font-sans font-medium text-left text-7xl text-neutral-800 leading-[130%]">
                         Meet <br /> Nexa
                     </h1>
 
@@ -35,7 +42,7 @@ export default function IntroCover() {
                     </div>
                 </div>
 
-                <div className="justify-left lg:justify-between md:justify-between gap-8 flex lg:flex-row md:flex-row flex-col lg:mt-[-1500px] mt-[-700px]">
+                <div ref={graphRef} className="justify-left lg:justify-between md:justify-between gap-8 flex lg:flex-row md:flex-row flex-col lg:mt-[-1500px] mt-[-700px]">
                     <Button className="w-fit justify-start gap-[9px] border-b-2 border-black px-2">
                         <p className="text-black text-xl lg:text-3xl font-medium text-left">
                             Let&apos;s talk
@@ -55,3 +62,6 @@ export default function IntroCover() {
         </div>
     )
 }
+
+
+
