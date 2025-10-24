@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 import Canva from "../../../../public/second/landing-page/story/storycanvas.png"
 import UIUX from "../../../../public/second/landing-page/story/uiux.png"
 import Brand from "../../../../public/second/landing-page/story/improve.png"
-import { useZoom, useSlideFromLeft, useSlideFromRight } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 import { useRef } from "react"
 
 export default function StoryWork() {
@@ -16,11 +16,11 @@ export default function StoryWork() {
     const imdegRef = useRef<HTMLDivElement>(null)
     const imbRef   = useRef<HTMLDivElement>(null)
 
-    useSlideFromLeft(headRef, 0.3)
-    useSlideFromRight(btnRef, 0.3)
-    useZoom(imcaRef, 0.3)
-    useZoom(imdegRef, 0.3)
-    useZoom(imbRef, 0.3)
+    useSlideFromTop(headRef, 0.3)
+    useSlideFromTop(btnRef, 0.3)
+    useSlideFromTop(imcaRef, 0.3)
+    useSlideFromTop(imdegRef, 0.3)
+    useSlideFromTop(imbRef, 0.3)
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:pt-20 lg:pb-5 md:px-14 md:py-18 px-5 py-14 bg-neutral-200">
@@ -66,3 +66,4 @@ export default function StoryWork() {
         </div>
     )
 }
+
