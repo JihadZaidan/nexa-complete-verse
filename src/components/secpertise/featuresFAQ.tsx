@@ -3,7 +3,7 @@
 import { itemsFAQ } from "@/data/faq";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { useState, useRef } from "react";
-import { useSlideFromLeft, useSlideFromRight, useStaggerChildren } from "@/library/animations";
+import { useSlideFromTop } from "@/library/animations";
 
 export default function ExpertiseFAQ() {
   const [openItem, setOpenItem] = useState<string | null>(itemsFAQ[0]?.id);
@@ -15,8 +15,8 @@ export default function ExpertiseFAQ() {
   const headerRef = useRef<HTMLHeadingElement>(null);
   const listRef = useRef<HTMLDivElement>(null)
 
-  useSlideFromLeft(headerRef, 0.3)
-  useSlideFromRight(listRef, 0.3)
+  useSlideFromTop(headerRef, 0.3)
+  useSlideFromTop(listRef, 0.3)
 
   return (
     <div className="w-full max-w-full px-4 lg:px-20 px-10 py-20 bg-gray-50">
@@ -64,4 +64,5 @@ export default function ExpertiseFAQ() {
     </div>
   );
 }
+
 
