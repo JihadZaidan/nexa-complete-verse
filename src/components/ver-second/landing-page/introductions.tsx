@@ -8,11 +8,11 @@ import Bottle from "../../../../public/second/landing-page/header/presure.png"
 import { useRef } from "react"
 import { useSlideFromTop } from "@/library/animations"
 
-const headeRef = useRef<HTMLHeadingElement>(null)
-const graphRef = useRef<HTMLDivElement>(null)
+const headeRef = useRef<HTMLHeadingElement>(null);
+const graphRef = useRef<HTMLDivElement>(null);
 
-useSlideFromTop(headeRef, 0.3)
-useSlideFromTop(graphRef, 0.3)
+useSlideFromTop(headeRef, 0.3);
+useSlideFromTop(graphRef, 0.3);
 
 export default function IntroCover() {
     return (
@@ -64,4 +64,5 @@ export default function IntroCover() {
         </div>
     )
 }
+
 
