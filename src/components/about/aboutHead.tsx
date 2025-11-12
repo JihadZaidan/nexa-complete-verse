@@ -26,7 +26,7 @@ export default function UpperAbout() {
                         passion for creative problem solving.
                     </h1>
 
-                    <div ref={buttonRef} className="lg:ml-85 md:ml-120">
+                    <div ref={buttonRef} className="lg:ml-85 md:ml-100">
                         <Button className="justify-center gap-[9px] ml-[-10px] border-b-2 border-black">
                             <p className="text-black lg:text-2xl text-lg font-medium">Learn More About Us</p>
                             <ArrowRight height={22} width={22} className="mt-[2px] text-black" />
@@ -45,5 +45,6 @@ export default function UpperAbout() {
         </div>
     )
 }
+
 
 
