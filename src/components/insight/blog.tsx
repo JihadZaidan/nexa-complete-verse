@@ -36,7 +36,7 @@ export default function InsightSection() {
                 className="lg:object-cover object-contain cursor-pointer"
               />
             </div>
-            <h3 className="font-medium text-xl text-black lg:cursor-pointer">{item.title}</h3>
+            <h3 className="font-medium lg:text-xl text-2xl text-black lg:cursor-pointer">{item.title}</h3>
             <p className="text-base text-gray-500">{item.date}</p>
 
           </Link>
@@ -105,6 +105,7 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
 
 
