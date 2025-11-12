@@ -34,7 +34,7 @@ export default function Resprime() {
                     </div>
                 </div>
 
-                <div className="w-full flex lg:flex-row items-left justify-left lg:mb-0 md:mb-0 mb-[-30px]">
+                <div className="w-full flex lg:flex-row items-left justify-left lg:mb-0 md:mb-0 mb-[-130px]">
                     <div ref={paraRef} className="flex flex-col gap-8">
                         <p className="font-sans font-normal lg:text-2xl text-base text-neutral-800 leading-[150%] text-left">
                             — An digital agency focused on digital <br />
@@ -64,6 +64,7 @@ export default function Resprime() {
         </div>
     )
 }
+
 
 
 
