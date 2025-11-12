@@ -33,7 +33,7 @@ export default function InsightSection() {
                 src={item.image.replace("public/", "/")}
                 alt={item.title}
                 fill
-                className="object-cover rounded-md cursor-pointer"
+                className="object-cover cursor-pointer"
               />
             </div>
             <h3 className="font-medium text-xl text-black lg:cursor-pointer">{item.title}</h3>
@@ -105,5 +105,6 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
 
