@@ -28,7 +28,7 @@ export default function InsightSection() {
             href={item.url}
             className="flex flex-col gap-3"
           >
-            <div className="relative w-full h-[200px]">
+            <div className="relative w-full lg:h-[200px] h-[250px]">
               <Image
                 src={item.image.replace("public/", "/")}
                 alt={item.title}
@@ -105,6 +105,7 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
 
 
