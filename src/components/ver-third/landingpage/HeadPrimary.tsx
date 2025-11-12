@@ -20,7 +20,7 @@ export default function Resprime() {
     useSlideFromTop(chiRef, 0.3);
 
     return (
-        <div className="max-w-full w-full lg:px-20 lg:py-16 md:px-14 md:py-10 px-5 pt-7 pb-14 bg-neutral-100">
+        <div className="max-w-full w-full lg:px-20 lg:py-16 md:px-14 md:py-10 px-5 pt-7 pb-3 bg-neutral-100">
             <div className="w-full flex flex-col justify-between lg:gap-30 gap-8">
                 <div className="w-full flex flex-col lg:justify-right md:justify-center lg:gap-15 md:gap-10 gap-8">
                     <h1 ref={headRef} className="w-full text-neutral-800 font-sans font-normal lg:text-8xl md:text-5xl text-5xl lg:text-center md:text-center text-start leading-[130%]">NEXA DIGITAL AGENCY</h1>
@@ -64,5 +64,6 @@ export default function Resprime() {
         </div>
     )
 }
+
 
 
