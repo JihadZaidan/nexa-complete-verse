@@ -6,7 +6,7 @@ import Link from "next/link"
 import { useRef, useState } from "react"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
-import { useZoom, useSlideFromLeft, useSlideFromRight } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 
 export default function OtherInsight() {
     const [showAll, setShowAll] = useState(false);
@@ -16,9 +16,9 @@ export default function OtherInsight() {
     const headerRef = useRef<HTMLHeadingElement>(null);
     const btnRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromLeft(headerRef, 0.3)
-    useSlideFromRight(btnRef, 0.3)
-    useZoom(contentRef, 0.3)
+    useSlideFromTop(headerRef, 0.3)
+    useSlideFromTop(btnRef, 0.3)
+    useSlideFromTop(contentRef, 0.3)
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-20 px-7 py-7 bg-[#F5F5F5]">
@@ -105,6 +105,7 @@ export default function OtherInsight() {
         </div>
     )
 }
+
 
 
 
