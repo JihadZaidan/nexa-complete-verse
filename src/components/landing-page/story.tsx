@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import invidi from "../../../public/one/landing-photos/insight/insight-visa.png";
 import invida from "../../../public/one/landing-photos/insight/insight-vida.png";
 import { useRef } from "react";
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations/useFadeIn";
 
 export default function Story() {
   const headRef = useRef<HTMLHeadingElement>(null);
@@ -13,10 +13,10 @@ export default function Story() {
   const oneRef = useRef<HTMLDivElement>(null);
   const twoRef = useRef<HTMLDivElement>(null);
 
-  useSlideFromTop(headRef, 0.3);
-  useSlideFromTop(buttonRef, 0.3);
-  useSlideFromTop(oneRef, 0.3);
-  useSlideFromTop(twoRef, 0.3);
+  useFadeIn(headRef, 0.3);
+  useFadeIn(buttonRef, 0.3);
+  useFadeIn(oneRef, 0.3);
+  useFadeIn(twoRef, 0.3);
 
   return (
     <section className="relative w-full overflow-x-hidden bg-[#F2F2F2] lg:px-20 lg:py-24 md:px-14 md:py-16 px-6 py-12">
@@ -92,4 +92,5 @@ export default function Story() {
     </section>
   );
 }
+
 
