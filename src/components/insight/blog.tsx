@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { useState, useRef } from "react";
 import Link from "next/link";
-import { useStaggerChildren } from "@/library/animations";
+import { useFadeIn } from "@/library/animations";
 
 export default function InsightSection() {
   const [showAll, setShowAll] = useState(false);
@@ -15,7 +15,7 @@ export default function InsightSection() {
   const blogRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Jalankan animasi stagger zoom
-  useStaggerChildren(blogRefs, 0.3);
+  useFadeIn(blogRef, 0.3);
 
   return (
     <section className="py-12 px-4 md:px-14 lg:px-20">
@@ -28,9 +28,7 @@ export default function InsightSection() {
             className="flex flex-col gap-3"
           >
             <div
-              ref={(el) => {
-                blogRefs.current[index] = el;
-              }}
+              ref={blogRef}
               className="relative w-full lg:h-[200px] h-[250px]"
             >
               <Image
@@ -116,4 +114,5 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
