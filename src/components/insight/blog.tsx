@@ -12,7 +12,7 @@ export default function InsightSection() {
   const blogsToShow = showAll ? insightBlog : insightBlog.slice(0, 3);
 
   // Gunakan 1 array ref untuk semua blog card (mobile + tablet + desktop)
-  const blogRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const blogRef = useRef<(HTMLDivElement | null)[]>([]);
 
   // Jalankan animasi stagger zoom
   useFadeIn(blogRef, 0.3);
@@ -114,5 +114,6 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
 
