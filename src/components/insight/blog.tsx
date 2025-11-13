@@ -67,9 +67,7 @@ export default function InsightSection() {
             className="flex flex-col gap-3"
           >
             <div
-              ref={(el) => {
-                blogRefs.current[index + 100] = el; // offset biar nggak bentrok sama mobile
-              }}
+              ref={blogRef}
               className="relative w-full h-[240px]"
             >
               <Image
@@ -94,9 +92,7 @@ export default function InsightSection() {
             className="flex flex-col gap-3"
           >
             <div
-              ref={(el) => {
-                blogRefs.current[index + 200] = el; // offset biar unik juga
-              }}
+              ref={blogRef}
               className="relative w-full lg:h-[300px]"
             >
               <Image
@@ -114,6 +110,7 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
 
 
