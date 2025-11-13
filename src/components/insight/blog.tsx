@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { useState, useRef } from "react";
 import Link from "next/link";
-import { useStaggerZoom } from "@/library/animations";
+import { useStaggerChildren } from "@/library/animations";
 
 export default function InsightSection() {
   const [showAll, setShowAll] = useState(false);
@@ -15,7 +15,7 @@ export default function InsightSection() {
   const blogRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Jalankan animasi stagger zoom
-  useStaggerZoom(blogRefs, 0.3);
+  useStaggerChildren(blogRefs, 0.3);
 
   return (
     <section className="py-12 px-4 md:px-14 lg:px-20">
@@ -116,3 +116,4 @@ export default function InsightSection() {
     </section>
   );
 }
+
