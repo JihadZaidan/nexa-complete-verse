@@ -7,7 +7,7 @@ import Branding from "../../../public/one/landing-photos/branding.png"
 import Webdev from "../../../public/one/landing-photos/webdevelopers.png"
 import Appdev from "../../../public/one/landing-photos/appdeveloper.png"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function VisionBrand() {
   const headRef = useRef<HTMLHeadingElement>(null)
@@ -15,10 +15,10 @@ export default function VisionBrand() {
   const upperRef = useRef<HTMLDivElement>(null)
   const lowerRef = useRef<HTMLDivElement>(null)
 
-  useSlideFromTop(headRef, 0.3)
-  useSlideFromTop(graphRef, 0.3)
-  useSlideFromTop(upperRef, 0.3)
-  useSlideFromTop(lowerRef, 0.3)
+  useFadeIn(headRef, 0.3)
+  useFadeIn(graphRef, 0.3)
+  useFadeIn(upperRef, 0.3)
+  useFadeIn(lowerRef, 0.3)
 
   return (
     <section className="w-full max-w-full bg-black overflow-x-hidden lg:px-20 md:px-14 px-8 lg:py-20 md:py-14 py-12">
@@ -124,4 +124,5 @@ export default function VisionBrand() {
     </section>
   )
 }
+
 
