@@ -25,7 +25,7 @@ export default function Worksheet() {
   useFadeIn(secondRef, 0.3)
   useFadeIn(sagaRef, 0.3)
   useFadeIn(thirdRef, 0.3)
-  useFadeInp(tangoRef, 0.3)
+  useFadeIn(tangoRef, 0.3)
 
   return (
     <section className="relative max-w-full w-full bg-white overflow-hidden lg:px-20 lg:py-36 md:px-14 md:py-24 px-8 py-16 mb-0">
@@ -129,5 +129,6 @@ export default function Worksheet() {
     </section>
   )
 }
+
 
 
