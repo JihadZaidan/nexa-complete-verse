@@ -11,11 +11,9 @@ export default function Navbar() {
   
   const navRef = useRef<HTMLHeadingElement>(null)
   const navbtnRef = useRef<HTMLButtonElement>(null);
-  const sidebtnRef = useRef<HTMLLinkElement>(null);
   
   useFadeIn(navRef, 0.35);
   useFadeIn(navbtnRef, 0.35);
-  useFadeIn(sidebtnRef, 0.35);
 
   return (
     <header
@@ -46,7 +44,6 @@ export default function Navbar() {
 
           {/* Sidebar / Menu Button */}
           <Link
-            ref={sidebtnRef}
             href="/sidebar"
             className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
           >
@@ -57,6 +54,7 @@ export default function Navbar() {
     </header>
   )
 }
+
 
 
 
