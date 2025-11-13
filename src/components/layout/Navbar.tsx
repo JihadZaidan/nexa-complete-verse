@@ -9,7 +9,7 @@ import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function Navbar() {
   
-  const navRef = useRef<HTMLLinkElement>(null)
+  const navRef = useRef<HTMLHeadingElement>(null)
   const navbtnRef = useRef<HTMLButtonElement>(null);
   const sidebtnRef = useRef<HTMLLinkElement>(null);
   
@@ -23,9 +23,9 @@ export default function Navbar() {
     >
       <nav className="flex justify-between items-center lg:px-20 md:px-14 px-6 py-5">
         {/* Logo */}
-        <Link ref={navRef} className="text-3xl font-sans font-medium text-black">
+        <h1 ref={navRef} className="text-3xl font-sans font-medium text-black">
           Nexa
-        </Link>
+        </h1>
 
         {/* Right Side */}
         <div className="flex items-center lg:gap-8">
@@ -57,6 +57,7 @@ export default function Navbar() {
     </header>
   )
 }
+
 
 
 
