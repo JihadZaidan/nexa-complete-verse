@@ -5,7 +5,7 @@ import { FiMenu } from "react-icons/fi"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useRef } from "react"
-import { useFadeIn } from "@/library/animations/useSlideFromTop"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function Navbar() {
   
@@ -57,4 +57,5 @@ export default function Navbar() {
     </header>
   )
 }
+
 
