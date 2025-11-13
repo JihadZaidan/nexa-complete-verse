@@ -17,7 +17,7 @@ export default function InsightSection() {
   return (
     <section className="py-12 px-4 md:px-14 lg:px-20">
       {/* Mobile View */}
-      <div className="block md:hidden space-y-8">
+      <div className="block md:hidden space-y-8c" ref={blogRef}>
         {blogsToShow.map((item, index) => (
           <Link
             key={index}
@@ -25,7 +25,6 @@ export default function InsightSection() {
             className="flex flex-col gap-3"
           >
             <div
-              ref={blogRef}
               className="relative w-full lg:h-[200px] h-[250px]"
             >
               <Image
@@ -56,7 +55,7 @@ export default function InsightSection() {
       </div>
 
       {/* Tablet View */}
-      <div className="hidden md:grid lg:hidden grid-cols-2 gap-6">
+      <div className="hidden md:grid lg:hidden grid-cols-2 gap-6" ref={blogRef}>
         {insightBlog.map((item, index) => (
           <Link
             key={index + "tablet"}
@@ -64,7 +63,6 @@ export default function InsightSection() {
             className="flex flex-col gap-3"
           >
             <div
-              ref={blogRef}
               className="relative w-full h-[240px]"
             >
               <Image
@@ -81,7 +79,7 @@ export default function InsightSection() {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden lg:grid grid-cols-3 gap-6">
+      <div className="hidden lg:grid grid-cols-3 gap-6" ref={blogRef}>
         {insightBlog.map((item, index) => (
           <Link
             key={index + "desktop"}
@@ -89,7 +87,6 @@ export default function InsightSection() {
             className="flex flex-col gap-3"
           >
             <div
-              ref={blogRef}
               className="relative w-full lg:h-[300px]"
             >
               <Image
@@ -107,6 +104,7 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
 
 
