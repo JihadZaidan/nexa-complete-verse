@@ -23,7 +23,7 @@ export default function Navbar() {
     >
       <nav className="flex justify-between items-center lg:px-20 md:px-14 px-6 py-5">
         {/* Logo */}
-        <Link ref={navRef} href="/" className="text-3xl font-sans font-medium text-black">
+        <Link ref={navRef} className="text-3xl font-sans font-medium text-black">
           Nexa
         </Link>
 
@@ -57,5 +57,6 @@ export default function Navbar() {
     </header>
   )
 }
+
 
 
