@@ -1,14 +1,14 @@
 "use client"
 import { useRef } from "react";
 import ExpertiseCarousel from "./preview";
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations";
 
 export default function ExpertWorks() {
     const headerRef = useRef<HTMLDivElement>(null);
     const coroRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(headerRef, 0.3);
-    useSlideFromTop(coroRef, 0.3);
+    useFadeIn(headerRef, 0.3);
+    useFadeIn(coroRef, 0.3);
 
     return (
         <div className="max-w-full w-full bg-white lg:px-20 lg:py-16 md:px-14 md:py-10 px-8 py-8">
@@ -28,6 +28,7 @@ export default function ExpertWorks() {
     )
 
 }
+
 
 
 
