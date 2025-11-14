@@ -4,16 +4,16 @@ import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import work1 from "../../../public/one/landing-photos/worker/firsly-work.png"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function UpperWorks() {
   const headerRef = useRef<HTMLHeadingElement>(null)
   const describeRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
 
-  useSlideFromTop(headerRef, 0.3)
-  useSlideFromTop(describeRef, 0.3)
-  useSlideFromTop(imageRef, 0.3)
+  useFadeIn(headerRef, 0.3)
+  useFadeIn(describeRef, 0.3)
+  useFadeIn(imageRef, 0.3)
 
   return (
     <section className="w-full bg-white overflow-hidden">
@@ -62,5 +62,6 @@ export default function UpperWorks() {
     </section>
   )
 }
+
 
 
