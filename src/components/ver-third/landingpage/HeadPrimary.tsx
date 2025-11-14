@@ -57,13 +57,14 @@ export default function Resprime() {
                     ref={chiRef}
                     src={cheepa}
                     alt="upper section"
-                    className="lg:w-[33%] md:w-[33%] lg:absolute md:absolute lg:opacity-[100%] md:opacity-[100%] opacity-0 lg:top-[587.50px] lg:left-[930px] md:left-[500px] md:top-[450px] lg:visible md:invisible invisible"
+                    className="lg:w-[33%] md:w-[33%] lg:absolute md:absolute lg:opacity-[100%] md:opacity-[100%] opacity-0 lg:top-[585.50px] lg:left-[930px] md:left-[500px] md:top-[450px] lg:visible md:invisible invisible"
                 />
 
             </div>
         </div>
     )
 }
+
 
 
 
