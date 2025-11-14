@@ -77,7 +77,7 @@ export default function Worksheet() {
           </div>
 
           {/* Case 2 */}
-          <div className="flex lg:flex-row md:flex-row flex-col-reverse items-center justify-end gap-10">
+          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse items-end justify-end gap-8">
             <div ref={sagaRef} className="lg:w-[45%] md:w-[50%] w-full overflow-hidden">
               <Image
                 src={work2}
@@ -86,7 +86,7 @@ export default function Worksheet() {
               />
             </div>
 
-            <div ref={secondRef} className="flex flex-col-reverse gap-6 bg-transparent">
+            <div ref={secondRef} className="flex flex-col gap-6 bg-transparent">
               <h5 className="text-2xl font-normal text-left text-black">/ CONTEXT AI</h5>
               <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
                 Empowers developers <br />
@@ -129,6 +129,7 @@ export default function Worksheet() {
     </section>
   )
 }
+
 
 
 
