@@ -52,7 +52,7 @@ export default function Worksheet() {
         <div className="flex flex-col w-full lg:gap-36 md:gap-24 gap-16">
           
           {/* Case 1 */}
-          <div className="flex lg:flex-row md:flex-row flex-col justify-left items-left gap-8">
+          <div className="flex lg:flex-row md:flex-row flex-col justify-start items-start gap-8">
             <div ref={firstRef} className="flex flex-col gap-6 bg-transparent">
               <h5 className="text-2xl font-normal text-left text-black">/ HOUSEL</h5>
               <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
@@ -101,7 +101,7 @@ export default function Worksheet() {
           </div>
 
           {/* Case 3 */}
-          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse justify-left items-left gap-8">
+          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse justify-start items-start gap-8">
             <div ref={thirdRef} className="flex flex-col gap-6 bg-transparent">
               <h5 className="text-2xl font-normal text-left text-black">/ CLOODY</h5>
               <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
@@ -129,6 +129,7 @@ export default function Worksheet() {
     </section>
   )
 }
+
 
 
 
