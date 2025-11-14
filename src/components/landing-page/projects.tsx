@@ -86,7 +86,7 @@ export default function Worksheet() {
               />
             </div>
 
-            <div ref={secondRef} className="flex flex-col gap-6 bg-transparent">
+            <div ref={secondRef} className="flex flex-col-reverse gap-6 bg-transparent">
               <h5 className="text-2xl font-normal text-left text-black">/ CONTEXT AI</h5>
               <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
                 Empowers developers <br />
@@ -129,6 +129,7 @@ export default function Worksheet() {
     </section>
   )
 }
+
 
 
 
