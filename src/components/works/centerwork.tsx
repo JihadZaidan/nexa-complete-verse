@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import work2 from "../../../public/one/landing-photos/worker/secondary-work.png"
 import crop from "../../../public/one/works/crop-work.png"
 import { useRef } from "react";
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations/useFadeIn";
 
 export default function CenterWork() {
     const fibeRef = useRef<HTMLDivElement>(null);
@@ -13,10 +13,10 @@ export default function CenterWork() {
     const secobeRef = useRef<HTMLDivElement>(null);
     const seimageRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(fimageRef, 0.3);
-    useSlideFromTop(fibeRef, 0.3);
-    useSlideFromTop(secobeRef, 0.3);
-    useSlideFromTop(seimageRef, 0.3);
+    useFadeIn(fimageRef, 0.3);
+    useFadeIn(fibeRef, 0.3);
+    useFadeIn(secobeRef, 0.3);
+    useFadeIn(seimageRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-20 md:px-14 md:py-8 px-10 py-8 bg-black">
@@ -77,6 +77,7 @@ export default function CenterWork() {
         </div>
     )
 }
+
 
 
 
