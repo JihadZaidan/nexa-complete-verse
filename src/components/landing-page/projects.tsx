@@ -77,7 +77,7 @@ export default function Worksheet() {
           </div>
 
           {/* Case 2 */}
-          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse lg:items-end lg:justify-end md:justify-end md:items-end justify-left gap-8">
+          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse lg:items-end lg:justify-end md:justify-end md:items-end justify-start gap-8">
             <div ref={sagaRef} className="lg:w-[45%] md:w-[50%] w-full overflow-hidden">
               <Image
                 src={work2}
@@ -129,6 +129,7 @@ export default function Worksheet() {
     </section>
   )
 }
+
 
 
 
