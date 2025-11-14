@@ -27,7 +27,7 @@ export default function VisionBrand() {
         <div className="w-full">
           <h2
             ref={headRef}
-            className="font-sans text-white font-normal leading-[150%] w-full md:w-[75%] lg:w-[58%] text-3xl md:text-4xl lg:text-5xl"
+            className="font-sans text-white font-normal leading-[150%] w-full md:w-[75%] lg:w-[63%] text-3xl md:text-4xl lg:text-5xl"
           >
             Transforming Digital Innovations for Visionary Brands
           </h2>
@@ -124,6 +124,7 @@ export default function VisionBrand() {
     </section>
   )
 }
+
 
 
 
