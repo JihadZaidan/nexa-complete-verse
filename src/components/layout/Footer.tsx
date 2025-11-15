@@ -5,7 +5,7 @@ import { navigation } from "@/data/navigation";
 import { ArrowRight, ArrowUpIcon } from "lucide-react";
 import { footer } from "@/data/footer";
 import { useState, useRef } from "react";
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations/useFadeIn";
 import { z } from "zod";
 
 // validation news letter by zod 
@@ -60,10 +60,10 @@ export default function Footer() {
         if (email.length) validate(email);
     };
 
-    useSlideFromTop(upleftRef, 0.4);
-    useSlideFromTop(uprightRef, 0.4);
-    useSlideFromTop(lowerRef , 0.4);
-    useSlideFromTop(copyRef, 0.4);
+    useFadeIn(upleftRef, 0.4);
+    useFadeIn(uprightRef, 0.4);
+    useFadeIn(lowerRef , 0.4);
+    useFadeIn(copyRef, 0.4);
 
     return (
         <footer className="w-full bg-neutral-900 px-10 lg:px-20 py-20 flex flex-col gap-16">
@@ -196,6 +196,7 @@ export default function Footer() {
         </footer>
     );
 }
+
 
 
 

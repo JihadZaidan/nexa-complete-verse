@@ -5,27 +5,30 @@ import { FiMenu } from "react-icons/fi"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations/useSlideFromTop"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function Navbar() {
-  const navRef = useRef<HTMLHeadElement>(null)
-  useSlideFromTop(navRef, 0.35)
+  
+  const navRef = useRef<HTMLHeadingElement>(null)
+  const navbtnRef = useRef<HTMLButtonElement>(null);
+  
+  useFadeIn(navRef, 0.35);
+  useFadeIn(navbtnRef, 0.35);
 
   return (
     <header
-      ref={navRef}
       className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-neutral-200"
     >
       <nav className="flex justify-between items-center lg:px-20 md:px-14 px-6 py-5">
         {/* Logo */}
-        <Link href="/" className="text-3xl font-sans font-medium text-black">
+        <h1 ref={navRef} className="text-3xl font-sans font-medium text-black">
           Nexa
-        </Link>
+        </h1>
 
         {/* Right Side */}
         <div className="flex items-center lg:gap-8">
           {/* Button hanya muncul di desktop */}
-          <Button className="hidden lg:flex items-center gap-2 bg-transparent hover:bg-black hover:text-white transition-all duration-300 lg:visible md:invisible invisible">
+          <Button ref={navbtnRef} className="hidden lg:flex items-center gap-2 bg-transparent hover:bg-black hover:text-white transition-all duration-300 lg:visible md:invisible invisible">
             <p className="text-black text-base font-medium">
               Let&apos;s talk
             </p>
@@ -51,3 +54,8 @@ export default function Navbar() {
     </header>
   )
 }
+
+
+
+
+

@@ -3,16 +3,16 @@ import Image from "next/image"
 import railey from "../../../../public/blog-detail/railey.png"
 import detail from "../../../../public/blog-detail/detailhead.png"
 import { useRef } from "react"
-import { useSlideFromLeft, useSlideFromRight } from "@/library/animations"
+import { useSlideFromTop } from "@/library/animations"
 
 export default function FourThemes() {
     const headRef = useRef<HTMLHeadingElement>(null);
     const foundRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromLeft(headRef, 0.3);
-    useSlideFromLeft(foundRef, 0.3);
-    useSlideFromRight(imageRef, 0.3);
+    useSlideFromTop(headRef, 0.3);
+    useSlideFromTop(foundRef, 0.3);
+    useSlideFromTop(imageRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-30 px-8 py-5 flex flex-col lg:gap-20 gap-10">
@@ -40,4 +40,5 @@ export default function FourThemes() {
             </div>
         </div>
     )
+
 }

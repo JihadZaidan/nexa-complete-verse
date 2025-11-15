@@ -5,16 +5,16 @@ import Image from "next/image"
 import team from "../../../public/one/landing-photos/teams.png"
 import contribute from "../../../public/one/landing-photos/contributors.png"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function Introduce() {
   const headRef = useRef<HTMLHeadingElement>(null)
   const buttonRef = useRef<HTMLDivElement>(null)
   const bottomRef = useRef<HTMLDivElement>(null)
 
-  useSlideFromTop(headRef, 0.3)
-  useSlideFromTop(buttonRef, 0.3)
-  useSlideFromTop(bottomRef, 0.3)
+  useFadeIn(headRef, 0.3)
+  useFadeIn(buttonRef, 0.3)
+  useFadeIn(bottomRef, 0.3)
 
   return (
     <section className="w-full max-w-full bg-white lg:px-20 md:px-14 px-8 lg:pt-24 pt-14 lg:pb-0 pb-10 overflow-x-hidden">
@@ -74,4 +74,5 @@ export default function Introduce() {
     </section>
   )
 }
+
 

@@ -20,7 +20,7 @@ export default function Resprime() {
     useSlideFromTop(chiRef, 0.3);
 
     return (
-        <div className="max-w-full w-full lg:px-20 lg:py-16 md:px-14 md:py-10 px-5 pt-7 pb-14 bg-neutral-100">
+        <div className="max-w-full w-full lg:px-20 lg:py-16 md:px-14 md:py-10 px-5 pt-7 pb-3 bg-neutral-100">
             <div className="w-full flex flex-col justify-between lg:gap-30 gap-8">
                 <div className="w-full flex flex-col lg:justify-right md:justify-center lg:gap-15 md:gap-10 gap-8">
                     <h1 ref={headRef} className="w-full text-neutral-800 font-sans font-normal lg:text-8xl md:text-5xl text-5xl lg:text-center md:text-center text-start leading-[130%]">NEXA DIGITAL AGENCY</h1>
@@ -34,7 +34,7 @@ export default function Resprime() {
                     </div>
                 </div>
 
-                <div className="w-full flex lg:flex-row items-left justify-left">
+                <div className="w-full flex lg:flex-row items-left justify-left lg:mb-0 md:mb-0 mb-[-130px]">
                     <div ref={paraRef} className="flex flex-col gap-8">
                         <p className="font-sans font-normal lg:text-2xl text-base text-neutral-800 leading-[150%] text-left">
                             — An digital agency focused on digital <br />
@@ -57,11 +57,18 @@ export default function Resprime() {
                     ref={chiRef}
                     src={cheepa}
                     alt="upper section"
-                    className="lg:w-[33%] md:w-[33%] lg:absolute md:absolute lg:opacity-[100%] md:opacity-[100%] opacity-0 lg:top-[587.75px] lg:left-[930px] md:left-[500px] md:top-[450px]"
+                    className="lg:w-[33%] md:w-[33%] lg:absolute md:absolute lg:opacity-[100%] md:opacity-[100%] opacity-0 lg:top-[585.50px] lg:left-[930px] md:left-[500px] md:top-[450px] lg:visible md:invisible invisible"
                 />
 
             </div>
         </div>
     )
 }
+
+
+
+
+
+
+
 

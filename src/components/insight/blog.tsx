@@ -1,46 +1,44 @@
-"use client"
+"use client";
 
 import { insightBlog } from "@/data/insight";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useState, useRef } from "react";
 import Link from "next/link";
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations";
 
 export default function InsightSection() {
   const [showAll, setShowAll] = useState(false);
   const blogsToShow = showAll ? insightBlog : insightBlog.slice(0, 3);
 
-  // gsap implement components
   const blogRef = useRef<HTMLDivElement>(null);
-
-  // run animate
-  useSlideFromTop(blogRef, 0.3);
+  useFadeIn(blogRef, 0.3);
 
   return (
     <section className="py-12 px-4 md:px-14 lg:px-20">
-
       {/* Mobile View */}
-      <div ref={blogRef} className="block md:hidden space-y-8">
+      <div className="block md:hidden space-y-8c" ref={blogRef}>
         {blogsToShow.map((item, index) => (
           <Link
             key={index}
             href={item.url}
             className="flex flex-col gap-3"
           >
-            <div className="relative w-full h-[200px]">
+            <div
+              className="relative w-full lg:h-[200px] h-[250px]"
+            >
               <Image
                 src={item.image.replace("public/", "/")}
                 alt={item.title}
                 fill
-                className="object-cover rounded-md cursor-pointer"
+                className="object-cover cursor-pointer rounded-md"
               />
             </div>
-            <h3 className="font-medium text-xl text-black lg:cursor-pointer">{item.title}</h3>
+            <h3 className="font-medium lg:text-xl text-2xl text-black lg:cursor-pointer">
+              {item.title}
+            </h3>
             <p className="text-base text-gray-500">{item.date}</p>
-
           </Link>
-
         ))}
 
         {!showAll && (
@@ -57,17 +55,16 @@ export default function InsightSection() {
       </div>
 
       {/* Tablet View */}
-      <div
-        ref={blogRef}
-        className="hidden md:grid lg:hidden grid-cols-2 gap-6"
-      >
+      <div className="hidden md:grid lg:hidden grid-cols-2 gap-6" ref={blogRef}>
         {insightBlog.map((item, index) => (
           <Link
-            key={index}
+            key={index + "tablet"}
             href={item.url}
             className="flex flex-col gap-3"
           >
-            <div className="relative w-full h-[240px]">  {/* This line is crucial */}
+            <div
+              className="relative w-full h-[240px]"
+            >
               <Image
                 src={item.image.replace("public/", "/")}
                 alt={item.title}
@@ -82,14 +79,16 @@ export default function InsightSection() {
       </div>
 
       {/* Desktop Grid */}
-      <div ref={blogRef} className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="hidden lg:grid grid-cols-3 gap-6" ref={blogRef}>
         {insightBlog.map((item, index) => (
           <Link
-            key={index}
+            key={index + "desktop"}
             href={item.url}
             className="flex flex-col gap-3"
           >
-            <div className="relative w-full lg:h-[300px]">
+            <div
+              className="relative w-full lg:h-[300px]"
+            >
               <Image
                 src={item.image.replace("public/", "/")}
                 alt={item.title}
@@ -105,5 +104,9 @@ export default function InsightSection() {
     </section>
   );
 }
+
+
+
+
 
 

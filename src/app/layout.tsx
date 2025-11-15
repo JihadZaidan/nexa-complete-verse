@@ -7,7 +7,21 @@ import GradientOverlay from "@/components/layout/GradientOverlay";
 
 const openSauce = localfont({
   src: [
-    { path: "/OpenSauceSans/OpenSauceSans-Regular.ttf", weight: "400", style: "normal" },
+    { 
+      path: "../font-folder/OpenSauceSans-Regular.ttf", 
+      weight: "400", 
+      style: "normal" 
+    },
+    {
+      path: "../font-folder/OpenSauceSans-Medium.ttf",
+      weight: "500",
+      style: "medium"
+    },
+    {
+      path: "../font-folder/OpenSauceSans-Semibold.ttf",
+      weight: "600",
+      style: "semibold"
+    }
   ],
   variable: "--font-open-sauce",
   display: "swap",
@@ -29,5 +43,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
+
 
 

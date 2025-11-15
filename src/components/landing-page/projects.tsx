@@ -6,7 +6,7 @@ import work1 from "../../../public/one/landing-photos/worker/firsly-work.png"
 import work2 from "../../../public/one/landing-photos/worker/secondary-work.png"
 import work3 from "../../../public/one/landing-photos/worker/threel-work.png"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function Worksheet() {
   const headRef = useRef<HTMLHeadingElement>(null)
@@ -18,14 +18,14 @@ export default function Worksheet() {
   const thirdRef = useRef<HTMLDivElement>(null)
   const tangoRef = useRef<HTMLDivElement>(null)
 
-  useSlideFromTop(headRef, 0.3)
-  useSlideFromTop(buttonRef, 0.3)
-  useSlideFromTop(firstRef, 0.3)
-  useSlideFromTop(figeRef, 0.3)
-  useSlideFromTop(secondRef, 0.3)
-  useSlideFromTop(sagaRef, 0.3)
-  useSlideFromTop(thirdRef, 0.3)
-  useSlideFromTop(tangoRef, 0.3)
+  useFadeIn(headRef, 0.3)
+  useFadeIn(buttonRef, 0.3)
+  useFadeIn(firstRef, 0.3)
+  useFadeIn(figeRef, 0.3)
+  useFadeIn(secondRef, 0.3)
+  useFadeIn(sagaRef, 0.3)
+  useFadeIn(thirdRef, 0.3)
+  useFadeIn(tangoRef, 0.3)
 
   return (
     <section className="relative max-w-full w-full bg-white overflow-hidden lg:px-20 lg:py-36 md:px-14 md:py-24 px-8 py-16 mb-0">
@@ -52,7 +52,7 @@ export default function Worksheet() {
         <div className="flex flex-col w-full lg:gap-36 md:gap-24 gap-16">
           
           {/* Case 1 */}
-          <div className="flex lg:flex-row md:flex-row flex-col items-center gap-10">
+          <div className="flex lg:flex-row md:flex-row flex-col justify-start items-start gap-8">
             <div ref={firstRef} className="flex flex-col gap-6 bg-transparent">
               <h5 className="text-2xl font-normal text-left text-black">/ HOUSEL</h5>
               <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
@@ -77,7 +77,7 @@ export default function Worksheet() {
           </div>
 
           {/* Case 2 */}
-          <div className="flex lg:flex-row md:flex-row flex-col-reverse items-center justify-end gap-10">
+          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse lg:items-end lg:justify-end md:justify-end md:items-end justify-start lg:ml-[200px] gap-8">
             <div ref={sagaRef} className="lg:w-[45%] md:w-[50%] w-full overflow-hidden">
               <Image
                 src={work2}
@@ -101,7 +101,7 @@ export default function Worksheet() {
           </div>
 
           {/* Case 3 */}
-          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse items-center justify-between gap-10">
+          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse justify-start items-start lg:mr-[200px] gap-8">
             <div ref={thirdRef} className="flex flex-col gap-6 bg-transparent">
               <h5 className="text-2xl font-normal text-left text-black">/ CLOODY</h5>
               <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
@@ -129,4 +129,14 @@ export default function Worksheet() {
     </section>
   )
 }
+
+
+
+
+
+
+
+
+
+
 
