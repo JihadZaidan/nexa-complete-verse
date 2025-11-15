@@ -23,7 +23,7 @@ export default function Introduce() {
         <div className="flex flex-col gap-8 lg:gap-16">
           <h1
             ref={headRef}
-            className="font-sans text-black font-normal leading-[130%] w-full lg:w-[70%] text-xl md:text-3xl lg:text-5xl"
+            className="font-sans text-black font-normal leading-[130%] w-full lg:w-[80%] text-xl md:text-3xl lg:text-5xl"
           >
             A digital agency focused on digital experiences. With every single
             one of our clients, we bring forth a deep passion for creative
@@ -74,5 +74,6 @@ export default function Introduce() {
     </section>
   )
 }
+
 
 
