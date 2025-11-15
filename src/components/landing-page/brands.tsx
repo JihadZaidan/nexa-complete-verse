@@ -68,7 +68,7 @@ export default function VisionBrand() {
           <div className="flex flex-col gap-14">
             <div
               ref={upperRef}
-              className="flex flex-col md:flex-row gap-7 w-full"
+              className="flex flex-col md:flex-row gap-7 lg:gap-0 w-full"
             >
               <div className="flex flex-col gap-5 w-full">
                 <h4 className="text-white text-2xl font-normal">
@@ -95,7 +95,7 @@ export default function VisionBrand() {
 
             <div
               ref={lowerRef}
-              className="flex flex-col md:flex-row gap-7 w-full"
+              className="flex flex-col md:flex-row gap-7 lg:gap-0 w-full"
             >
               <div className="flex flex-col gap-5 w-full">
                 <h4 className="text-white text-2xl font-normal">
@@ -124,6 +124,7 @@ export default function VisionBrand() {
     </section>
   )
 }
+
 
 
 
