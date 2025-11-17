@@ -21,22 +21,26 @@ export default function UpperWorks() {
         <div className="flex flex-col gap-16">
           <h1
             ref={headerRef}
-            className="lg:text-5xl md:text-3xl text-2xl leading-[130%] lg:w-[60%] md:w-[85%] font-normal font-sans text-black"
+            className="lg:text-5xl md:text-3xl text-2xl leading-[130%] lg:w-[61%] md:w-[85%] font-normal font-sans text-black"
           >
-            From creative projects that push the boundaries of our team&apos;s
-            imagination. Built into all of our works.
+            From creative projects that push 
+            the boundaries of our team&apos;s 
+            imagination. Built in into all of 
+            our works.
           </h1>
 
-          <div className="flex lg:flex-row md:flex-row flex-col lg:gap-24 gap-10 items-center">
+          <div className="flex lg:flex-row md:flex-row flex-col lg:gap-8 gap-10 items-center">
             {/* Left text */}
             <div
               ref={describeRef}
-              className="lg:w-[45%] w-full flex flex-col gap-6"
+              className="lg:w-[45%] lg:ml-[200px] w-full flex flex-col gap-6"
             >
               <h5 className="text-2xl font-normal text-left text-black">/ HOUSEL</h5>
-              <h4 className="lg:text-3xl text-xl font-normal text-left text-black leading-relaxed">
-                Help you to sell, buy, mortgage, invest property, and other real
-                estate service.
+              <h4 className="lg:text-4xl text-xl font-normal lg:w-[80%] text-left text-black leading-relaxed">
+                Help you to sell, buy, 
+                mortgage, invest 
+                property, and other 
+                real estate service.
               </h4>
               <Button className="justify-start gap-2 w-fit">
                 <p className="text-black lg:text-lg text-base font-normal">View case study</p>
@@ -47,7 +51,7 @@ export default function UpperWorks() {
             {/* Right image */}
             <div
               ref={imageRef}
-              className="lg:w-[55%] w-full overflow-hidden"
+              className="lg:w-[40%] lg:mr-[120px] w-full overflow-hidden"
             >
               <Image
                 src={work1}
@@ -62,6 +66,3 @@ export default function UpperWorks() {
     </section>
   )
 }
-
-
-
