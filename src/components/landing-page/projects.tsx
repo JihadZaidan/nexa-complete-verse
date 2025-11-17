@@ -35,12 +35,12 @@ export default function Worksheet() {
         <div className="flex lg:flex-row md:flex-col flex-col justify-between gap-10">
           <h2
             ref={headRef}
-            className="lg:w-[40%] w-full text-left lg:text-5xl md:text-4xl text-3xl font-normal font-sans text-black leading-[150%]"
+            className="lg:w-[50%] w-full text-left lg:text-5xl md:text-4xl text-3xl font-normal font-sans text-black leading-[150%]"
           >
-            The work we do, and the people we help
+            The work we do, <br /> and the people we help
           </h2>
 
-          <div ref={buttonRef} className="lg:mt-12 md:mt-6">
+          <div ref={buttonRef} className="lg:mt-[100px] md:mt-6">
             <Button className="flex flex-row justify-center gap-3">
               <p className="text-black text-lg font-normal">All Case Study</p>
               <ArrowRight height={22} width={22} className="text-black group-hover:text-white transition" />
@@ -52,12 +52,12 @@ export default function Worksheet() {
         <div className="flex flex-col w-full lg:gap-36 md:gap-24 gap-16">
           
           {/* Case 1 */}
-          <div className="flex lg:flex-row md:flex-row flex-col justify-start items-start gap-8">
-            <div ref={firstRef} className="flex flex-col gap-6 bg-transparent">
+          <div className="flex lg:flex-row md:flex-row flex-col justify-start items-start gap-8 lg:gap-0">
+            <div ref={firstRef} className="flex flex-col gap-6 bg-transparent lg:ml-[10px]">
               <h5 className="text-2xl font-normal text-left text-black">/ HOUSEL</h5>
-              <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
-                Help you to sell, buy, <br />
-                mortgage, invest property, <br />
+              <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%] lg:w-[50%]">
+                Help you to sell, buy, 
+                mortgage, invest property, 
                 and other real estate service.
               </h4>
               <Button className="justify-start gap-[9px] mt-2">
@@ -66,7 +66,7 @@ export default function Worksheet() {
               </Button>
             </div>
 
-            <div ref={figeRef} className="lg:w-[45%] md:w-[50%] w-full overflow-hidden">
+            <div ref={figeRef} className="lg:w-[80%] md:w-[50%] lg:ml-[-250px] lg:mr-[180px] w-full overflow-hidden">
               <Image
                 src={work1}
                 alt="worker first photos"
@@ -77,8 +77,8 @@ export default function Worksheet() {
           </div>
 
           {/* Case 2 */}
-          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse lg:items-end lg:justify-end md:justify-end md:items-end justify-start lg:ml-[200px] gap-8">
-            <div ref={sagaRef} className="lg:w-[45%] md:w-[50%] w-full overflow-hidden">
+          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse lg:items-end lg:justify-end md:justify-end md:items-end justify-start lg:ml-[300px] gap-8">
+            <div ref={sagaRef} className="lg:w-[55%] md:w-[50%] w-full overflow-hidden">
               <Image
                 src={work2}
                 alt="worker second photos"
@@ -88,10 +88,11 @@ export default function Worksheet() {
 
             <div ref={secondRef} className="flex flex-col gap-6 bg-transparent">
               <h5 className="text-2xl font-normal text-left text-black">/ CONTEXT AI</h5>
-              <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
+              <h4 className="lg:text-3xl text-2xl font-normal text-left text-black leading-[140%]">
                 Empowers developers <br />
-                and companies to build <br />
-                outstanding products.
+                and companies to <br />
+                build outstanding <br />
+                products.
               </h4>
               <Button className="justify-start gap-[9px] mt-2">
                 <p className="text-black lg:text-xl md:text-lg text-base font-normal">View case study</p>
@@ -101,14 +102,16 @@ export default function Worksheet() {
           </div>
 
           {/* Case 3 */}
-          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse justify-start items-start lg:mr-[200px] gap-8">
+          <div className="flex lg:flex-row-reverse md:flex-row-reverse flex-col-reverse justify-start items-start lg:ml-[-200px] gap-10">
             <div ref={thirdRef} className="flex flex-col gap-6 bg-transparent">
               <h5 className="text-2xl font-normal text-left text-black">/ CLOODY</h5>
-              <h4 className="lg:text-4xl text-2xl font-normal text-left text-black leading-[140%]">
-                Allowing users to upload <br />
-                and sync files to cloud <br />
-                storage, then access <br />
-                them via browser or device.
+              <h4 className="lg:text-3xl text-xl font-normal text-left text-black leading-[140%]">
+                Allowing users to <br />
+                upload and sync files <br />
+                to cloud storage and <br />
+                then access <br />
+                them via Web Browser <br /> 
+                or device.
               </h4>
               <Button className="justify-start gap-[9px] mt-2">
                 <p className="text-black lg:text-xl md:text-lg text-base font-normal">View case study</p>
@@ -116,7 +119,7 @@ export default function Worksheet() {
               </Button>
             </div>
 
-            <div ref={tangoRef} className="lg:w-[45%] md:w-[50%] w-full overflow-hidden">
+            <div ref={tangoRef} className="lg:w-[60%] md:w-[50%] w-full overflow-hidden">
               <Image
                 src={work3}
                 alt="worker third photos"
@@ -129,14 +132,3 @@ export default function Worksheet() {
     </section>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
