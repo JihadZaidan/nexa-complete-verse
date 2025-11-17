@@ -56,7 +56,7 @@ export default function Introduce() {
               className="w-full sm:w-[80%] lg:w-[40%] h-auto object-contain"
               priority
             />
-            <p className="text-black font-normal leading-[140%] text-base md:text-xl lg:w-[40px] lg:text-2xl text-center lg:text-left">
+            <p className="text-black font-normal leading-[140%] text-base md:text-xl lg:w-[40%] lg:text-2xl text-center lg:text-left">
               You&apos;ll collaborate with our experts.
             </p>
           </div>
@@ -74,6 +74,7 @@ export default function Introduce() {
     </section>
   )
 }
+
 
 
 
