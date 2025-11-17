@@ -49,14 +49,14 @@ export default function Introduce() {
           ref={bottomRef}
           className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-4"
         >
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 lg:pt-[200px] w-full lg:w-[55%]">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 lg:ml-[-60px] lg:pt-[200px] w-full lg:w-[55%]">
             <Image
               src={team}
               alt="team members"
               className="w-full sm:w-[80%] lg:w-[50%] h-auto object-contain"
               priority
             />
-            <p className="text-black font-normal leading-[140%] text-base md:text-xl lg:text-2xl text-center lg:text-left">
+            <p className="text-black font-normal leading-[140%] text-base md:text-xl lg:w-[40px] lg:text-2xl text-center lg:text-left">
               You&apos;ll collaborate with our experts.
             </p>
           </div>
@@ -74,6 +74,7 @@ export default function Introduce() {
     </section>
   )
 }
+
 
 
 
