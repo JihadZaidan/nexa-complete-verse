@@ -36,7 +36,7 @@ export default function UpperWorks() {
               className="lg:w-[45%] lg:ml-[200px] w-full flex flex-col gap-6"
             >
               <h5 className="text-2xl font-normal text-left text-black">/ HOUSEL</h5>
-              <h4 className="lg:text-4xl text-xl font-normal lg:w-[80%] text-left text-black leading-relaxed">
+              <h4 className="lg:text-4xl text-xl font-normal lg:w-[80%] text-left text-black leading-[140%]">
                 Help you to sell, buy, 
                 mortgage, invest 
                 property, and other 
@@ -66,3 +66,4 @@ export default function UpperWorks() {
     </section>
   )
 }
+
