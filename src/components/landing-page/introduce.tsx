@@ -53,7 +53,7 @@ export default function Introduce() {
             <Image
               src={team}
               alt="team members"
-              className="w-full sm:w-[80%] lg:w-[50%] h-auto object-contain"
+              className="w-full sm:w-[80%] lg:w-[40%] h-auto object-contain"
               priority
             />
             <p className="text-black font-normal leading-[140%] text-base md:text-xl lg:w-[40px] lg:text-2xl text-center lg:text-left">
@@ -74,6 +74,7 @@ export default function Introduce() {
     </section>
   )
 }
+
 
 
 
