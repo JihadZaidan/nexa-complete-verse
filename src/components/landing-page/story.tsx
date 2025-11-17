@@ -30,7 +30,7 @@ export default function Story() {
             Latest insights, stories, and news from Nexa.
           </h3>
 
-          <div ref={buttonRef} className="md:mt-10 lg:mt-16 mt-4">
+          <div ref={buttonRef} className="md:mt-10 lg:mt-[100px] mt-4">
             <Button className="flex items-center justify-center gap-3 bg-transparent">
               <span className="text-black lg:text-xl md:text-base text-base font-normal group-hover:text-white">
                 Explore the Insight
@@ -92,5 +92,6 @@ export default function Story() {
     </section>
   );
 }
+
 
 
