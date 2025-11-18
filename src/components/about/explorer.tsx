@@ -5,7 +5,7 @@ import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
 import Discusion from "../../../public/about/Video-Showcase.png"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function AboutExplor() {
     const headeRef = useRef<HTMLHeadingElement>(null);
@@ -13,10 +13,10 @@ export default function AboutExplor() {
     const buttonRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(headeRef, 0.3);
-    useSlideFromTop(describeRef, 0.3);
-    useSlideFromTop(buttonRef, 0.3);
-    useSlideFromTop(imageRef, 0.3);
+    useFadeIn(headeRef, 0.3);
+    useFadeIn(describeRef, 0.3);
+    useFadeIn(buttonRef, 0.3);
+    useFadeIn(imageRef, 0.3);
 
     return (
         <div className="max-w-full w-full bg-black lg:px-20 lg:py-20 md:px-14 md:py-14 px-8 py-8">
@@ -54,4 +54,5 @@ export default function AboutExplor() {
         </div>
     )
 }
+
 
