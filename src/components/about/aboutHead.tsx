@@ -4,16 +4,16 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import upper from "../../../public/about/upper-about.png"
 import { useRef } from "react";
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations/useFadeIn";
 
 export default function UpperAbout() {
     const headRef = useRef<HTMLHeadingElement>(null);
     const buttonRef = useRef<HTMLDivElement>(null);
     const imageRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(headRef, 0.3);
-    useSlideFromTop(buttonRef, 0.3);
-    useSlideFromTop(imageRef, 0.3);
+    useFadeIn(headRef, 0.3);
+    useFadeIn(buttonRef, 0.3);
+    useFadeIn(imageRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:pt-16 lg:pb-0 md:px-14 md:pt-12 md:pb-10 px-8 pt-8 pb-8 bg-white">
@@ -45,6 +45,7 @@ export default function UpperAbout() {
         </div>
     )
 }
+
 
 
 
