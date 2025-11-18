@@ -2,9 +2,14 @@
 
 import { itemsFAQ } from "@/data/faq";
 import { ArrowRight, ArrowDown } from "lucide-react";
-import { useState,useRef } from "react";
-import { useSlideFromTop } from "@/library/animations";
+import { useState, useRef, useEffect, MutableRefObject } from "react";
+import { useFadeIn } from "@/library/animations/useFadeIn";
+import { useStaggerZoom } from "@/library/animations/useStaggerZoom"; // Asumsi lokasi hook
 
+// --- PASTIKAN HOOK useStaggerZoom ADA DI SINI ATAU DIIMPOR DENGAN BENAR ---
+// (Jika Anda perlu menempatkan kode useStaggerZoom di file terpisah, 
+// pastikan jalur impor di atas sudah benar)
+// -------------------------------------------------------------------------
 
 export default function ExpertiseFAQ() {
   const [openItem, setOpenItem] = useState<string | null>(itemsFAQ[0]?.id);
@@ -13,26 +18,57 @@ export default function ExpertiseFAQ() {
     setOpenItem((prev) => (prev === id ? null : id));
   };
 
-  const headeRef = useRef<HTMLHeadingElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
+  // 1. Ref Collection untuk Semua Item FAQ
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useSlideFromTop(headeRef, 0.3)
-  useSlideFromTop(contentRef, 0.3)
+  // 2. Callback Ref untuk mengisi Ref Collection
+  const setItemRef = (el: HTMLDivElement | null, index: number) => {
+    if (el) {
+      itemRefs.current[index] = el;
+    }
+  };
+
+  // Ref untuk Judul (Jika Anda masih ingin menggeser judul)
+  const headeRef = useRef<HTMLHeadingElement>(null);
+  
+  // 3. Panggil Hook Animasi
+  useFadeIn(headeRef, 0.3);
+  // Panggil useStaggerZoom pada koleksi itemRefs
+  useStaggerZoom(itemRefs as MutableRefObject<(HTMLDivElement | null)[]>, 0.5); 
+
+  // Cleanup refs saat unmount (best practice)
+  useEffect(() => {
+    return () => {
+      itemRefs.current = [];
+    };
+  }, []);
 
   return (
     <div className="w-full max-w-full px-4 lg:px-20 px-10 py-20 bg-gray-50">
       <div className="flex flex-col gap-12">
-        <h2 ref={headeRef} className="text-black font-normal lg:text-5xl text-3xl font-sans leading-snug">
+        <h2 
+          ref={headeRef} 
+          className="text-black font-normal lg:text-5xl text-3xl font-sans leading-snug"
+          // Tambahkan opacity 0 untuk mencegah FOUC pada judul
+          style={{ opacity: 0 }} 
+        >
           Frequently Asked <br />
           Questions
         </h2>
 
-        <div ref={contentRef} className="flex flex-col border-t divide-y">
+        {/* Hapus contentRef karena sekarang itemRefs menargetkan setiap baris */}
+        <div className="flex flex-col border-t divide-y">
           {itemsFAQ.map((item, index) => {
             const isOpen = openItem === item.id;
 
             return (
-              <div key={item.id} className="border-gray border-b">
+              // 4. Terapkan Callback Ref dan Style Awal (opacity: 0) di sini
+              <div 
+                key={item.id} 
+                ref={(el) => setItemRef(el, index)} 
+                className="border-gray border-b"
+                style={{ opacity: 0 }} // PENTING: Sembunyikan item sebelum GSAP menjalankannya
+              >
                 <button
                   onClick={() => toggleItem(item.id)}
                   className="w-full flex justify-between items-center py-6 text-left text-lg font-normal text-black hover:underline focus:outline-none"
@@ -63,7 +99,3 @@ export default function ExpertiseFAQ() {
     </div>
   );
 }
-
-
-
-
