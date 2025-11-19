@@ -5,7 +5,7 @@ import team from "../../../../public/three/landingpage/teams.png"
 import cheepa from "../../../../public/three/landingpage/body/chipschapa.png"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations"
 import { useRef } from "react"
 
 export default function Resprime() {
@@ -14,10 +14,10 @@ export default function Resprime() {
     const paraRef = useRef<HTMLDivElement>(null);
     const chiRef = useRef<HTMLImageElement>(null);
 
-    useSlideFromTop(headRef, 0.3);
-    useSlideFromTop(timsRef, 0.3);
-    useSlideFromTop(paraRef, 0.3);
-    useSlideFromTop(chiRef, 0.3);
+    useFadeIn(headRef, 0.3);
+    useFadeIn(timsRef, 0.3);
+    useFadeIn(paraRef, 0.3);
+    useFadeIn(chiRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-16 md:px-14 md:py-10 px-5 pt-7 pb-3 bg-neutral-100">
@@ -27,10 +27,13 @@ export default function Resprime() {
                     <div ref={timsRef} className="lg:ml-150 lg:w-[50%] flex lg:flex-row md:flex-row flex-col lg:gap-5 gap-3 justify-left items-left">
                         <Image
                             src={team}
-                            alt="photos"
-                            className="ml-[-45px] lg:scale-[75%] md:scale-[55%] scale-[75%] lg:ml-0"
+                            alt="team members"
+                            className="w-[55%] md:w-[80%] lg:w-[40%] h-auto object-contain"
+                            priority
                         />
-                        <p className="lg:mt-4 lg:text-2xl md:mt-7 md:ml-[-50px] md:text-xl text-base font-normal text-black leading-[140%]">You&apos;ll collaborate with our experts.</p>
+                        <p className="text-black font-normal leading-[140%] text-base md:text-xl lg:w-[40%] lg:text-xl text-center lg:text-left">
+                            You&apos;ll collaborate with our experts.
+                        </p>
                     </div>
                 </div>
 
@@ -57,18 +60,10 @@ export default function Resprime() {
                     ref={chiRef}
                     src={cheepa}
                     alt="upper section"
-                    className="lg:w-[33%] md:w-[33%] lg:absolute md:absolute lg:opacity-[100%] md:opacity-[100%] opacity-0 lg:top-[585.50px] lg:left-[930px] md:left-[500px] md:top-[450px] lg:visible md:invisible invisible"
+                    className="lg:w-[33%] md:w-[33%] lg:absolute md:absolute lg:opacity-[100%] md:opacity-[100%] opacity-0 lg:top-[525px] lg:left-[930px] md:left-[500px] md:top-[450px] lg:visible md:invisible invisible"
                 />
 
             </div>
         </div>
     )
 }
-
-
-
-
-
-
-
-
