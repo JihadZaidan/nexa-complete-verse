@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Converter from "../../../../public/second/works/center/upper.png"
 import Lofi from "../../../../public/second/works/center/left.png"
 import Rigel from "../../../../public/second/works/center/right.png"
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations/useFadeIn";
 import { useRef } from "react";
 
 export default function CenterWorks() {
@@ -15,11 +15,11 @@ export default function CenterWorks() {
     const prihadRef = useRef<HTMLHeadingElement>(null);
     const prigarpRef = useRef<HTMLParagraphElement>(null);
 
-    useSlideFromTop(uppermageRef, 0.3);
-    useSlideFromTop(lowerlevronRef, 0.3);
-    useSlideFromTop(loweregRef, 0.3);
-    useSlideFromTop(prihadRef, 0.3);
-    useSlideFromTop(prigarpRef, 0.3);
+    useFadeIn(uppermageRef, 0.3);
+    useFadeIn(lowerlevronRef, 0.3);
+    useFadeIn(loweregRef, 0.3);
+    useFadeIn(prihadRef, 0.3);
+    useFadeIn(prigarpRef, 0.3);
 
     return (
         <div className="max-w-full w-full bg-neutral-900 lg:px-20 lg:pt-20 lg:pb-16 md:px-14 md:pt-15 md:pb-18 px-8 py-14">
@@ -68,5 +68,6 @@ export default function CenterWorks() {
         </div>
     )
 }
+
 
 
