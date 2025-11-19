@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations";
 
 import Kopi from "../../../public/expertise/01-digital.png";
 import Tamar from "../../../public/expertise/02-branding.png";
@@ -36,9 +36,9 @@ export default function Uppertise() {
   const pagaRef = useRef<HTMLParagraphElement>(null);
   const slideRef = useRef<HTMLDivElement>(null);
 
-  useSlideFromTop(headRef, 0.3);
-  useSlideFromTop(pagaRef, 0.3);
-  useSlideFromTop(slideRef, 0.3);
+  useFadeIn(headRef, 0.3);
+  useFadeIn(pagaRef, 0.3);
+  useFadeIn(slideRef, 0.3);
 
   // Auto slide every 4.5s
   useEffect(() => {
@@ -107,3 +107,4 @@ export default function Uppertise() {
     </div>
   );
 }
+
