@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 import Canva from "../../../../public/second/landing-page/story/storycanvas.png"
 import UIUX from "../../../../public/second/landing-page/story/uiux.png"
 import Brand from "../../../../public/second/landing-page/story/improve.png"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 import { useRef } from "react"
 
 export default function StoryWork() {
@@ -16,11 +16,11 @@ export default function StoryWork() {
     const imdegRef = useRef<HTMLDivElement>(null);
     const imbRef   = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(headRef, 0.3);
-    useSlideFromTop(btnRef, 0.3);
-    useSlideFromTop(imcaRef, 0.3);
-    useSlideFromTop(imdegRef, 0.3);
-    useSlideFromTop(imbRef, 0.3);
+    useFadeIn(headRef, 0.3);
+    useFadeIn(btnRef, 0.3);
+    useFadeIn(imcaRef, 0.3);
+    useFadeIn(imdegRef, 0.3);
+    useFadeIn(imbRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:pt-20 lg:pb-5 md:px-14 md:py-18 px-5 py-14 bg-neutral-200">
@@ -31,7 +31,7 @@ export default function StoryWork() {
                         and news from Nexa.
                     </h3>
 
-                    <Button ref={btnRef} className="justify-center gap-[9px] lg:mt-22 md:mt-13 mt-10 lg:ml-0 md:ml-0 ml-[-150px]">
+                    <Button ref={btnRef} className="justify-center gap-[9px] lg:mt-[100px] md:mt-13 mt-10 lg:ml-0 md:ml-0 ml-[-150px]">
                         <p className="text-neutral-800 text-base font-normal">Explore the Insight</p>
                         <ArrowRight height={25} width={25} className="mt-[3px] text-neutral-800" />
                     </Button>
@@ -66,6 +66,7 @@ export default function StoryWork() {
         </div>
     )
 }
+
 
 
 
