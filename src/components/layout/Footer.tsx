@@ -1,11 +1,13 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import { navigation } from "@/data/navigation";
 import { ArrowRight, ArrowUpIcon } from "lucide-react";
 import { footer } from "@/data/footer";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, MutableRefObject } from "react";
 import { useFadeIn } from "@/library/animations/useFadeIn";
+// Import useStaggerZoom
+import { useStaggerZoom } from "@/library/animations/useStaggerZoom";
 import { z } from "zod";
 
 // validation news letter by zod 
@@ -26,6 +28,23 @@ export default function Footer() {
     const uprightRef = useRef<HTMLDivElement>(null);
     const lowerRef = useRef<HTMLDivElement>(null);
     const copyRef = useRef<HTMLDivElement>(null);
+
+    // 1. Ref Array untuk semua item menu di Middle Section
+    const menuRefs = useRef<(HTMLLIElement | null)[]>([]);
+
+    // 2. Callback Ref untuk mengisi array
+    const setMenuRef = (el: HTMLLIElement | null) => {
+        if (el) {
+            menuRefs.current.push(el);
+        }
+    };
+
+    // Cleanup refs (Best Practice)
+    useEffect(() => {
+        return () => {
+            menuRefs.current = [];
+        };
+    }, []);
 
     const validate = (value: string) => {
         const result = emailSchema.safeParse(value);
@@ -60,16 +79,21 @@ export default function Footer() {
         if (email.length) validate(email);
     };
 
+    // Animasi FadeIn untuk elemen statis di atas
     useFadeIn(upleftRef, 0.4);
     useFadeIn(uprightRef, 0.4);
-    useFadeIn(lowerRef , 0.4);
+    useFadeIn(lowerRef , 0.4); // lowerRef tetap digunakan untuk container (jika tidak semua anaknya dianimasikan)
     useFadeIn(copyRef, 0.4);
+
+    // 3. Panggil useStaggerZoom pada array item menu.
+    // Gunakan delay yang sedikit lebih lama dari useFadeIn di atas (0.6s)
+    useStaggerZoom(menuRefs as MutableRefObject<(HTMLDivElement | null)[]>, 0.6);
 
     return (
         <footer className="w-full bg-neutral-900 px-10 lg:px-20 py-20 flex flex-col gap-16">
             {/* Top Section */}
             <div className="flex flex-col lg:flex-row justify-between gap-10">
-                <div ref={upleftRef} className="flex flex-col lg:gap-5 gap-3">
+                <div ref={upleftRef} className="flex flex-col lg:gap-5 gap-3" style={{ opacity: 0 }}>
                     <h4 className="font-sans font-normal text-8xl text-neutral-100">Nexa</h4>
                     <p className="leading-[140%] lg:text-3xl text-xl text-neutral-400 lg:text-left font-sans font-normal">
                         Let&apos;s Make Something Cool
@@ -77,7 +101,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bagian Newsletter */}
-                <div ref={uprightRef} className="flex flex-col gap-4 justify-left items-left">
+                <div ref={uprightRef} className="flex flex-col gap-4 justify-left items-left" style={{ opacity: 0 }}>
                     <p className="text-neutral-400 font-sans font-normal text-xl">
                         Sign up for our newsletter
                     </p>
@@ -134,15 +158,19 @@ export default function Footer() {
             </div>
 
             {/* Middle Section */}
+            {/* Meskipun lowerRef ada di sini, setiap item <li> di dalamnya akan dianimasikan */}
             <div ref={lowerRef} className="grid lg:grid-cols-3 md:grid-cols-3 gap-10">
                 {/* Navigation */}
                 <ul className="flex flex-col gap-5 justify-start items-start">
                     {navigation
                         .filter((item) => item.published)
                         .map((item, index) => (
+                            // 4. Terapkan Callback Ref dan Style Awal
                             <li
                                 key={`${item.url}-${index}`}
+                                ref={(el: HTMLLIElement | null) => setMenuRef(el)}
                                 className="font-normal text-neutral-400 text-xl"
+                                style={{ opacity: 0 }} // PENTING: Style awal untuk useStaggerZoom
                             >
                                 <Link href={item.url} className="hover:text-neutral-100">
                                     {item.label}
@@ -160,9 +188,12 @@ export default function Footer() {
                                 ["Awards", "Branding", "Careers", "Inquiries", "Contact Us"].includes(item.label)
                         )
                         .map((item, index) => (
+                            // 4. Terapkan Callback Ref dan Style Awal
                             <li
                                 key={`${item.url}-${index}`}
+                                ref={(el: HTMLLIElement | null) => setMenuRef(el)}
                                 className="font-normal text-neutral-400 text-xl"
+                                style={{ opacity: 0 }} // PENTING: Style awal untuk useStaggerZoom
                             >
                                 <Link href={item.url} className="hover:text-neutral-100">
                                     {item.label}
@@ -171,7 +202,7 @@ export default function Footer() {
                         ))}
                 </ul>
 
-                {/* Socials & Info */}
+                {/* Socials & Info - TIDAK di-stagger zoom (tetapi akan tetap terpengaruh oleh useFadeIn pada lowerRef) */}
                 <div className="flex flex-col gap-4">
                     <ul className="flex flex-row gap-3">
                         {["Fb", "Ig", "Tw", "In", "Be"].map((item, index) => (
@@ -186,7 +217,7 @@ export default function Footer() {
             </div>
 
             {/* Bottom Section */}
-            <div ref={copyRef} className="border-t border-neutral-800 pt-8 flex flex-col lg:flex-row md:flex-row justify-between items-center gap-4">
+            <div ref={copyRef} className="border-t border-neutral-800 pt-8 flex flex-col lg:flex-row md:flex-row justify-between items-center gap-4" style={{ opacity: 0 }}>
                 <p className="text-neutral-400 text-lg font-normal">Copyright © 2024 Nexa</p>
                 <div className="flex items-center cursor-pointer gap-2 text-neutral-400 hover:text-white">
                     <Link href="#" className="text-neutral-400 text-lg font-normal">Back to top</Link>
@@ -196,9 +227,3 @@ export default function Footer() {
         </footer>
     );
 }
-
-
-
-
-
-
