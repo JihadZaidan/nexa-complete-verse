@@ -11,8 +11,16 @@ import { useFadeIn } from "@/library/animations"
 export default function IntroCover() {
     const headeRef = useRef<HTMLHeadingElement>(null);
     const graphRef = useRef<HTMLDivElement>(null);
+    const potaRef = useRef<HTMLImageElement>(null);
+    const studyRef = useRef<HTMLImageElement>(null);
+    const botRef = useRef<HTMLImageElement>(null);
+    
     useFadeIn(headeRef, 0.3);
     useFadeIn(graphRef, 0.3);
+    useFadeIn(potaRef, 0.3);
+    useFadeIn(studyRef, 0.3);
+    useFadeIn(botRef, 0.3);
+    
     return (
         <div className="bg-neutral-100 max-w-full w-full lg:px-20 lg:py-15 md:px-14 md:py-8 px-8 pt-8 pb-20">
             <div className="lg:justify-between justify-left items-left flex flex-col gap-2">
@@ -21,18 +29,21 @@ export default function IntroCover() {
                         Meet <br /> Nexa
                     </h1>
                     <Image
+                        ref={potaRef}
                         src={Chitato}
                         alt="radical toast product"
                         className="lg:absolute lg:opacity-[100%] lg:z-2 lg:scale-[30%] opacity-0 lg:left-[300px] lg:bottom-[-50px] md:opacity-[100%] md:scale-[70%]"
                     />
 
                     <Image
+                        ref={studyRef}
                         src={Studio}
                         alt="studio action go"
                         className="lg:relative lg:opacity-[100%] opacity-0 lg:scale-[35%] lg:left-[200px] lg:bottom-[470px] md:opacity-[100%] md:scale-[60%]"
                     />
 
                     <Image
+                        ref={botRef}
                         src={Bottle}
                         alt="product ads comerce"
                         className="lg:relative lg:opacity-[100%] opacity-0 lg:scale-[35%] lg:left-[580px] lg:bottom-[1250px]"
@@ -59,6 +70,7 @@ export default function IntroCover() {
         </div>
     )
 }
+
 
 
 
