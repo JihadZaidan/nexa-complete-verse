@@ -6,21 +6,46 @@ import { ArrowRight } from "lucide-react"
 import { navigation } from "@/data/navigation"
 import Image from "next/image"
 import Snack from "../../../public/second/landing-page/header/chipschapa.png"
-import { useSlideFromTop } from "@/library/animations"
-import { useRef } from "react"
+import { useFadeIn } from "@/library/animations"
+import { useRef, useEffect, MutableRefObject } from "react"
+// Import useStaggerZoom
+import { useStaggerZoom } from "@/library/animations/useStaggerZoom"
 
 export default function SidebarPage() {
     const closeRef = useRef<HTMLDivElement>(null);
     const mageRef = useRef<HTMLDivElement>(null);
-    const listRef = useRef<HTMLDivElement>(null);
+    const listRef = useRef<HTMLDivElement>(null); // Tetap gunakan ini jika perlu ref container
     const headeRef = useRef<HTMLHeadingElement>(null);
     const addRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(closeRef, 0.3)
-    useSlideFromTop(mageRef, 0.3)
-    useSlideFromTop(listRef, 0.3)
-    useSlideFromTop(headeRef, 0.3)
-    useSlideFromTop(addRef, 0.3)
+    // 1. Ref Array untuk item menu
+    const menuItemRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+
+    // 2. Callback Ref untuk mengisi array
+    const setMenuRef = (el: HTMLAnchorElement | null, index: number) => {
+        if (el) {
+            menuItemRefs.current[index] = el;
+        }
+    };
+    
+    // Cleanup refs (Best Practice)
+    useEffect(() => {
+        return () => {
+            menuItemRefs.current = [];
+        };
+    }, []);
+
+
+    // Animasi komponen statis lainnya (Tetap gunakan useFadeIn)
+    useFadeIn(closeRef, 0.3)
+    useFadeIn(mageRef, 0.3)
+    // Hapus useFadeIn(listRef, 0.3) - sekarang item individual yang dianimasikan
+    useFadeIn(headeRef, 0.3)
+    useFadeIn(addRef, 0.3)
+    
+    // 3. Panggil useStaggerZoom pada array menu
+    // Kita gunakan baseDelay yang lebih lama (misalnya 0.7s) agar terjadi setelah elemen lain fade in
+    useStaggerZoom(menuItemRefs as MutableRefObject<(HTMLDivElement | null)[]>, 0.7);
     
     return (
         <div className="fixed inset-0 z-[9999] w-[100vw] h-[100vh] bg-black flex flex-col lg:px-10 lg:pt-10 md:px-10 md:py-7 lg:gap-2 px-7 py-7">
@@ -48,14 +73,18 @@ export default function SidebarPage() {
                         />
                     </div>
 
+                    {/* Ref container dipertahankan, namun item di dalamnya yang dianimasikan */}
                     <div ref={listRef} className="flex flex-col lg:items-end lg:gap-8 gap-4 lg:mt-0 md:mt-0 mt-[-200px]">
                         {navigation
                             .filter((item) => !item.hideInNavbar && item.published)
-                            .map((item) => (
+                            .map((item, index) => (
+                                // 4. Terapkan Callback Ref dan Style Awal
                                 <Link
                                     key={item.url}
                                     href={item.url}
+                                    ref={(el: HTMLAnchorElement | null) => setMenuRef(el, index)}
                                     className="text-white hover:text-gray lg:text-3xl text-2xl font-sans font-normal lg:text-right md:text-center text-left w-full hover:border-b hover:border-additional-100 leading-[120%]"
+                                    style={{ opacity: 0 }} // PENTING: Sembunyikan item sebelum animasi
                                 >
                                     {item.label}
                                 </Link>
@@ -80,5 +109,3 @@ export default function SidebarPage() {
         </div>
     )
 }
-
-
