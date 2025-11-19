@@ -15,7 +15,7 @@ export default function Navbar() {
   
   useFadeIn(navRef, 0.35);
   useFadeIn(navbtnRef, 0.35);
-  useFadeIn(manusRef, 0.35);
+  useFadeIn(menusRef, 0.35);
 
   return (
     <header
@@ -58,6 +58,7 @@ export default function Navbar() {
     </header>
   )
 }
+
 
 
 
