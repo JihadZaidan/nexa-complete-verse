@@ -15,7 +15,7 @@ export default function InsightSection() {
   const blogRef = useRef<HTMLDivElement>(null);
   
   // Terapkan useStaggerChildren pada blogRef, menargetkan elemen dengan class '.insight-item'
-  useStaggerChildren(blogRef, ".insight-item", 0.3);
+  useStaggerChildren(blogRef, ".insight-item", 0.2);
 
   return (
     // Pindahkan ref={blogRef} ke elemen <section> utama
@@ -119,3 +119,4 @@ export default function InsightSection() {
     </section>
   );
 }
+
