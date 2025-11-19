@@ -1,14 +1,14 @@
 "use client"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations"
 
 export default function Insider() {
     
     const headRef = useRef<HTMLHeadingElement>(null);
     const graphRef = useRef<HTMLParagraphElement>(null);
 
-    useSlideFromTop(headRef, 0.3);
-    useSlideFromTop(graphRef, 0.3);
+    useFadeIn(headRef, 0.3);
+    useFadeIn(graphRef, 0.3);
 
     return (
         <div className="max-w-full w-full bg-white lg:px-18 lg:pt-16 lg:pb-20 md:px-14 px-9 pt-5 pb-8">
@@ -28,4 +28,5 @@ export default function Insider() {
         </div>
     )
 }
+
 
