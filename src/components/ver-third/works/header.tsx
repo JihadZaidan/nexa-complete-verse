@@ -5,7 +5,7 @@ import team from "../../../../public/three/landingpage/teams.png"
 import upper from "../../../../public/about/upper-about.png"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations"
 import { useRef } from "react"
 
 export default function Worked() {
@@ -13,9 +13,9 @@ export default function Worked() {
     const timsRef = useRef<HTMLDivElement>(null);
     const paraRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(headRef, 0.3);
-    useSlideFromTop(timsRef, 0.3);
-    useSlideFromTop(paraRef, 0.3);
+    useFadeIn(headRef, 0.3);
+    useFadeIn(timsRef, 0.3);
+    useFadeIn(paraRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-16 px-5 pt-7 pb-14 bg-neutral-100">
@@ -61,4 +61,5 @@ export default function Worked() {
         </div>
     )
 }
+
 
