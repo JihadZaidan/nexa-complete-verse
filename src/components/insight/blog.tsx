@@ -5,24 +5,32 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { useState, useRef } from "react";
 import Link from "next/link";
-import { useFadeIn } from "@/library/animations";
+// Hapus useFadeIn, Import useStaggerChildren
+import { useStaggerChildren } from "@/library/animations/useStaggerChildren"; 
 
 export default function InsightSection() {
   const [showAll, setShowAll] = useState(false);
   const blogsToShow = showAll ? insightBlog : insightBlog.slice(0, 3);
 
   const blogRef = useRef<HTMLDivElement>(null);
-  useFadeIn(blogRef, 0.3);
+  
+  // Terapkan useStaggerChildren pada blogRef, menargetkan elemen dengan class '.insight-item'
+  useStaggerChildren(blogRef, ".insight-item", 0.3);
 
   return (
-    <section className="py-12 px-4 md:px-14 lg:px-20">
+    // Pindahkan ref={blogRef} ke elemen <section> utama
+    <section className="py-12 px-4 md:px-14 lg:px-20" ref={blogRef}>
+      
       {/* Mobile View */}
-      <div className="block md:hidden space-y-8c" ref={blogRef}>
+      {/* Ref dihapus dari sini */}
+      <div className="block md:hidden space-y-8c">
         {blogsToShow.map((item, index) => (
+          // Tambahkan class 'insight-item' dan style awal
           <Link
             key={index}
             href={item.url}
-            className="flex flex-col gap-3"
+            className="flex flex-col gap-3 insight-item" 
+            style={{ opacity: 0 }} 
           >
             <div
               className="relative w-full lg:h-[200px] h-[250px]"
@@ -42,7 +50,8 @@ export default function InsightSection() {
         ))}
 
         {!showAll && (
-          <div className="pt-4">
+          // Tambahkan class 'insight-item' pada wrapper tombol 'See more'
+          <div className="pt-4 insight-item" style={{ opacity: 0 }}>
             <Button
               variant="outline"
               className="text-xl font-medium font-sans text-black px-25"
@@ -55,12 +64,15 @@ export default function InsightSection() {
       </div>
 
       {/* Tablet View */}
-      <div className="hidden md:grid lg:hidden grid-cols-2 gap-6" ref={blogRef}>
+      {/* Ref dihapus dari sini */}
+      <div className="hidden md:grid lg:hidden grid-cols-2 gap-6">
         {insightBlog.map((item, index) => (
+          // Tambahkan class 'insight-item' dan style awal
           <Link
             key={index + "tablet"}
             href={item.url}
-            className="flex flex-col gap-3"
+            className="flex flex-col gap-3 insight-item"
+            style={{ opacity: 0 }} 
           >
             <div
               className="relative w-full h-[240px]"
@@ -79,12 +91,15 @@ export default function InsightSection() {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden lg:grid grid-cols-3 gap-6" ref={blogRef}>
+      {/* Ref dihapus dari sini */}
+      <div className="hidden lg:grid grid-cols-3 gap-6">
         {insightBlog.map((item, index) => (
+          // Tambahkan class 'insight-item' dan style awal
           <Link
             key={index + "desktop"}
             href={item.url}
-            className="flex flex-col gap-3"
+            className="flex flex-col gap-3 insight-item"
+            style={{ opacity: 0 }}
           >
             <div
               className="relative w-full lg:h-[300px]"
@@ -104,9 +119,3 @@ export default function InsightSection() {
     </section>
   );
 }
-
-
-
-
-
-
