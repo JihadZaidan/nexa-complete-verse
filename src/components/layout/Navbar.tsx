@@ -12,10 +12,12 @@ export default function Navbar() {
   const navRef = useRef<HTMLHeadingElement>(null)
   const navbtnRef = useRef<HTMLButtonElement>(null);
   const menusRef = useRef<HTMLDivElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
   
   useFadeIn(navRef, 0.35);
   useFadeIn(navbtnRef, 0.35);
   useFadeIn(menusRef, 0.35);
+  useFadeIn(lineRef, 0.35);
 
   return (
     <header
@@ -42,7 +44,7 @@ export default function Navbar() {
           </Button>
 
           {/* Garis pemisah hanya tampil di desktop */}
-          <div className="hidden lg:block w-[2px] h-[20px] bg-neutral-900" />
+          <div ref={lineRef} className="hidden lg:block w-[2px] h-[20px] bg-neutral-900" />
 
           {/* Sidebar / Menu Button */}
           <div ref={menusRef}>
@@ -58,6 +60,7 @@ export default function Navbar() {
     </header>
   )
 }
+
 
 
 
