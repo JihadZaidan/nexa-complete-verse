@@ -4,7 +4,7 @@ import Image from "next/image";
 import Chitato from "../../../public/three/landingpage/body/chipschapa.png"
 import Studio from "../../../public/three/landingpage/body/shooting.png"
 import Bin from "../../../public/three/landingpage/body/binary.png"
-import { useSlideFromTop } from "@/library/animations";
+import { useFadeIn } from "@/library/animations";
 import { useRef } from "react";
 
 export default function Featurise() {
@@ -14,11 +14,11 @@ export default function Featurise() {
     const fordoRef = useRef<HTMLHeadingElement>(null);
     const mageRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(fredoRef, 0.3);
-    useSlideFromTop(sedoRef, 0.3);
-    useSlideFromTop(tredeRef, 0.3);
-    useSlideFromTop(fordoRef, 0.3);
-    useSlideFromTop(mageRef, 0.3);
+    useFadeIn(fredoRef, 0.3);
+    useFadeIn(sedoRef, 0.3);
+    useFadeIn(tredeRef, 0.3);
+    useFadeIn(fordoRef, 0.3);
+    useFadeIn(mageRef, 0.3);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-20 md:px-14 md:py-15 px-7 py-14 bg-neutral-900">
@@ -54,6 +54,7 @@ export default function Featurise() {
     )
 
 }
+
 
 
 
