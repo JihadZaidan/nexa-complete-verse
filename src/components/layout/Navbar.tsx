@@ -11,9 +11,11 @@ export default function Navbar() {
   
   const navRef = useRef<HTMLHeadingElement>(null)
   const navbtnRef = useRef<HTMLButtonElement>(null);
+  const menusRef = useRef<HTMLDivElement>(null);
   
   useFadeIn(navRef, 0.35);
   useFadeIn(navbtnRef, 0.35);
+  useFadeIn(manusRef, 0.35);
 
   return (
     <header
@@ -43,17 +45,20 @@ export default function Navbar() {
           <div className="hidden lg:block w-[2px] h-[20px] bg-neutral-900" />
 
           {/* Sidebar / Menu Button */}
-          <Link
+          <div ref={menusRef}>
+            <Link
             href="/sidebar"
             className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
-          >
-            <FiMenu className="w-7 h-7 text-black" />
+            >
+              <FiMenu className="w-7 h-7 text-black" />
           </Link>
+          </div>
         </div>
       </nav>
     </header>
   )
 }
+
 
 
 
