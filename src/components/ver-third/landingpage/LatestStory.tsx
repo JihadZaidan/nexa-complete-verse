@@ -8,7 +8,7 @@ import elevato from "../../../../public/three/landingpage/story/elevato.png"
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations"
 
 export default function Story() {
     const headRef = useRef<HTMLHeadingElement>(null);
@@ -16,10 +16,10 @@ export default function Story() {
     const oneRef = useRef<HTMLDivElement>(null);
     const twoRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(headRef, 0.3);
-    useSlideFromTop(buttonRef, 0.3);
-    useSlideFromTop(oneRef, 0.3);
-    useSlideFromTop(twoRef, 0.3);
+    useFadeIn(headRef, 0.3);
+    useFadeIn(buttonRef, 0.3);
+    useFadeIn(oneRef, 0.3);
+    useFadeIn(twoRef, 0.3);
 
     return (
         <div className="max-w-full w-full bg-[#F2F2F2]">
@@ -52,4 +52,5 @@ export default function Story() {
         </div>
     )
 }
+
 
