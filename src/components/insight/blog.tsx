@@ -81,7 +81,7 @@ export default function InsightSection() {
                 src={item.image.replace("public/", "/")}
                 alt={item.title}
                 fill
-                className="object-cover rounded-md aspect-[1/1]"
+                className="object-cover aspect-[1/1]"
               />
             </div>
             <h3 className="font-medium text-lg text-black">{item.title}</h3>
@@ -108,7 +108,7 @@ export default function InsightSection() {
                 src={item.image.replace("public/", "/")}
                 alt={item.title}
                 fill
-                className="object-cover rounded-md aspect-[1/1]"
+                className="object-cover aspect-[1/1]"
               />
             </div>
             <h3 className="font-medium text-lg text-black">{item.title}</h3>
@@ -119,5 +119,6 @@ export default function InsightSection() {
     </section>
   );
 }
+
 
 
