@@ -40,7 +40,7 @@ export default function IntroCover() {
                 </div>
 
                 <div ref={graphRef} className="justify-left lg:justify-between md:justify-between gap-8 flex lg:flex-row md:flex-row flex-col lg:mt-[-1500px] mt-[-700px]">
-                    <Button className="w-fit justify-start gap-[9px] border-b-2 border-black px-2">
+                    <Button className="w-fit justify-start gap-[9px] border-b-2 border-black px-2 lg:mt-[170px]">
                         <p className="text-black text-xl lg:text-3xl font-medium text-left">
                             Let&apos;s talk
                         </p>
@@ -59,6 +59,7 @@ export default function IntroCover() {
         </div>
     )
 }
+
 
 
 
