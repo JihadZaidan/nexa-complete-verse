@@ -1,14 +1,14 @@
 "use client"
 
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations"
 
 export default function HeaderWork() {
 
     const headRef = useRef<HTMLHeadingElement>(null);
     const graphyRef = useRef<HTMLParagraphElement>(null);
-    useSlideFromTop(headRef, 0.3);
-    useSlideFromTop(graphyRef, 0.3);
+    useFadeIn(headRef, 0.3);
+    useFadeIn(graphyRef, 0.3);
 
     return (
         <div className="max-w-full w-full bg-neutral-100 lg:px-20 lg:pt-16 lg:pb-20 md:px-14 px-8 pt-6 pb-14">
@@ -24,5 +24,6 @@ export default function HeaderWork() {
         </div>
     )
 }
+
 
 
