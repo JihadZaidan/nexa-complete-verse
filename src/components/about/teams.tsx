@@ -6,7 +6,7 @@ import Luna from "../../../public/about/team/team-luna.png"
 import Sakhir from "../../../public/about/team/team-sakhir.png"
 import Wayne from "../../../public/about/team/team-wayne.png"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function Teams() {
     const oneRef = useRef<HTMLImageElement>(null);
@@ -15,11 +15,11 @@ export default function Teams() {
     const fouRef = useRef<HTMLImageElement>(null);
     const themeRef = useRef<HTMLHeadingElement>(null);
 
-    useSlideFromTop(oneRef, 0.3);
-    useSlideFromTop(twoRef, 0.3);
-    useSlideFromTop(thRef, 0.3);
-    useSlideFromTop(fouRef, 0.3);
-    useSlideFromTop(themeRef, 0.3);
+    useFadeIn(oneRef, 0.3);
+    useFadeIn(twoRef, 0.3);
+    useFadeIn(thRef, 0.3);
+    useFadeIn(fouRef, 0.3);
+    useFadeIn(themeRef, 0.3);
 
     return (
         <section className="relative lg:px-30 lg:py-30 md:px-22 md:py-22">
@@ -62,4 +62,5 @@ export default function Teams() {
 
     )
 }
+
 
