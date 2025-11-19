@@ -72,7 +72,7 @@ export default function ExpertiseCarousel() {
             <div className="mb-3 text-xl font-normal text-black">
               {work.title}
             </div>
-            <div className="lg:aspect-[4/5] aspect-[3/2] w-full relative overflow-hidden rounded-lg shadow-lg">
+            <div className="lg:aspect-[4/5] aspect-[3/2] w-full relative overflow-hidden shadow-lg">
               <Image
                 src={work.avatar}
                 alt={work.title}
@@ -86,4 +86,5 @@ export default function ExpertiseCarousel() {
     </div>
   );
 }
+
 
