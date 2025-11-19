@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Work from "../../../../public/second/landing-page/body/worker.png"
 import { useRef } from "react"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations/useFadeIn"
 
 export default function WorkerSheet() {
     const headRef = useRef<HTMLHeadingElement>(null);
@@ -12,10 +12,10 @@ export default function WorkerSheet() {
     const listRef = useRef<HTMLDivElement>(null);
     const imRef = useRef<HTMLImageElement>(null);
 
-    useSlideFromTop(headRef, 0.3)
-    useSlideFromTop(btnRef, 0.3)
-    useSlideFromTop(listRef, 0.3)
-    useSlideFromTop(imRef, 0.3)
+    useFadeIn(headRef, 0.3)
+    useFadeIn(btnRef, 0.3)
+    useFadeIn(listRef, 0.3)
+    useFadeIn(imRef, 0.3)
 
     return (
         <div className="max-w-full w-full bg-neutral-100 lg:px-20 lg:pt-25 lg:pb-30 md:px-14 md:py-16 px-8 py-8">
@@ -62,4 +62,5 @@ export default function WorkerSheet() {
         </div>
     )
 }
+
 
