@@ -31,3 +31,8 @@ vercel installation
 ```bash
 npm install -g vercel 
 ```
+
+clone project 
+```bash 
+git clone https://JihadZaidan/nexa-complete-verse/
+```
