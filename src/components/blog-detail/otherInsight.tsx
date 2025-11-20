@@ -6,24 +6,37 @@ import Link from "next/link"
 import { useRef, useState } from "react"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations"
+// Import useStaggerChildren
+import { useStaggerChildren } from "@/library/animations/useStaggerChildren";
+
 
 export default function OtherInsight() {
     const [showAll, setShowAll] = useState(false);
     const blogsToShow = showAll ? insightBlog : insightBlog.slice(0, 3);
-    
-    const contentRef = useRef<HTMLDivElement>(null);
+
+    // Ref terpisah untuk kontainer Mobile dan Desktop
+    const contentRefMobile = useRef<HTMLDivElement>(null);
+    const contentRefDesktop = useRef<HTMLDivElement>(null);
+
     const headerRef = useRef<HTMLHeadingElement>(null);
     const btnRef = useRef<HTMLDivElement>(null);
 
-    useSlideFromTop(headerRef, 0.3)
-    useSlideFromTop(btnRef, 0.3)
-    useSlideFromTop(contentRef, 0.3)
+    // Animasi Header dan Tombol
+    useFadeIn(headerRef, 0.3)
+    useFadeIn(btnRef, 0.3)
+    // useSlideFromTop(contentRef, 0.3) dihapus, diganti stagger
+
+    // Terapkan useStaggerChildren pada ref Mobile dan Desktop
+    // Menargetkan elemen dengan class '.insight-item'
+    useStaggerChildren(contentRefMobile, ".insight-item", 0.5);
+    useStaggerChildren(contentRefDesktop, ".insight-item", 0.5);
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-20 px-7 py-7 bg-[#F5F5F5]">
             <div className="w-full flex flex-col lg:gap-18 gap-9">
                 <div className="flex lg:flex-row flex-col lg:justify-between justify-left items-left gap-5">
+                    {/* Hapus style={{ opacity: 0 }} karena useSlideFromTop sudah menanganinya */}
                     <h3 ref={headerRef} className="font-sans font-normal text-black lg:text-4xl text-3xl">Other Insight</h3>
                     <div ref={btnRef}>
                         <Button className="flex flex-row items-center gap-3 ml-[-10px]">
@@ -43,12 +56,14 @@ export default function OtherInsight() {
                 </div>
 
                 {/* Mobile View */}
-                <div ref={contentRef} className="block md:hidden space-y-8">
+                <div ref={contentRefMobile} className="block md:hidden space-y-8">
                     {blogsToShow.map((item, index) => (
                         <Link
                             key={index}
                             href={item.url}
-                            className="flex flex-col gap-3"
+                            // Tambahkan class insight-item dan style awal untuk useStaggerChildren
+                            className="flex flex-col gap-3 insight-item"
+                            style={{ opacity: 0 }}
                         >
                             <div className="relative w-full h-[200px]">
                                 <Image
@@ -66,7 +81,7 @@ export default function OtherInsight() {
                     ))}
 
                     {!showAll && (
-                        <div className="pt-4 hidden md:block">
+                        <div className="pt-4 lg:invisible md:block">
                             <Button
                                 variant="outline"
                                 className="text-xl font-normal font-sans text-black px-25"
@@ -80,12 +95,14 @@ export default function OtherInsight() {
                 </div>
 
                 {/* Desktop Grid */}
-                <div ref={contentRef} className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
+                <div ref={contentRefDesktop} className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
                     {blogsToShow.map((item, index) => (
                         <Link
                             key={index}
                             href={item.url}
-                            className="flex flex-col gap-3"
+                            // Tambahkan class insight-item dan style awal untuk useStaggerChildren
+                            className="flex flex-col gap-3 insight-item"
+                            style={{ opacity: 0 }}
                         >
                             <div className="relative w-full lg:h-[300px]">
                                 <Image
@@ -99,13 +116,9 @@ export default function OtherInsight() {
                             <p className="text-sm text-gray-500">{item.date}</p>
                         </Link>
                     ))}
-                </div>
 
+                </div>
             </div>
         </div>
     )
 }
-
-
-
-
