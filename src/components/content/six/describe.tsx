@@ -4,7 +4,7 @@ import Image from "next/image"
 import Note from "../../../../public/insight-blog/inblog-04.png"
 import Tims from "../../../../public/one/landing-photos/branding.png"
 import Meeting from "../../../../public/about/Video-Showcase.png"
-import { useSlideFromTop } from "@/library/animations"
+import { useFadeIn } from "@/library/animations"
 import { useRef } from "react"
 
 export default function SixDescription() {
@@ -15,11 +15,11 @@ export default function SixDescription() {
     const TeamRef = useRef<HTMLImageElement>(null);
     const MeetRef = useRef<HTMLImageElement>(null);
 
-    useSlideFromTop(textRef, 0.3)
-    useSlideFromTop(NoteRef, 0.3)
-    useSlideFromTop(TeamRef, 0.3)
-    useSlideFromTop(typoRef, 0.3)
-    useSlideFromTop(MeetRef, 0.3)
+    useFadeIn(textRef, 0.3)
+    useFadeIn(NoteRef, 0.3)
+    useFadeIn(TeamRef, 0.3)
+    useFadeIn(typoRef, 0.3)
+    useFadeIn(MeetRef, 0.3)
 
     return (
         <div className="max-w-full w-full lg:px-20 lg:py-15 px-10 py-10">
@@ -67,3 +67,4 @@ export default function SixDescription() {
     )
 
 }
+
