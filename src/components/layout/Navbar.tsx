@@ -10,14 +10,10 @@ import { useFadeIn } from "@/library/animations/useFadeIn"
 export default function Navbar() {
   
   const navRef = useRef<HTMLHeadingElement>(null)
-  const navbtnRef = useRef<HTMLButtonElement>(null);
-  const menusRef = useRef<HTMLDivElement>(null);
-  const lineRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null)
   
   useFadeIn(navRef, 0.35);
-  useFadeIn(navbtnRef, 0.35);
-  useFadeIn(menusRef, 0.35);
-  useFadeIn(lineRef, 0.35);
+  useFadeIn(rightRef, 0.35);
 
   return (
     <header
@@ -30,9 +26,9 @@ export default function Navbar() {
         </h1>
 
         {/* Right Side */}
-        <div className="flex items-center lg:gap-8">
+        <div ref={rightRef} className="flex items-center lg:gap-8">
           {/* Button hanya muncul di desktop */}
-          <Button ref={navbtnRef} className="hidden lg:flex items-center gap-2 bg-transparent hover:bg-black hover:text-white transition-all duration-300 lg:visible md:invisible invisible">
+          <Button className="hidden lg:flex items-center gap-2 bg-transparent hover:bg-black hover:text-white transition-all duration-300 lg:visible md:invisible invisible">
             <p className="text-black text-base font-medium">
               Let&apos;s talk
             </p>
@@ -44,22 +40,21 @@ export default function Navbar() {
           </Button>
 
           {/* Garis pemisah hanya tampil di desktop */}
-          <div ref={lineRef} className="hidden lg:block w-[2px] h-[20px] bg-neutral-900" />
+          <div className="hidden lg:block w-[2px] h-[20px] bg-neutral-900" />
 
           {/* Sidebar / Menu Button */}
-          <div ref={menusRef}>
-            <Link
+          <Link
             href="/sidebar"
             className="p-2 rounded-md hover:bg-neutral-100 transition-colors duration-200"
-            >
-              <FiMenu className="w-7 h-7 text-black" />
+          >
+            <FiMenu className="w-7 h-7 text-black" />
           </Link>
-          </div>
         </div>
       </nav>
     </header>
   )
 }
+
 
 
 
