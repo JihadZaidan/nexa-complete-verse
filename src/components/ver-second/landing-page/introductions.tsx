@@ -32,21 +32,21 @@ export default function IntroCover() {
                         ref={potaRef}
                         src={Chitato}
                         alt="radical toast product"
-                        className="lg:absolute lg:opacity-[100%] lg:z-2 lg:scale-[30%] opacity-0 lg:left-[300px] lg:bottom-[-50px] md:opacity-[100%] md:scale-[70%]"
+                        className="lg:absolute lg:opacity-[100%] lg:z-2 lg:scale-[30%] opacity-0 lg:left-[300px] lg:bottom-[-50px] md:opacity-[100%] md:scale-[70%] lg:visible invisible"
                     />
 
                     <Image
                         ref={studyRef}
                         src={Studio}
                         alt="studio action go"
-                        className="lg:relative lg:opacity-[100%] opacity-0 lg:scale-[35%] lg:left-[200px] lg:bottom-[470px] md:opacity-[100%] md:scale-[60%]"
+                        className="lg:relative lg:opacity-[100%] opacity-0 lg:scale-[35%] lg:left-[200px] lg:bottom-[470px] md:opacity-[100%] md:scale-[60%] lg:visible invisible"
                     />
 
                     <Image
                         ref={botRef}
                         src={Bottle}
                         alt="product ads comerce"
-                        className="lg:relative lg:opacity-[100%] opacity-0 lg:scale-[35%] lg:left-[580px] lg:bottom-[1250px]"
+                        className="lg:relative lg:opacity-[100%] opacity-0 lg:scale-[35%] lg:left-[580px] lg:bottom-[1250px] lg:visible invisible"
                     />
                 </div>
 
@@ -70,6 +70,7 @@ export default function IntroCover() {
         </div>
     )
 }
+
 
 
 
