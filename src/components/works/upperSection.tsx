@@ -51,12 +51,12 @@ export default function UpperWorks() {
             {/* Right image */}
             <div
               ref={imageRef}
-              className="lg:w-[40%] lg:mr-[120px] lg:mt-[50px] w-full overflow-hidden"
+              className="lg:w-[40%] lg:mr-[120px] lg:absolute top-[500px] w-full overflow-hidden"
             >
               <Image
                 src={work1}
                 alt="worker first photos"
-                className="w-full h-auto object-cover absolute top-[100px]"
+                className="w-full h-auto object-cover"
                 priority
               />
             </div>
@@ -66,6 +66,7 @@ export default function UpperWorks() {
     </section>
   )
 }
+
 
 
 
