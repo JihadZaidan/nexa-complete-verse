@@ -31,7 +31,7 @@ export default function Story() {
                     </h3>
 
                     <div ref={buttonRef} className="relative lg:mt-20 md:mt-12">
-                        <Button className="flex flex-row justify-center gap-3 ml-[-10px]">
+                        <Button className="flex flex-row justify-center gap-3 ml-[-10px] lg:mt-[100px]">
                             <p className="text-black lg:text-lg md:text-base text-base font-medium">Explore the Insight</p>
                             <ArrowRight height={22} width={22} className="mt-[2px] text-black lg:h-[22px] lg:w-[22px] h-[25px] w-[25px]" />
                         </Button>
@@ -52,5 +52,6 @@ export default function Story() {
         </div>
     )
 }
+
 
 
