@@ -77,7 +77,7 @@ export default function ExpertiseCarousel() {
                 src={work.avatar}
                 alt={work.title}
                 fill
-                className="object-cover transition-transform duration-500 hover:scale-105"
+                className="lg:object-cover object-contain transition-transform duration-500 hover:scale-105"
               />
             </div>
           </div>
@@ -86,5 +86,6 @@ export default function ExpertiseCarousel() {
     </div>
   );
 }
+
 
 
