@@ -56,7 +56,7 @@ export default function UpperWorks() {
               <Image
                 src={work1}
                 alt="worker first photos"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover absolute top-[100px]"
                 priority
               />
             </div>
@@ -66,5 +66,6 @@ export default function UpperWorks() {
     </section>
   )
 }
+
 
 
