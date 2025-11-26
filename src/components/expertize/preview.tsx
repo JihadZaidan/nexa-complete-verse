@@ -68,7 +68,7 @@ export default function ExpertiseCarousel() {
         className="flex overflow-x-auto scroll-smooth gap-6 no-scrollbar pt-10 pb-6 pr-12 mt-5"
       >
         {works.map((work) => (
-          <div key={work.id} className="min-w-[500px] flex-shrink-0">
+          <div key={work.id} className="min-w-[500px] flex-shrink-0 lg:object-cover object-contain">
             <div className="mb-3 text-xl font-normal text-black">
               {work.title}
             </div>
@@ -77,7 +77,7 @@ export default function ExpertiseCarousel() {
                 src={work.avatar}
                 alt={work.title}
                 fill
-                className="lg:object-cover object-contain transition-transform duration-500 hover:scale-105"
+                className="transition-transform duration-500 hover:scale-105"
               />
             </div>
           </div>
@@ -86,6 +86,7 @@ export default function ExpertiseCarousel() {
     </div>
   );
 }
+
 
 
 
